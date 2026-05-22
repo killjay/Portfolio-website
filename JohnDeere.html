@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Simplifying John Deere's In-Cab Displays · Nandha Kumar</title>
+    <meta name="description" content="Redesigning John Deere's complex tractor interface to reduce cognitive load for farmers. NASA TLX validated 41% reduction in mental demand.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=toc3">
+    <meta name="theme-color" content="#BFD2B9">
+</head>
+<body class="cs-tint-deere">
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <div class="container">
+                <a class="cs-back" href="work.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">Partnership · Product Design · UI/UX</p>
+                <h1 class="cs-hero__title reveal">
+                    Simplifying Tractor <span class="highlight">In-Cab</span> Displays
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Cutting cognitive load in John Deere's tractor interface so operators spend less time
+                    fighting menus and more time in the field.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Duration</dt>
+                        <dd>6 weeks</dd>
+                    </div>
+                    <div>
+                        <dt>Team</dt>
+                        <dd>5 members</dd>
+                    </div>
+                    <div>
+                        <dt>My Role</dt>
+                        <dd>UX Researcher &amp; Designer</dd>
+                    </div>
+                    <div>
+                        <dt>Partner</dt>
+                        <dd>John Deere UX Team</dd>
+                    </div>
+                    <div>
+                        <dt>Focus Areas</dt>
+                        <dd>Layout Manager, Help System</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Body -->
+        <div class="container--prose">
+
+            <!-- Challenge -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The challenge</span>
+                    <h2 class="h2 cs-section__title">The Challenge</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>John Deere's in-cab displays were getting in the way during real farm work. The Layout Manager was barely being used. The Help Center wasn't answering the questions operators actually had, so they lost time and got frustrated trying to set things up.</p>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat">
+                        <div class="stat__value"><em>14</em></div>
+                        <div class="stat__label">Steps to customize layout</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">Low</div>
+                        <div class="stat__label">Layout Manager adoption</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">High</div>
+                        <div class="stat__label">User frustration levels</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Methodology -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Research</span>
+                    <h2 class="h2 cs-section__title">Research Methodology</h2>
+                    <p class="cs-section__sub">How we built the research</p>
+                </header>
+                <div class="cs-prose">
+                    <p>We started with John Deere's UX team to map the issues they were already tracking, then ran research with farmers at Iowa State University to confirm what was real and find what they'd missed.</p>
+                </div>
+                <div class="step-grid step-grid--4">
+                    <div class="step">
+                        <div class="step__num">Step 01</div>
+                        <h3 class="step__title">Stakeholder Interviews</h3>
+                        <p class="step__desc">Met with the John Deere UX lead to map current system limitations and business constraints.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">Step 02</div>
+                        <h3 class="step__title">User Interviews</h3>
+                        <p class="step__desc">Ran 5 interviews with farmers across novice to expert experience levels.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">Step 03</div>
+                        <h3 class="step__title">Task Analysis</h3>
+                        <p class="step__desc">Walked through 3 core operator tasks to find the worst workflow bottlenecks.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">Step 04</div>
+                        <h3 class="step__title">Usability Testing</h3>
+                        <p class="step__desc">Tested current vs. proposed designs and measured the gap with NASA TLX and Likert scores.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Findings -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Findings</span>
+                    <h2 class="h2 cs-section__title">Key Research Findings</h2>
+                </header>
+
+                <div class="issue">
+                    <div class="issue__label">Issue #1</div>
+                    <h3 class="issue__title">Complex Customization</h3>
+                    <p class="issue__desc">The 14-step flow to customize a homepage and set up widgets was painful enough that most operators gave up on personalization entirely.</p>
+                </div>
+                <div class="issue">
+                    <div class="issue__label">Issue #2</div>
+                    <h3 class="issue__title">Deep Navigation</h3>
+                    <p class="issue__desc">"Run Pages" setup was buried behind deep menu layers, so even simple customization felt like work.</p>
+                </div>
+                <div class="issue">
+                    <div class="issue__label">Issue #3</div>
+                    <h3 class="issue__title">Safety Concerns</h3>
+                    <p class="issue__desc">Deletion flows had no real warnings, so operators could lose configuration data with a single misplaced tap.</p>
+                </div>
+
+                <blockquote class="cs-quote">
+                    <p class="cs-quote__text">"The screen becomes almost unusable during sunny days when I'm working in the field. The brightness issue combined with the complex menus makes it really frustrating to use."</p>
+                    <p class="cs-quote__author">Full-time farmer, user interview</p>
+                </blockquote>
+            </section>
+
+            <!-- Persona -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; User persona</span>
+                    <h2 class="h2 cs-section__title">User Persona</h2>
+                </header>
+
+                <div class="persona">
+                    <div class="persona__head">
+                        <div class="persona__photo">
+                            <img src="Images/Theo Thompson.png" alt="Theo Thompson">
+                        </div>
+                        <div>
+                            <h3 class="persona__name">Theo Thompson, 56</h3>
+                            <p class="persona__role">Farmer</p>
+                        </div>
+                    </div>
+
+                    <div class="persona__bg">
+                        <div class="persona__bg-title">Background</div>
+                        <p class="persona__bg-text">An experienced farmer and technician with hands-on agricultural knowledge.</p>
+                    </div>
+
+                    <blockquote class="persona__quote">
+                        "Customization is huge... because when you're so used to it, you just realize that like this is how this doesn't work."
+                    </blockquote>
+
+                    <div class="persona__cols persona__cols--3">
+                        <div>
+                            <div class="persona__col-title">Needs</div>
+                            <ul>
+                                <li>Run planting and harvesting tasks from the tractor's display without fighting the UI</li>
+                                <li>See real-time data while monitoring ongoing operations</li>
+                                <li>An interface that fits the range of jobs he does in a season</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="persona__col-title">Motivations</div>
+                            <ul>
+                                <li>Get more done by managing and monitoring tasks in real-time</li>
+                                <li>Use time, labor and materials efficiently to keep costs down</li>
+                                <li>Make data-driven decisions that improve crop yield and quality</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="persona__col-title">Frustrations</div>
+                            <ul>
+                                <li>Re-entering the same data every time he sets up a new equipment profile</li>
+                                <li>Having to retype implement details whenever he swaps gear</li>
+                                <li>Customizing the interface is harder than it should be</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wireframing -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Wireframing</span>
+                    <h2 class="h2 cs-section__title">Wireframing</h2>
+                </header>
+                <figure class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/JohnDeere/Group 102 (2).png" alt="John Deere wireframes">
+                    </div>
+                    <figcaption class="cs-figure__caption">Fig 1. Low-fidelity wireframes for the layout manager and help system</figcaption>
+                </figure>
+            </section>
+
+            <!-- Design Solutions -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Solutions</span>
+                    <h2 class="h2 cs-section__title">Design Solutions</h2>
+                </header>
+
+                <div class="solution">
+                    <div class="solution__media">
+                        <img src="Images/JohnDeere/help.gif" alt="Enhanced help system">
+                    </div>
+                    <div>
+                        <div class="solution__label">Solution #1</div>
+                        <h3 class="solution__title">Enhanced Help System</h3>
+                        <p class="solution__desc">Swapped text-heavy documentation for a visual "Help Guide" and QR-code "Video Tutorials" that operators can pull up without leaving the task they're on.</p>
+                        <div class="solution__stat">
+                            <span class="solution__stat-value">60%</span>
+                            <span class="solution__stat-label">Faster help access</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <div>
+                        <div class="solution__label">Solution #2</div>
+                        <h3 class="solution__title">Streamlined Run Page Creation</h3>
+                        <p class="solution__desc">Cleaned up the dashboard setup flow with clearer buttons and contextual tips. Configuration dropped from 14 clicks to 8.</p>
+                        <div class="solution__stat">
+                            <span class="solution__stat-value">43%</span>
+                            <span class="solution__stat-label">Reduction in steps</span>
+                        </div>
+                    </div>
+                    <div class="solution__media">
+                        <img src="Images/JohnDeere/runa page.gif" alt="Streamlined run page creation">
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <div class="solution__media">
+                        <img src="Images/JohnDeere/Run Page Set.gif" alt="Page set management">
+                    </div>
+                    <div>
+                        <div class="solution__label">Solution #3</div>
+                        <h3 class="solution__title">Intuitive Page Set Management</h3>
+                        <p class="solution__desc">Added multi-select and direct controls like "Set as Active" so operators can organize page sets without re-learning the menu each time.</p>
+                        <div class="solution__stat">
+                            <span class="solution__stat-value">50%</span>
+                            <span class="solution__stat-label">Faster organization</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testing Results -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(07) &nbsp; Testing</span>
+                    <h2 class="h2 cs-section__title">Usability Testing Results</h2>
+                    <p class="cs-section__sub">Quantitative Validation Using NASA TLX</p>
+                </header>
+                <div class="cs-prose">
+                    <p>We tested the current interface against our proposed design using the NASA Task Load Index and Likert scales, so the improvement wasn't a vibe check.</p>
+                </div>
+                <div class="stat-grid stat-grid--4">
+                    <div class="stat">
+                        <div class="stat__value"><em>41%</em></div>
+                        <div class="stat__label">Reduction in mental demand · 7.3 → 4.3</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">49%</div>
+                        <div class="stat__label">Reduction in effort required · 5.3 → 2.7</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">9%</div>
+                        <div class="stat__label">Reduction in frustration · 3.3 → 3.0</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">16%</div>
+                        <div class="stat__label">Improved usability · 3.7 → 4.3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(08) &nbsp; Impact</span>
+                    <h2 class="h2 cs-section__title">Impact &amp; Business Value</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The redesign backed up our hypothesis that simpler menus and a better help system would make operators more efficient. The metrics that matter for day-to-day farm work moved in the right direction.</p>
+
+                    <h3 class="h3" style="margin-top: var(--s-6); margin-bottom: var(--s-4);">Key Business Outcomes</h3>
+                    <ul>
+                        <li><strong>41% decrease in mental demand</strong>, which lowers operator fatigue on long shifts</li>
+                        <li><strong>Stronger safety protocols</strong> from clearer deletion warnings and confirmation flows</li>
+                        <li><strong>Faster onboarding</strong> using visual help guides instead of static documentation</li>
+                    </ul>
+                </div>
+
+                <h3 class="h3" style="margin-top: var(--s-8); margin-bottom: var(--s-4);">Design System Principles Established</h3>
+                <div class="step-grid">
+                    <div class="step">
+                        <div class="step__num">Principle #1</div>
+                        <h3 class="step__title">Progressive Disclosure</h3>
+                        <p class="step__desc">Complex functions sit behind simple, contextual entry points so operators only see what they need.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">Principle #2</div>
+                        <h3 class="step__title">Visual Hierarchy</h3>
+                        <p class="step__desc">Information architecture, spacing, and typography stay consistent so the screen is scannable at a glance.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">Principle #3</div>
+                        <h3 class="step__title">Contextual Help</h3>
+                        <p class="step__desc">Help comes through QR codes and visual guides at the moment it's needed, not buried in a manual.</p>
+                    </div>
+                </div>
+
+                <h3 class="h3" style="margin-top: var(--s-8); margin-bottom: var(--s-4);">Key Learnings</h3>
+                <div class="cs-prose">
+                    <ul>
+                        <li>Industrial UX is about balancing feature depth with operational simplicity</li>
+                        <li>Environmental factors like sunlight and vibration change what "usable" actually means in the cab</li>
+                        <li>Standardized metrics like NASA TLX give design decisions evidence stakeholders trust</li>
+                        <li>Working closely with engineering kept the solutions feasible inside Deere's existing system</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Next project -->
+        <section class="cs-next">
+            <div class="container">
+                <span class="eyebrow reveal">(09) &nbsp; Next case study</span>
+                <div class="work-grid" style="margin-top: var(--s-6);">
+                    <a class="work-card work-card--velotic reveal" href="Velotic.html">
+                        <div class="work-card__media">
+                            <img src="Images/Velotic/insight-week.png" alt="Velotic preview">
+                        </div>
+                        <div class="work-card__head">
+                            <h3 class="work-card__title">The <em>operating system</em> for fitness coaches</h3>
+                            <span class="work-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                        <p class="work-card__meta">Solo-built SaaS — coach portal, native iOS and Android apps, AI coaching layer.</p>
+                    </a>
+                    <a class="work-card work-card--workiva reveal" href="Workiva.html">
+                        <div class="work-card__media">
+                            <img src="Images/Anomaly.png" alt="Workiva preview">
+                        </div>
+                        <div class="work-card__head">
+                            <h3 class="work-card__title">Making <em>anomaly</em> detection easier than ever</h3>
+                            <span class="work-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                        <p class="work-card__meta">Helping data teams catch inconsistencies in collaborative spreadsheets, faster.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer__wordmark">Nandha&nbsp;<em>Kumar</em></h2>
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Studio</h4>
+                    <p>Product designer working at the intersection of AI, immersive tech, and everyday usability. Open to senior product design roles.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Now</h4>
+                    <p>Available for new product design roles. San Francisco, PT.</p>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js?v=toc3" defer></script>
+</body>
+</html>
