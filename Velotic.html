@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Velotic · One product, three surfaces · Nandha Kumar</title>
-    <meta name="description" content="A coach workspace, a client app on iOS and Android, and an AI that speaks in the coach's own voice. Designed and shipped solo in three months.">
+    <title>Velotic · Getting fitness coaches out of spreadsheets · Nandha Kumar</title>
+    <meta name="description" content="How I designed and built a coaching platform for 5 fitness coaches and the 2,150 clients on the other side of their spreadsheets. Solo, 12 weeks, three native surfaces.">
     <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
 
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="site.css?v=toc3">
+    <link rel="stylesheet" href="site.css?v=toc5">
     <meta name="theme-color" content="#DEE3A8">
 </head>
 <body class="cs-tint-velotic">
@@ -39,46 +39,51 @@
 
                 <p class="cs-hero__tags reveal">Solo Venture · Product · Design · 0→1</p>
                 <h1 class="cs-hero__title reveal">
-                    A coach who answers at <span class="highlight">11 PM</span>, without burning out the human.
+                    Getting <span class="highlight">5 fitness coaches</span> out of spreadsheets, and the 2,150 clients on the other side with them.
                 </h1>
                 <p class="lede cs-hero__lede reveal">
-                    Velotic is a B2B SaaS for independent fitness coaches. A coach workspace,
-                    a client app on iOS and Android, and an AI layer that speaks in the human
-                    coach's own voice. Designed and shipped solo in three months.
+                    Three of my closest friends are fitness coaches. I assumed there was a product for what they did. There wasn't. So I built Velotic, a coach workspace on the web and a client app on iOS and Android, with an AI layer that speaks in the coach's own voice. Solo, twelve weeks, feature complete in May 2026.
                 </p>
 
                 <dl class="cs-meta reveal">
                     <div>
-                        <dt>Duration</dt>
-                        <dd>3 months, Feb to May 2026</dd>
+                        <dt>Role</dt>
+                        <dd>Solo founder. Research, product, design, engineering</dd>
                     </div>
                     <div>
-                        <dt>Role</dt>
-                        <dd>Solo across research, design, engineering</dd>
+                        <dt>Timeline</dt>
+                        <dd>February to May 2026</dd>
                     </div>
                     <div>
                         <dt>Surfaces</dt>
-                        <dd>3 · Web · iOS · Android</dd>
+                        <dd>Web (React) · iOS (SwiftUI) · Android (Compose)</dd>
                     </div>
                     <div>
                         <dt>Status</dt>
-                        <dd>Feature complete, premarket</dd>
-                    </div>
-                    <div>
-                        <dt>Tools</dt>
-                        <dd>Pencil, Figma, SwiftUI, Compose, React</dd>
+                        <dd>Private beta with 5 coaches and 2,150 clients</dd>
                     </div>
                 </dl>
+            </div>
+        </section>
 
-                <aside class="cs-tldr reveal" aria-label="Sixty second read">
-                    <div class="cs-tldr__label">60 second read</div>
-                    <ul class="cs-tldr__list">
-                        <li><span class="cs-tldr__key">Problem</span><span class="cs-tldr__val">Online fitness coaches run their business across 13+ tools and lose 40 to 60% of their week to admin. Clients message at 11 PM with no middle ground.</span></li>
-                        <li><span class="cs-tldr__key">Bet</span><span class="cs-tldr__val">Three native surfaces over one Firebase spine. Coach gets a workspace built for a wide screen. Client gets a fitness app built for a phone. AI in the base tier, not premium.</span></li>
-                        <li><span class="cs-tldr__key">Shipped</span><span class="cs-tldr__val">13 coach modules, 10 client modules across iOS and Android, three AI providers split by job.</span></li>
-                        <li><span class="cs-tldr__key">Result</span><span class="cs-tldr__val">Feature complete in 12 weeks solo. Private beta, ready for preseed by May 2026. Zero token drift across ~150k lines of platform code.</span></li>
-                    </ul>
-                </aside>
+        <!-- Stats teaser strip -->
+        <section class="container reveal">
+            <div class="cs-statstrip">
+                <div class="cs-stat">
+                    <div class="cs-stat__num">5</div>
+                    <div class="cs-stat__label">Coaches onboarded</div>
+                    <div class="cs-stat__cap">3 original friends, 2 inbound after launch</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">2,150</div>
+                    <div class="cs-stat__label">Clients served</div>
+                    <div class="cs-stat__cap">Across the 5 coach books, active May 2026</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">12 wks</div>
+                    <div class="cs-stat__label">First interview to feature complete</div>
+                    <div class="cs-stat__cap">Solo. Three native surfaces, one Firebase spine</div>
+                </div>
             </div>
         </section>
 
@@ -89,226 +94,105 @@
             </div>
         </section>
 
-        <!-- Body -->
         <div class="container--prose">
 
-            <!-- 01. The problem -->
+            <!-- 01. Discovery -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem</span>
-                    <h2 class="h2 cs-section__title">Where coaches lose their week.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The discovery</span>
+                    <h2 class="h2 cs-section__title">How I found the problem nobody was complaining about.</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>I started by talking to online fitness coaches in India, the audience I planned to ship to first. Three numbers kept coming back. Coaches were running their businesses out of <strong>13+ disconnected tools</strong>. Spreadsheets, PDFs, a generic calorie app, Calendly, WhatsApp, Razorpay. Roughly <strong>40 to 60% of their week</strong> went to admin, not coaching. Most said the wheels came off at <strong>15 to 20 clients</strong>. Beyond that, they hired help or burned out.</p>
+                    <p>Last year I got curious about what three of my closest friends do for a living. All three are fitness coaches with nine to ten years on the job each. I asked one of them, casually, how he tracked his clients' progress. He pulled out his phone, opened Google Sheets, and showed me a tab system that looked like it had been built by someone who had never been told there was another way.</p>
+                    <p>I had assumed there was a product for this. There wasn't, at least not one any of my friends had adopted. So over the next few weeks I sat down with each of them, one at a time, and asked them to walk me through a normal week.</p>
+                </div>
+            </section>
+
+            <!-- 02. Pain points -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; What I uncovered</span>
+                    <h2 class="h2 cs-section__title">The friction was so old it had gone invisible.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The most interesting thing about those conversations was that none of them thought they had a problem. They had built their entire business inside Excel and Google Sheets and the friction had become invisible. It took me asking them to narrate a single day, step by step, before the cost surfaced.</p>
+                    <p>Across all three coaches, the same pattern:</p>
+                    <ul>
+                        <li>Each managed <strong>20 to 30 clients</strong> at a time, in onboarding batches</li>
+                        <li>They were effectively <strong>on call 24/7</strong>. None had taken a day off in months</li>
+                        <li>Daily follow ups happened over <strong>WhatsApp and text</strong>. Programs, checkins, motivation, all in the same thread</li>
+                        <li>Every client got <strong>four spreadsheets</strong>. A diet sheet, a workout sheet, a progress sheet the client was supposed to log into daily, and a body measurements sheet updated weekly</li>
+                        <li><strong>Fridays and Saturdays were analysis days.</strong> The coach would open each client's sheets, look for patterns, and decide what to change</li>
+                        <li><strong>Sundays were feedback days.</strong> Long voice notes, scribbled tweaks, occasional video calls</li>
+                    </ul>
                 </div>
 
                 <blockquote class="cs-pull">
-                    <p class="cs-pull__text">"When a client asks a question at 11 PM, I either answer and don't sleep, or I don't answer and feel guilty about it. There's <em>no middle ground.</em>"</p>
-                    <p class="cs-pull__attr">Composite of conversations with online coaches, Bangalore + Pune</p>
+                    <p class="cs-pull__text">"When a client messages me at 11 PM, I either answer and don't sleep, or I don't answer and feel guilty about it. There's <em>no middle ground.</em>"</p>
+                    <p class="cs-pull__attr">Coach 2 of 3, Bangalore</p>
                 </blockquote>
 
-                <div class="cs-scope">
-                    <span class="cs-scope__label">Research scope</span>
-                    <div class="cs-scope__body">Informal conversations with seven coaches I already knew personally. Five online, two ran studios. Three rounds of competitive teardown across Trainerize, TrueCoach, MyPTHub, Everfit, and Fitbit Coach. <strong>Not a survey. Not a moderated study.</strong> The numbers above are directional, not citable, but they were consistent enough across conversations that I designed against them.</div>
-                </div>
-
                 <div class="cs-prose">
-                    <p>The 11 PM line was the design brief in one sentence. Whatever I built had to take the routine question off the human's plate without turning the coach into a chatbot.</p>
+                    <p>Then I went to the other side of the spreadsheet. I interviewed five of their clients. From the client side, the pain was different and louder. Logging a workout in Excel on a phone was awful. Reading a recipe out of a row of cells with no images was worse. Two of the clients I spoke to had quietly stopped logging months ago and were just lying about it in their weekly checkins.</p>
                 </div>
             </section>
 
-            <!-- 02. The bet -->
+            <!-- 03. Brief -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; The bet</span>
-                    <h2 class="h2 cs-section__title">Same data, opposite feeling surfaces.</h2>
-                    <p class="cs-section__sub">A wide screen for the coach. A phone for the client. One spine in the middle.</p>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; The brief I gave myself</span>
+                    <h2 class="h2 cs-section__title">A coach who can answer at 11 PM without being awake at 11 PM.</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>Most coaching tools treat the coach and the client as one user with two passwords. They share data like programs, meals, checkins, payments, but want completely different things. A coach needs dense tables, drag and drop builders, and revenue at a glance. A client needs a phone and as few taps as possible. So I split the product into three frontends sharing one Firebase backbone, and gave each surface permission to look like what its user actually wants.</p>
-                </div>
-
-                <div class="cs-archdiag" aria-label="System architecture">
-                    <div class="cs-archdiag__row">
-                        <div class="cs-archdiag__node">
-                            <strong>Coach</strong>
-                            <span>React + TypeScript<br>web portal</span>
-                        </div>
-                        <div class="cs-archdiag__node">
-                            <strong>Client · iOS</strong>
-                            <span>SwiftUI · HealthKit<br>Swift Charts</span>
-                        </div>
-                        <div class="cs-archdiag__node">
-                            <strong>Client · Android</strong>
-                            <span>Jetpack Compose<br>Health Connect</span>
-                        </div>
-                    </div>
-                    <div class="cs-archdiag__hub">
-                        <strong>Firebase · asia-south1</strong>
-                        <span>Firestore · Storage · ~110 Cloud Functions</span>
-                    </div>
-                    <div class="cs-archdiag__row">
-                        <div class="cs-archdiag__node">
-                            <strong>Claude</strong>
-                            <span>Conversational coach</span>
-                        </div>
-                        <div class="cs-archdiag__node">
-                            <strong>Gemini</strong>
-                            <span>Meal vision, macros</span>
-                        </div>
-                        <div class="cs-archdiag__node">
-                            <strong>Whisper</strong>
-                            <span>Voice notes</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="cs-figure__caption">Fig 1. Three frontends, one Firebase spine, three model providers split by job.</p>
-
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Decision</span>
-                    <div class="cs-decision__body"><strong>Native on both stores, not React Native.</strong> The slower path, 2× the screen budget. The win: HealthKit, Health Connect, biometric lock, embedded video for technique demos, Dynamic Island toasts. Fitness clients live on their phones, and the difference between idiomatic SwiftUI/Compose and a wrapped webview is felt in ten seconds.</div>
-                </div>
-
-                <div class="cs-prose">
-                    <p>Two opinionated defaults followed. <strong>India first, not India friendly.</strong> Indian food database, GST compliant invoicing, Razorpay primary with Stripe secondary, WhatsApp Business API, asia-south1 region. The beachhead is Indian coaches, so India is the unmarked case and the rest of the world is the configuration. <strong>Multi coach by default.</strong> RBAC, head coach permissions, audit events. A studio with five trainers runs on the same product as a solo coach. Building multi tenancy last would've forced a rewrite.</p>
+                    <p>Build something that takes the routine question off the coach's plate. Give the client a phone first surface that doesn't feel like a spreadsheet. And let the coach stay the coach, instead of becoming a chatbot.</p>
                 </div>
             </section>
 
-            <!-- 03. Three surfaces, one product (merged Coach + Client) -->
+            <!-- 04. Solution -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Three surfaces</span>
-                    <h2 class="h2 cs-section__title">One product, two postures.</h2>
-                    <p class="cs-section__sub">The coach workspace replaces six tools. The client app is built for the phone, with as few taps as possible.</p>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; What I built</span>
+                    <h2 class="h2 cs-section__title">Three native surfaces, one Firebase spine, three AI providers split by job.</h2>
+                    <p class="cs-section__sub">Velotic shipped in twelve weeks. A coach portal on the web, a client app on iOS and Android, and an AI Coach that sounds like the human the client signed up for.</p>
                 </header>
 
-                <h3 class="h3" style="margin-top: var(--s-6); margin-bottom: var(--s-3);">The coach workspace</h3>
+                <h3 class="h3 cs-h3">The coach portal</h3>
                 <div class="cs-prose">
-                    <p>One login lets a coach run a paid discovery call, take a client through onboarding, assign a workout and nutrition plan, send a custom form, chat over WhatsApp or in the app, charge in INR or USD, and watch their MRR move. Thirteen modules in total. Six daily driver surfaces below. The rest (Clients, Workout Studio, Templates, Forms Builder, Calendar, Analytics, Team) sit behind a primary nav rail.</p>
+                    <p>The web portal is where the coach lives. Seventeen pages organized into a daily driver set (Revenue, Pipeline, Clients, Chat, Workout Studio, Diet Planner) and a longer tail set (Forms, Templates, Calendar, Analytics, Team Management, Invoices, Discovery, Pending Clients). Workouts and diets are built once as templates, then assigned. The chat surface is the same in app thread the client sees, with a WhatsApp Business API bridge for clients who won't move off WhatsApp.</p>
+                    <p>The point of the portal isn't more features. It's to collapse four spreadsheets per client into one screen the coach can see at a glance, and to make the Friday analysis session a five minute one.</p>
                 </div>
 
-                <!-- TODO: replace this compact list with annotated coach portal screenshots after the next design partner pass -->
-                <div class="cs-modules">
-                    <div class="cs-module cs-module--accent">
-                        <div class="cs-module__num">01</div>
-                        <div class="cs-module__name">Revenue</div>
-                        <div class="cs-module__sub">MRR, churn, active subs, CSV export</div>
-                    </div>
-                    <div class="cs-module cs-module--accent">
-                        <div class="cs-module__num">02</div>
-                        <div class="cs-module__name">Pipeline</div>
-                        <div class="cs-module__sub">Lead funnel · view → call → convert</div>
-                    </div>
-                    <div class="cs-module">
-                        <div class="cs-module__num">03</div>
-                        <div class="cs-module__name">Workout Planner</div>
-                        <div class="cs-module__sub">Drag and drop weekly builder</div>
-                    </div>
-                    <div class="cs-module">
-                        <div class="cs-module__num">04</div>
-                        <div class="cs-module__name">Diet Planner</div>
-                        <div class="cs-module__sub">Ingredient level macros, Indian food DB</div>
-                    </div>
-                    <div class="cs-module">
-                        <div class="cs-module__num">05</div>
-                        <div class="cs-module__name">Chat</div>
-                        <div class="cs-module__sub">In app · WhatsApp Business API</div>
-                    </div>
-                    <div class="cs-module">
-                        <div class="cs-module__num">06</div>
-                        <div class="cs-module__name">Invoicing</div>
-                        <div class="cs-module__sub">PDF, GST/VAT, INR/USD/GBP/EUR</div>
-                    </div>
-                </div>
-                <p class="cs-figure__caption">Fig 2. Six of the thirteen coach modules. The two tinted are the daily entry points where most coach time is spent.</p>
-
-                <h3 class="h3" style="margin-top: var(--s-8); margin-bottom: var(--s-3);">The client app</h3>
+                <h3 class="h3 cs-h3">The client app</h3>
                 <div class="cs-prose">
-                    <p>SwiftUI on iOS 18 with Swift Charts, HealthKit, biometric lock, Dynamic Island toasts. Jetpack Compose on Material 3 with Hilt, WorkManager, Health Connect, ExoPlayer for exercise demos. Both apps share five tabs and the same data model.</p>
+                    <p>Five tabs on the phone: Home, Workouts, Habits, Meals, Settings. SwiftUI on iOS 18 with HealthKit, App Attest, biometric lock, and Dynamic Island toasts. Jetpack Compose on Android with Play Integrity, Health Connect, Hilt, and ExoPlayer for exercise demo videos.</p>
+                    <p>A workout logs sets, reps, and weight, with optional video form checks. A meal can be logged three ways: a photo (Gemini parses it into ingredients and macros), a voice note ("two eggs, toast, black coffee" — Whisper transcribes, Gemini extracts), or text search against an Indian food database. Body measurements roll up into a single weekly card. None of it feels like a spreadsheet.</p>
                 </div>
 
                 <div class="cs-figure-grid">
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/screen-1.png" alt="Velotic client app, Android home"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/screen-2.png" alt="Velotic client app, Android workout"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-week.png" alt="Insight Card, At a glance"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-home.png" alt="Velotic client app, iOS home"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-workouts.png" alt="Velotic client app, iOS workouts"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-meals.png" alt="Velotic client app, iOS meals"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-analysis.png" alt="Velotic client app, AI food analysis"></div>
                 </div>
-                <p class="cs-figure__caption">Fig 3. The client app on Android. Insight Cards are AI generated weekly readings. Narrative not numbers.</p>
+                <p class="cs-figure__caption">Fig 1. Client app on iOS. Home dashboard, workout plans, meal tracking, and AI-powered food analysis.</p>
 
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Tradeoff</span>
-                    <div class="cs-decision__body"><strong>On Android, the AI Coach got a bottom nav tab. On iOS, it lives one tap deeper.</strong> Android users tend to discover by tab. iOS users tend to discover by gesture and depth. Promoting the AI Coach on Android put a bet on a single product idea above platform symmetry. I'd rather two idiomatic apps than one app duplicated twice.</div>
-                </div>
-            </section>
-
-            <!-- Mid page lateral nav, high engagement waypoint -->
-            <aside class="cs-jump reveal" aria-label="Other case studies">
-                <div class="cs-jump__label">Halfway through · Jump to another case study</div>
-                <div class="cs-jump__row">
-                    <a class="cs-jump__card cs-jump__card--myntra" href="Myntra.html">
-                        <span class="cs-jump__year">Myntra</span>
-                        <span class="cs-jump__title">Rebuilding the wishlist from scratch</span>
-                        <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="cs-jump__card cs-jump__card--workiva" href="Workiva.html">
-                        <span class="cs-jump__year">Workiva</span>
-                        <span class="cs-jump__title">Making anomaly detection less painful</span>
-                        <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="cs-jump__card cs-jump__card--deere" href="JohnDeere.html">
-                        <span class="cs-jump__year">John Deere</span>
-                        <span class="cs-jump__title">Designing intuitive cab displays</span>
-                        <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                    </a>
-                </div>
-            </aside>
-
-            <!-- 05. AI Coach -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; AI Coach</span>
-                    <h2 class="h2 cs-section__title">An AI that sounds like the coach the client signed up for.</h2>
-                    <p class="cs-section__sub">The category bet, and the one decision the rest of the product has to defend.</p>
-                </header>
+                <h3 class="h3 cs-h3">The AI Coach</h3>
                 <div class="cs-prose">
-                    <p>The easy build is a generic chatbot bolted onto the side. That kills the product. A client paid to be coached by <em>this human</em>. If the AI sounds like a generic LLM, the coach's brand is the thing being diluted.</p>
-                    <p>So the system prompt is assembled per request from the coach's own voice. Their bio, certifications, methodology, communication tone, plus a panel of editable <em>AI directives</em> they can write themselves. The client's active workout plan, nutrition targets, last assessment, and recent logs are layered on top.</p>
-                </div>
-
-                <div class="cs-prompt" aria-label="System prompt anatomy">
-                    <div class="cs-prompt__layer cs-prompt__layer--safety">
-                        <span class="cs-prompt__tag">Safety · static</span>
-                        <span class="cs-prompt__text">You are a coaching assistant. Never give medical diagnoses. Never modify the client's assigned plan. Two pass sanitizer strips injection attempts before this prompt is built.</span>
-                    </div>
-                    <div class="cs-prompt__layer cs-prompt__layer--coach">
-                        <span class="cs-prompt__tag">Coach · per request</span>
-                        <span class="cs-prompt__text">Speak as Coach Priya. 8 years strength training, NASM certified, calm and matter of fact. AI directives: "always remind clients to prioritise sleep before macros. Never say 'crush it'."</span>
-                    </div>
-                    <div class="cs-prompt__layer cs-prompt__layer--client">
-                        <span class="cs-prompt__tag">Client · per request</span>
-                        <span class="cs-prompt__text">Anika · goal: fat loss, current week 3 of 12. Assigned: 4 day upper/lower split, 1,650 kcal / 130p / 165c / 50f. Last assessment 11 days ago. Logged 5 workouts, 6 meal days this week.</span>
-                    </div>
-                    <div class="cs-prompt__layer cs-prompt__layer--task">
-                        <span class="cs-prompt__tag">Task</span>
-                        <span class="cs-prompt__text">User: "Can I have ice cream tonight?" Answer in Coach Priya's voice, against Anika's current targets.</span>
-                    </div>
-                </div>
-                <p class="cs-figure__caption">Fig 4. The system prompt as four stacked layers. The top two (safety, coach voice) are stable. The bottom two (client state, task) change every message.</p>
-
-                <div class="cs-prose">
-                    <p>Three model providers, split by job.</p>
+                    <p>The bet that the rest of the product had to defend: AI in the base tier, not premium, and trained on the coach's own voice. Every message assembles a fresh system prompt from the coach's bio, certifications, methodology, and an editable directives panel they write themselves. The client's current plan, recent assessments, and last seven days of logs layer on top.</p>
                 </div>
 
                 <div class="cs-decision">
-                    <span class="cs-decision__label">Claude</span>
-                    <div class="cs-decision__body"><strong>Conversational coach.</strong> Reasons well over messy human context. 50 messages/day per client, 20 message window, rate limited and audited.</div>
+                    <span class="cs-decision__label">Models</span>
+                    <div class="cs-decision__body">
+                        <strong>Claude Haiku 4.5</strong> for chat. Capped at 50 messages per client per day with a 20 message rolling context window, persisted in Firestore. <strong>Gemini 3.1 Flash Lite</strong> for meal photo analysis and free text nutrition parsing. <strong>OpenAI Whisper</strong> for voice notes. Each picked for the job, not the brand.
+                    </div>
                 </div>
+
                 <div class="cs-decision">
-                    <span class="cs-decision__label">Gemini</span>
-                    <div class="cs-decision__body"><strong>Food vision.</strong> Cheaper than Claude vision, attuned to Indian cuisine in practice. Returns structured macros from a photo or a free text "two eggs and toast."</div>
-                </div>
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Whisper</span>
-                    <div class="cs-decision__body"><strong>Voice notes.</strong> The simplest call. A client speaks the meal. The AI logs it.</div>
+                    <span class="cs-decision__label">Safety</span>
+                    <div class="cs-decision__body">
+                        Every coach supplied string runs through a regex sanitizer before it reaches the model. Patterns like "ignore previous instructions" and "act as" never make it into the prompt. The AI can be coached by the coach. It cannot be jailbroken by the client. Every reply carries a small "AI generated · Not medical advice" disclaimer.
+                    </div>
                 </div>
 
                 <div class="cs-figure-grid">
@@ -317,63 +201,115 @@
                     <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-calorie.png" alt="Insight Card, Calorie dense lunches"></div>
                     <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-dinner.png" alt="Insight Card, Dinner drives sugar"></div>
                 </div>
-                <p class="cs-figure__caption">Fig 5. Insight Cards are the AI's user facing surface. Single fact headline, monospaced data line, soft drill down. Same component, dozens of stories.</p>
+                <p class="cs-figure__caption">Fig 2. Insight Cards are the AI's user facing surface. One pattern, dozens of stories, all stamped with the coach's own voice.</p>
+            </section>
 
+            <!-- 05. What worked, didn't, next -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; What worked, what didn't, what's next</span>
+                    <h2 class="h2 cs-section__title">The honest version.</h2>
+                </header>
+
+                <h3 class="h3 cs-h3">What worked</h3>
                 <div class="cs-prose">
-                    <p>Two design moves matter more than the model choice. Every coach supplied string runs through a two pass prompt injection sanitizer before it reaches the model. The AI can be coached by the coach but not jailbroken by the client. And every reply carries a small "AI generated · Not medical advice" disclaimer.</p>
+                    <ul>
+                        <li><strong>AI in the base tier was the right call.</strong> Trainerize gates it behind their top plan. I didn't. All five coaches use it daily, and clients ask it more questions than they ask the human.</li>
+                        <li><strong>One token, three platforms.</strong> The design system uses identical token names across web, iOS, and Android (<em>AccentGreen</em>, <em>BgBase</em>, <em>MacroProtein</em>). Roughly 195k lines of platform code stayed visually coherent because the names did.</li>
+                        <li><strong>Voice beat photo for meal logging.</strong> Not what I expected. Clients walk and talk into the app instead of stopping to compose a photo. Voice logs outpaced photo logs in the first month of beta.</li>
+                    </ul>
+                </div>
+
+                <h3 class="h3 cs-h3">What didn't</h3>
+                <div class="cs-prose">
+                    <ul>
+                        <li><strong>The AI directives panel is too powerful and too unguided.</strong> All five coaches needed me to set theirs up by hand. v2 needs a guided builder, not a free form textarea.</li>
+                        <li><strong>The marketing site is a placeholder.</strong> All inbound has been WhatsApp introductions from the original three coaches. That works for a beta of five. It will not scale.</li>
+                        <li><strong>I over designed the Insight Card system before clients had seen one.</strong> The first version would have been good enough. Three weeks lost on a component that, in hindsight, wanted to be simpler.</li>
+                    </ul>
+                </div>
+
+                <h3 class="h3 cs-h3">What's next</h3>
+                <div class="cs-prose">
+                    <ul>
+                        <li><strong>A 40% AI deflection target through July 2026.</strong> Routine client questions resolved by AI without escalating to the human coach, measured weekly across the five coach books.</li>
+                        <li><strong>A guided builder for AI directives</strong>, so new coaches can self serve their own voice setup in under ten minutes.</li>
+                        <li><strong>Wearable integrations.</strong> Strava, Garmin, Apple Watch. Deferred from v1, on deck for v2.</li>
+                        <li><strong>A real marketing site</strong> and a paid acquisition test in Tier 1 Indian metros.</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- 06. Cuts and bets -->
-            <section class="cs-section reveal">
+            <!-- 06. Current status -->
+            <section class="cs-section reveal cs-impact">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Cuts and bets</span>
-                    <h2 class="h2 cs-section__title">What I almost shipped, and didn't.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Where it stands today</span>
+                    <h2 class="h2 cs-section__title">Pre revenue. Past the question of whether anyone would use it.</h2>
                 </header>
+
+                <div class="cs-bignums">
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">5</div>
+                        <div class="cs-bignum__label">Coaches onboarded</div>
+                        <div class="cs-bignum__cap">3 original friends using it free. 2 additional coaches inbound after launch, together holding roughly 2,000 clients between them.</div>
+                    </div>
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">2,150</div>
+                        <div class="cs-bignum__label">Clients served</div>
+                        <div class="cs-bignum__cap">Active in private beta as of May 2026. Spread across the 5 coach books. No paid acquisition has run yet.</div>
+                    </div>
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">~195k</div>
+                        <div class="cs-bignum__label">Lines of platform code</div>
+                        <div class="cs-bignum__cap">React + TypeScript web (~130k), Jetpack Compose Android (~28.5k), SwiftUI iOS (~24k), Cloud Functions (~37k). Solo authored.</div>
+                    </div>
+                </div>
+
                 <div class="cs-prose">
-                    <p>Three months solo means everything ships at the cost of something else. Two cuts mattered more than the rest.</p>
-                </div>
-
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Cut</span>
-                    <div class="cs-decision__body"><strong>The AI Coach as a paid addon.</strong> The obvious move was to gate it behind the top tier. That's what Trainerize does. I almost did. But if AI is premium, coaches won't trust it to deflect routine questions because only their top tier clients see it. The whole "11 PM has no middle ground" thesis dies. So it went into the base tier and I accepted thinner margins.</div>
-                </div>
-
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Cut</span>
-                    <div class="cs-decision__body"><strong>Strava / Garmin / Apple Watch integrations.</strong> Tempting. They look impressive on a feature matrix. But the v1 user is an online coach with 5 to 50 clients, not a quantified self athlete. Wearable data without a coach who knows how to read it is noise. Deferred to v2.</div>
+                    <p>Two of the post launch coaches found me through WhatsApp introductions from the original three. Neither saw a marketing site, a deck, or an ad. They onboarded because someone they trusted told them this thing existed and was free for now. That's an early signal worth more to me than any vanity metric the beta could throw.</p>
                 </div>
             </section>
 
-            <!-- 07. Where it landed -->
+            <!-- 07. Reflection -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Where it landed</span>
-                    <h2 class="h2 cs-section__title">Feature complete, premarket, honest about it.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(07) &nbsp; What I'm carrying forward</span>
+                    <h2 class="h2 cs-section__title">Two things from this one that I'll bring to the next.</h2>
                 </header>
-
-                <p class="cs-status"><span class="cs-status__dot"></span>Status · in private beta, May 2026</p>
-
                 <div class="cs-prose">
-                    <p>The coach portal (13 modules), the client apps on iOS and Android (10 modules each), the AI layer, the design system, and a preseed pitch deck all shipped in twelve weeks. No paying users yet, no LTV:CAC to report, no engagement claims I can stand behind. What I can claim is the falsifiable next test.</p>
-                </div>
-
-                <div class="cs-bigstat">
-                    <div class="cs-bigstat__num"><em>40%</em> AI deflection</div>
-                    <p class="cs-bigstat__caption">Pilot target with five design partner coaches starting June 2026. Routine client questions resolved by the AI Coach without escalating to the human, measured weekly. If it holds across a month, the product idea earns the next round. If it doesn't, the AI Coach needs surgery before anything else ships.</p>
-                </div>
-
-                <div class="cs-prose">
-                    <p>The two takeaways I'm carrying into the next one. A token named design system beats a pixel perfect one. <em>AccentGreen</em> meaning the same thing on three platforms is what kept ~150k lines of platform code coherent. And the unit of design isn't a screen, it's the conversation between surfaces. The most valuable diagram I drew was the workflow of a workout from coach planner → Firestore → client app → log → coach analytics, not any single screen.</p>
+                    <p><strong>A token named design system beats a pixel perfect one.</strong> <em>AccentGreen</em> meaning the same thing in three codebases is what kept this coherent at solo scale. The token names were more load bearing than any individual screen.</p>
+                    <p><strong>The unit of design wasn't a screen, it was the conversation between surfaces.</strong> The most useful diagram I drew the whole twelve weeks wasn't a UI mockup. It was the flow of a single workout from coach planner to Firestore to client app to client log to coach analytics. Once that flow read clean, every screen that touched it got easier to design.</p>
                 </div>
             </section>
 
         </div>
 
+        <!-- Other case studies -->
+        <aside class="cs-jump reveal container" aria-label="Other case studies">
+            <div class="cs-jump__label">Jump to another case study</div>
+            <div class="cs-jump__row">
+                <a class="cs-jump__card cs-jump__card--myntra" href="Myntra.html">
+                    <span class="cs-jump__year">Myntra</span>
+                    <span class="cs-jump__title">Rebuilding the wishlist from scratch</span>
+                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="cs-jump__card cs-jump__card--workiva" href="Workiva.html">
+                    <span class="cs-jump__year">Workiva</span>
+                    <span class="cs-jump__title">Making anomaly detection less painful</span>
+                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="cs-jump__card cs-jump__card--deere" href="JohnDeere.html">
+                    <span class="cs-jump__year">John Deere</span>
+                    <span class="cs-jump__title">Designing intuitive cab displays</span>
+                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </aside>
+
         <!-- Next project -->
         <section class="cs-next">
             <div class="container">
-                <span class="eyebrow reveal">(07) &nbsp; Next case study</span>
+                <span class="eyebrow reveal">Next case study</span>
                 <div class="work-grid" style="margin-top: var(--s-6);">
                     <a class="work-card work-card--myntra reveal" href="Myntra.html">
                         <div class="work-card__media">
@@ -420,7 +356,7 @@
                     <h4>Connect</h4>
                     <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
                     <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
                 </div>
                 <div class="footer__col">
                     <h4>Now</h4>
@@ -434,6 +370,6 @@
         </div>
     </footer>
 
-    <script src="site.js?v=toc3" defer></script>
+    <script src="site.js?v=toc5" defer></script>
 </body>
 </html>
