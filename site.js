@@ -142,9 +142,11 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const entries = Array.from(proseRoot.querySelectorAll('.cs-section'))
     .map((sec) => {
+      const eyebrowEl = sec.querySelector('.cs-section__eyebrow');
       const titleEl = sec.querySelector('.cs-section__title');
       if (!titleEl) return null;
-      const title = titleEl.textContent.trim();
+      const raw = eyebrowEl ? eyebrowEl.textContent.trim() : titleEl.textContent.trim();
+      const title = raw.replace(/^\(\d+\)\s*/, '');
       if (!sec.id) {
         sec.id =
           'sec-' +

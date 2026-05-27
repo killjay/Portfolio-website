@@ -132,6 +132,11 @@
                     <p class="cs-pull__attr">Coach 2 of 3, Bangalore</p>
                 </blockquote>
 
+                <div class="cs-figure">
+                    <div class="cs-figure__img"><img src="Images/Velotic/Group 88.png" alt="Eighteen spreadsheets every coach's client updates daily — diet sheets, workout logs, progress trackers, measurement tables"></div>
+                    <p class="cs-figure__caption">Fig 1. Eighteen sheets per client. An hour and a half of daily data entry, with constant risk of clients accidentally overwriting coach edits.</p>
+                </div>
+
                 <div class="cs-prose">
                     <p>Then I went to the other side of the spreadsheet. I interviewed five of their clients. From the client side, the pain was different and louder. Logging a workout in Excel on a phone was awful. Reading a recipe out of a row of cells with no images was worse. Two of the clients I spoke to had quietly stopped logging months ago and were just lying about it in their weekly checkins.</p>
                 </div>
@@ -174,7 +179,7 @@
                     <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-meals.png" alt="Velotic client app, iOS meals"></div>
                     <div class="cs-figure-grid__item"><img src="Images/Velotic/mobile-analysis.png" alt="Velotic client app, AI food analysis"></div>
                 </div>
-                <p class="cs-figure__caption">Fig 1. Client app on iOS. Home dashboard, workout plans, meal tracking, and AI-powered food analysis.</p>
+                <p class="cs-figure__caption">Fig 2. Client app on iOS. Home dashboard, workout plans, meal tracking, and AI-powered food analysis.</p>
 
                 <h3 class="h3 cs-h3">The AI Coach</h3>
                 <div class="cs-prose">
@@ -195,13 +200,6 @@
                     </div>
                 </div>
 
-                <div class="cs-figure-grid">
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-fiber.png" alt="Insight Card, Fiber breakdown"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-sugar.png" alt="Insight Card, Sugar in yogurt"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-calorie.png" alt="Insight Card, Calorie dense lunches"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/Velotic/insight-dinner.png" alt="Insight Card, Dinner drives sugar"></div>
-                </div>
-                <p class="cs-figure__caption">Fig 2. Insight Cards are the AI's user facing surface. One pattern, dozens of stories, all stamped with the coach's own voice.</p>
             </section>
 
             <!-- 05. What worked, didn't, next -->
@@ -211,32 +209,47 @@
                     <h2 class="h2 cs-section__title">The honest version.</h2>
                 </header>
 
-                <h3 class="h3 cs-h3">What worked</h3>
-                <div class="cs-prose">
-                    <ul>
-                        <li><strong>AI in the base tier was the right call.</strong> Trainerize gates it behind their top plan. I didn't. All five coaches use it daily, and clients ask it more questions than they ask the human.</li>
-                        <li><strong>One token, three platforms.</strong> The design system uses identical token names across web, iOS, and Android (<em>AccentGreen</em>, <em>BgBase</em>, <em>MacroProtein</em>). Roughly 195k lines of platform code stayed visually coherent because the names did.</li>
-                        <li><strong>Voice beat photo for meal logging.</strong> Not what I expected. Clients walk and talk into the app instead of stopping to compose a photo. Voice logs outpaced photo logs in the first month of beta.</li>
-                    </ul>
-                </div>
+                <div class="cs-honest-split">
+                    <div class="cs-honest-split__content">
+                        <h3 class="h3 cs-h3">What worked</h3>
+                        <div class="cs-prose">
+                            <ul>
+                                <li><strong>AI in the base tier was the right call.</strong> Trainerize gates it behind their top plan. I didn't. All five coaches use it daily, and clients ask it more questions than they ask the human.</li>
+                                <li><strong>One token, three platforms.</strong> The design system uses identical token names across web, iOS, and Android (<em>AccentGreen</em>, <em>BgBase</em>, <em>MacroProtein</em>). Roughly 195k lines of platform code stayed visually coherent because the names did.</li>
+                                <li><strong>Voice beat photo for meal logging.</strong> Not what I expected. Clients walk and talk into the app instead of stopping to compose a photo. Voice logs outpaced photo logs in the first month of beta.</li>
+                            </ul>
+                        </div>
 
-                <h3 class="h3 cs-h3">What didn't</h3>
-                <div class="cs-prose">
-                    <ul>
-                        <li><strong>The AI directives panel is too powerful and too unguided.</strong> All five coaches needed me to set theirs up by hand. v2 needs a guided builder, not a free form textarea.</li>
-                        <li><strong>The marketing site is a placeholder.</strong> All inbound has been WhatsApp introductions from the original three coaches. That works for a beta of five. It will not scale.</li>
-                        <li><strong>I over designed the Insight Card system before clients had seen one.</strong> The first version would have been good enough. Three weeks lost on a component that, in hindsight, wanted to be simpler.</li>
-                    </ul>
-                </div>
+                        <h3 class="h3 cs-h3">What didn't</h3>
+                        <div class="cs-prose">
+                            <ul>
+                                <li><strong>The AI directives panel is too powerful and too unguided.</strong> All five coaches needed me to set theirs up by hand. v2 needs a guided builder, not a free form textarea.</li>
+                                <li><strong>The marketing site is a placeholder.</strong> All inbound has been WhatsApp introductions from the original three coaches. That works for a beta of five. It will not scale.</li>
+                                <li><strong>I over designed the Insight Card system before clients had seen one.</strong> The first version would have been good enough. Three weeks lost on a component that, in hindsight, wanted to be simpler.</li>
+                            </ul>
+                        </div>
 
-                <h3 class="h3 cs-h3">What's next</h3>
-                <div class="cs-prose">
-                    <ul>
-                        <li><strong>A 40% AI deflection target through July 2026.</strong> Routine client questions resolved by AI without escalating to the human coach, measured weekly across the five coach books.</li>
-                        <li><strong>A guided builder for AI directives</strong>, so new coaches can self serve their own voice setup in under ten minutes.</li>
-                        <li><strong>Wearable integrations.</strong> Strava, Garmin, Apple Watch. Deferred from v1, on deck for v2.</li>
-                        <li><strong>A real marketing site</strong> and a paid acquisition test in Tier 1 Indian metros.</li>
-                    </ul>
+                        <h3 class="h3 cs-h3">What's next</h3>
+                        <div class="cs-prose">
+                            <ul>
+                                <li><strong>A 40% AI deflection target through July 2026.</strong> Routine client questions resolved by AI without escalating to the human coach, measured weekly across the five coach books.</li>
+                                <li><strong>A guided builder for AI directives</strong>, so new coaches can self serve their own voice setup in under ten minutes.</li>
+                                <li><strong>Wearable integrations.</strong> Strava, Garmin, Apple Watch. Deferred from v1, on deck for v2.</li>
+                                <li><strong>A real marketing site</strong> and a paid acquisition test in Tier 1 Indian metros.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cs-honest-split__video">
+                        <div class="cs-figure">
+                            <div class="cs-figure__img">
+                                <video autoplay loop muted playsinline>
+                                    <source src="Images/Velotic/videos/Velotic Mobile.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="cs-figure__caption">Fig 3. Fifteen minutes replaces ninety. The same daily update that took an hour and a half across eighteen spreadsheets.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -284,67 +297,13 @@
 
         </div>
 
-        <!-- Other case studies -->
-        <aside class="cs-jump reveal container" aria-label="Other case studies">
-            <div class="cs-jump__label">Jump to another case study</div>
-            <div class="cs-jump__row">
-                <a class="cs-jump__card cs-jump__card--myntra" href="Myntra.html">
-                    <span class="cs-jump__year">Myntra</span>
-                    <span class="cs-jump__title">Rebuilding the wishlist from scratch</span>
-                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                </a>
-                <a class="cs-jump__card cs-jump__card--workiva" href="Workiva.html">
-                    <span class="cs-jump__year">Workiva</span>
-                    <span class="cs-jump__title">Making anomaly detection less painful</span>
-                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                </a>
-                <a class="cs-jump__card cs-jump__card--deere" href="JohnDeere.html">
-                    <span class="cs-jump__year">John Deere</span>
-                    <span class="cs-jump__title">Designing intuitive cab displays</span>
-                    <span class="cs-jump__arrow" aria-hidden="true">→</span>
-                </a>
-            </div>
-        </aside>
-
-        <!-- Next project -->
-        <section class="cs-next">
-            <div class="container">
-                <span class="eyebrow reveal">Next case study</span>
-                <div class="work-grid" style="margin-top: var(--s-6);">
-                    <a class="work-card work-card--myntra reveal" href="Myntra.html">
-                        <div class="work-card__media">
-                            <img src="Images/Shirts.png" alt="Myntra preview">
-                        </div>
-                        <div class="work-card__head">
-                            <h3 class="work-card__title"><em>Reimagining</em> the wishlist experience</h3>
-                            <span class="work-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                        <p class="work-card__meta">Cutting bounce rates by 34% on a fashion platform serving 75M+ users.</p>
-                    </a>
-                    <a class="work-card work-card--workiva reveal" href="Workiva.html">
-                        <div class="work-card__media">
-                            <img src="Images/Anomaly.png" alt="Workiva preview">
-                        </div>
-                        <div class="work-card__head">
-                            <h3 class="work-card__title">AI powered <em>anomaly</em> detection</h3>
-                            <span class="work-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                        <p class="work-card__meta">An AI assist for financial analysts hunting anomalies in collaborative spreadsheets.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
 
     </main>
 
     <footer class="footer">
         <div class="container">
-            <h2 class="footer__wordmark">Nandha&nbsp;<em>Kumar</em></h2>
+
             <div class="footer__cols">
-                <div class="footer__col">
-                    <h4>Studio</h4>
-                    <p>Product designer working at the intersection of AI, immersive tech, and everyday usability. Open to senior product design roles.</p>
-                </div>
                 <div class="footer__col">
                     <h4>Navigate</h4>
                     <a href="index.html">Home</a>
@@ -356,11 +315,7 @@
                     <h4>Connect</h4>
                     <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
                     <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-                </div>
-                <div class="footer__col">
-                    <h4>Now</h4>
-                    <p>Available for new product design roles. San Francisco, PT.</p>
+                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </div>
             <div class="footer__legal">

@@ -1076,6 +1076,14 @@ h1, h2, h3, h4, h5 {
   background: var(--bg-card);
   border: 1px solid var(--hairline-2);
 }
+.cs-tint-myntra .solution__media {
+  max-width: 35%;
+  margin: 0 auto;
+}
+.cs-tint-deere .solution__media {
+  max-width: 60%;
+  margin: 0 auto;
+}
 .solution__media img { width: 100%; height: auto; display: block; }
 .solution__label {
   font-family: var(--font-mono);
@@ -1130,7 +1138,7 @@ h1, h2, h3, h4, h5 {
   background: var(--bg-card);
   border: 1px solid var(--hairline-2);
 }
-.cs-figure__img img { width: 100%; height: auto; display: block; }
+.cs-figure__img img, .cs-figure__img video { width: 100%; height: auto; display: block; }
 .cs-figure__caption {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1144,7 +1152,7 @@ h1, h2, h3, h4, h5 {
 /* Figure grid — used for screen line-ups (e.g. phone screens) */
 .cs-figure-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--s-4);
   margin: var(--s-8) 0 var(--s-3);
 }
@@ -1742,10 +1750,13 @@ h1, h2, h3, h4, h5 {
 .footer__wordmark em { font-style: italic; color: var(--accent); }
 .footer__cols {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: var(--s-6);
   padding-top: var(--s-6);
   border-top: 1px solid var(--hairline);
+}
+.footer__col:last-child {
+  text-align: right;
 }
 @media (max-width: 720px) { .footer__cols { grid-template-columns: 1fr 1fr; } }
 .footer__col h4 {
@@ -2017,71 +2028,6 @@ body.is-lightbox-open { overflow: hidden; }
   .cs-tldr__val { font-size: 15px; }
 }
 
-/* =========================================================
-   Mid-page lateral nav — sibling case study jumps
-   ========================================================= */
-.cs-jump {
-  margin-top: var(--s-12);
-  margin-bottom: var(--s-12);
-  padding: var(--s-6) 0;
-  border-top: 1px solid var(--hairline);
-  border-bottom: 1px solid var(--hairline);
-}
-.cs-jump__label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-  margin-bottom: var(--s-5);
-  text-align: center;
-}
-.cs-jump__row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--s-4);
-}
-.cs-jump__card {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: var(--s-3);
-  align-items: center;
-  padding: var(--s-4) var(--s-5);
-  background: var(--bg-card);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-m, 12px);
-  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
-}
-.cs-jump__card:hover {
-  transform: translateY(-2px);
-  border-color: var(--ink);
-}
-.cs-jump__year {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-}
-.cs-jump__title {
-  font-family: var(--font-display);
-  font-size: 14px;
-  line-height: 1.35;
-  color: var(--ink);
-}
-.cs-jump__arrow {
-  font-family: var(--font-mono);
-  font-size: 16px;
-  color: var(--muted-2);
-  transition: transform 0.25s var(--ease), color 0.25s var(--ease);
-}
-.cs-jump__card:hover .cs-jump__arrow {
-  color: var(--accent);
-  transform: translateX(2px);
-}
-@media (max-width: 900px) {
-  .cs-jump__row { grid-template-columns: 1fr; }
-}
 
 /* =========================================================
    Tri-tier case study layout (Tier I rail + Tier II body + Tier III accordion)
@@ -2410,3 +2356,41 @@ body.is-lightbox-open { overflow: hidden; }
   margin: var(--s-8) 0 var(--s-3);
 }
 .cs-section .cs-h3:first-of-type { margin-top: var(--s-6); }
+
+/* Honest section split: content left, phone video right */
+.cs-honest-split {
+  display: flex;
+  gap: var(--s-8);
+  align-items: flex-start;
+}
+.cs-honest-split__content {
+  flex: 1;
+  min-width: 0;
+}
+.cs-honest-split__content .cs-h3:first-of-type {
+  margin-top: 0;
+}
+.cs-honest-split__video {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 100px;
+}
+.cs-honest-split__video .cs-figure {
+  margin: 0;
+}
+.cs-honest-split__video video {
+  width: 100%;
+  border-radius: 12px;
+}
+@media (max-width: 900px) {
+  .cs-honest-split {
+    flex-direction: column-reverse;
+  }
+  .cs-honest-split__video {
+    flex: none;
+    width: 280px;
+    max-width: 100%;
+    position: static;
+    margin: 0 auto var(--s-6);
+  }
+}
