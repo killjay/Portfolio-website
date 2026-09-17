@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1202 633" width="1202" height="633" role="img" aria-label="The design workflow at Runara: Figma to Claude Code to a pull request, reviewed by an agent, merged back to the design system and to Figma">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 11px; letter-spacing: 1.4px; fill: #1A1B1D; }
+      .mono-muted { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 11px; letter-spacing: 1.4px; fill: rgba(26,27,29,0.5); }
+      .serif { font-family: 'Libre Baskerville', Georgia, serif; font-size: 15px; fill: #1A1B1D; }
+      .serif-i { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 15px; fill: #C8632E; }
+      .node { fill: #F9F2E6; stroke: rgba(26,27,29,0.14); }
+      .node-accent { fill: #F9F2E6; stroke: #C8632E; stroke-width: 1.5; }
+      .line { stroke: rgba(26,27,29,0.35); stroke-width: 1.2; fill: none; }
+      .line-accent { stroke: #C8632E; stroke-width: 1.2; fill: none; }
+      .dash { stroke: rgba(26,27,29,0.35); stroke-width: 1.2; fill: none; stroke-dasharray: 4 5; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="rgba(26,27,29,0.5)"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C8632E"/></marker>
+  </defs>
+  <rect width="1202" height="633" fill="#D4D9E2"/>
+
+  <!-- Row 1: draft loop -->
+  <text x="80" y="88" class="mono-muted">01 · DRAFT LOOP · ME + CLAUDE CODE</text>
+
+  <rect x="80" y="112" width="200" height="92" rx="8" class="node"/>
+  <text x="100" y="142" class="mono">FIGMA</text>
+  <text x="100" y="168" class="serif">Frame link, variables,</text>
+  <text x="100" y="188" class="serif">Code Connect map</text>
+
+  <path d="M280 158 H372" class="line" marker-end="url(#a)"/>
+  <text x="292" y="148" class="mono-muted">MCP</text>
+
+  <rect x="374" y="112" width="220" height="92" rx="8" class="node-accent"/>
+  <text x="394" y="142" class="mono">CLAUDE CODE</text>
+  <text x="394" y="168" class="serif">Drafts against the</text>
+  <text x="394" y="188" class="serif">system, not a screenshot</text>
+
+  <path d="M594 158 H686" class="line" marker-end="url(#a)"/>
+
+  <rect x="688" y="112" width="200" height="92" rx="8" class="node"/>
+  <text x="708" y="142" class="mono">THE INTERVIEW</text>
+  <text x="708" y="168" class="serif">I question the draft.</text>
+  <text x="708" y="188" class="serif-i">Most fail here.</text>
+
+  <path d="M788 204 V236 H484 V206" class="dash" marker-end="url(#a)"/>
+  <text x="560" y="232" class="mono-muted">ITERATE</text>
+
+  <path d="M888 158 H1000" class="line-accent" marker-end="url(#b)"/>
+  <rect x="1002" y="128" width="120" height="60" rx="8" class="node-accent"/>
+  <text x="1022" y="153" class="mono">CODE →</text>
+  <text x="1022" y="173" class="mono">CANVAS</text>
+
+  <!-- divider -->
+  <line x1="80" y1="292" x2="1122" y2="292" stroke="rgba(26,27,29,0.14)"/>
+
+  <!-- Row 2: contribution pipeline -->
+  <text x="80" y="336" class="mono-muted">02 · CONTRIBUTION PIPELINE · ANYONE ON THE TEAM</text>
+
+  <rect x="80" y="360" width="180" height="92" rx="8" class="node"/>
+  <text x="100" y="390" class="mono">PULL REQUEST</text>
+  <text x="100" y="416" class="serif">Token, component</text>
+  <text x="100" y="436" class="serif">or doc change</text>
+
+  <path d="M260 406 H332" class="line" marker-end="url(#a)"/>
+
+  <rect x="334" y="360" width="180" height="92" rx="8" class="node"/>
+  <text x="354" y="390" class="mono">CHECKS</text>
+  <text x="354" y="416" class="serif">Schema · build ·</text>
+  <text x="354" y="436" class="serif">contrast · snapshots</text>
+
+  <path d="M514 406 H586" class="line" marker-end="url(#a)"/>
+
+  <rect x="588" y="360" width="200" height="92" rx="8" class="node-accent"/>
+  <text x="608" y="390" class="mono">REVIEW AGENT</text>
+  <text x="608" y="416" class="serif">Reads the diff against</text>
+  <text x="608" y="436" class="serif">the design principles</text>
+
+  <!-- three lanes -->
+  <path d="M788 380 H860 V366 H932" class="line-accent" marker-end="url(#b)"/>
+  <path d="M788 406 H932" class="line" marker-end="url(#a)"/>
+  <path d="M788 432 H860 V446 H932" class="line" marker-end="url(#a)"/>
+
+  <rect x="934" y="348" width="188" height="36" rx="6" class="node-accent"/>
+  <text x="950" y="371" class="mono">MERGE · SAFE LANE</text>
+
+  <rect x="934" y="388" width="188" height="36" rx="6" class="node"/>
+  <text x="950" y="411" class="mono">FLAG · BACK TO AUTHOR</text>
+
+  <rect x="934" y="428" width="188" height="36" rx="6" class="node"/>
+  <text x="950" y="451" class="mono">ESCALATE · TO ME</text>
+
+  <!-- merge feeds back to figma -->
+  <path d="M1028 348 V236 H1062 V190" class="dash" marker-end="url(#a)"/>
+  <text x="1040" y="268" class="mono-muted">SYNC</text>
+
+  <!-- footer line -->
+  <text x="80" y="560" class="serif">Runara</text>
+  <text x="152" y="560" class="serif-i">the AI product design workflow I built there</text>
+  <text x="80" y="586" class="mono-muted">DESIGN STANDARDS IN THE REPO · JUDGMENT WITH THE DESIGNER · 2026</text>
+</svg>

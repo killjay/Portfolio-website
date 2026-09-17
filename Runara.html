@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Runara · High time you changed your design workflow · Nandha Kumar</title>
+    <meta name="description" content="The design workflow I inherited was built around handoff. The one I built at Runara runs on a repo, a Figma MCP connection, Claude Code, and a review agent that lets the whole team contribute to the design system without waiting on me. What changed, what broke, and where I still refuse to let the machine decide.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=runara1">
+    <meta name="theme-color" content="#D4D9E2">
+</head>
+<body class="cs-tint-runara">
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <div class="container">
+                <a class="cs-back" href="work.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">Runara · Senior Product Designer · Workflow · Design systems · AI tooling</p>
+                <h1 class="cs-hero__title reveal">
+                    High time you changed your <span class="highlight">design workflow.</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    The workflow I was trained in was built for handoff. The one I run now has no handoff in it. It came together at Runara, where I own the design system and the tooling around it: the system lives in a repo, Claude Code can read and write the Figma file, and a review agent lets engineers and other designers contribute without waiting on me. This is how I got here, what the machine gets wrong, and where I still make every call myself.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Senior product designer at Runara. Owner of the design system and the tooling around it</dd>
+                    </div>
+                    <div>
+                        <dt>When</dt>
+                        <dd>The old workflow from 2019. The new one at Runara since early 2026, still changing</dd>
+                    </div>
+                    <div>
+                        <dt>Stack</dt>
+                        <dd>Figma and its MCP server, Claude Code, DTCG tokens, Style Dictionary, GitHub Actions</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>A design system anyone on the team can change, reviewed by an agent, merged within the rules I wrote</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <section class="container">
+            <div class="cs-cover reveal">
+                <img src="Images/Runara/cover.svg" alt="Two rows. The draft loop: Figma to Claude Code over MCP, then my interview of the draft, then code pushed back to canvas. The contribution pipeline: a pull request, automated checks, a review agent, and three lanes: merge, flag back to the author, or escalate to me.">
+            </div>
+        </section>
+
+        <div class="container--prose">
+
+            <!-- 01. Then -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; Then</span>
+                    <h2 class="h2 cs-section__title">The first team I joined ran the workflow the industry had settled on a decade earlier. I did every step of it.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>It went like this. Research in a deck. Wireframes in Sketch. A symbol library that one person maintained and everyone detached from. A clickable prototype in InVision for the stakeholder review, which was a meeting, which was where the design actually got decided. Then the part that took the most time and produced the least value: handoff. I exported to Zeplin, wrote redlines for the things Zeplin missed, sat in a "walkthrough" with engineering, and answered Slack questions about spacing for the next two weeks.</p>
+                    <p>Then the build shipped, and it did not match. Not because anyone was careless. Because the design lived in one place, the code lived in another, and the only bridge between them was me, explaining. Design QA was a spreadsheet of screenshots with red circles. The design system was a Sketch library plus a Confluence page, and the contribution model was "ask Nandha." I was the bottleneck by design, and I was proud of it, because being the bottleneck felt like being the standard.</p>
+                    <p>I want to be fair to that workflow. It was rigorous. It taught me to think in components, to specify states, to write a redline that an engineer could not misread. Most of what I know about UI I learned by having to explain it to someone who was going to build it without me in the room. But the whole shape of it was organised around a single assumption: the designer produces a picture, and someone else turns the picture into the product.</p>
+                </div>
+            </section>
+
+            <!-- 02. What changed -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; What changed</span>
+                    <h2 class="h2 cs-section__title">The picture stopped being the source of truth. That broke the workflow more than any tool did.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Two things happened close together. Figma shipped an MCP server, which means an AI agent can read a frame as structure rather than as a screenshot: the layer hierarchy, the variables behind every colour and spacing value, and the Code Connect map that says which production component a Figma component corresponds to.<sup>1</sup> And Claude Code became something a designer could actually sit in front of all day. Give it a frame link, and it writes against your real components and tokens instead of approximating from pixels. Ask it to push what it built back, and it lands in Figma as editable layers.<sup>2</sup></p>
+                    <p>Figma's own 2026 report puts a number on what that did to the job: designers participating in development nearly doubled in a year, from 21 to 41 percent.<sup>3</sup> I am one of them. But the interesting change is not that I write code now. It is that the artefact I hand over is no longer a picture. It is a working screen, built from the system, that engineering reviews as a pull request rather than reconstructs from a spec.</p>
+                    <p>Once that was true, handoff stopped being a phase. And once handoff stopped being a phase, everything I had built my process around, the redlines, the walkthroughs, the QA spreadsheet, became overhead with nothing to attach to.</p>
+                </div>
+
+                <div class="cs-flows">
+                    <div class="cs-flow">
+                        <div class="cs-flow__title">The workflow I inherited</div>
+                        <ol>
+                            <li>Research synthesis in a deck</li>
+                            <li>Wireframes, then hi-fi in Sketch</li>
+                            <li>Detach from the library when it gets in the way</li>
+                            <li>InVision prototype for the stakeholder meeting</li>
+                            <li>Export to Zeplin, add redlines for the gaps</li>
+                            <li>Handoff walkthrough with engineering</li>
+                            <li>Two weeks of spacing questions in Slack</li>
+                            <li>Design QA against the build, screenshots with red circles</li>
+                            <li class="is-end">Design system updated later, by me, if I remember</li>
+                        </ol>
+                    </div>
+                    <div class="cs-flow">
+                        <div class="cs-flow__title cs-flow__title--after">How I work at Runara</div>
+                        <ol>
+                            <li class="is-new">Standards first: tokens, principles, and component rules in the repo</li>
+                            <li>Research synthesis, still a document, now also read by the agent</li>
+                            <li class="is-new">Draft the screen with Claude Code against the system, from a Figma frame or from a brief</li>
+                            <li class="is-new">Interview the draft. Reject most of it. Iterate in the same session</li>
+                            <li class="is-new">Push the result back to Figma as editable layers for the team to see</li>
+                            <li>Open a pull request. Engineering reviews working UI, not a spec</li>
+                            <li class="is-new">Any teammate opens their own PR against the design system</li>
+                            <li class="is-new">Checks run, the review agent reads the diff, and it merges, flags, or escalates</li>
+                            <li class="is-end">System stays current because contributing is cheaper than working around it</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. How I work now -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; How I work now</span>
+                    <h2 class="h2 cs-section__title">I spend the first week of any project writing the rules the machine has to design inside.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The mistake I made in the first month was prompting the way people prompt image generators: describe the screen, admire the output, describe it again. It produced plausible UI that belonged to no product. What fixed it was doing the design-system work first and treating it as the prompt.</p>
+                    <p>Concretely, the repo now holds four things before any screen exists. The tokens, in the W3C Design Tokens format, built out to CSS, Swift, and Kotlin by Style Dictionary, so there is one file that says what "muted text" means everywhere.<sup>4</sup> A CLAUDE.md that reads like a design principles page, not a style guide: what the product is for, who it is for, what we never do, which component to reach for in which situation. Skills for each component family, so "add a filter bar" pulls in the rules for density, empty states, and keyboard behaviour without me restating them. And Code Connect mappings, so when Claude Code reads a Figma frame it sees "this is our Button, primary, medium" rather than a rectangle with a fill.</p>
+                    <p>Then the loop. I give Claude Code a frame link or a paragraph of intent. It drafts. I do not accept the draft. I interview it.</p>
+                </div>
+
+                <div class="cs-rules">
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Question 01</div>
+                        <div class="cs-rule__title">What is the one thing on this screen?</div>
+                        <div class="cs-rule__body">If the draft cannot answer in a sentence, the hierarchy is wrong. AI drafts tend toward evenness: every element the same weight, because the average interface is even.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Question 02</div>
+                        <div class="cs-rule__title">What happens when it is empty, loading, wrong, or too long?</div>
+                        <div class="cs-rule__body">The first draft is always the happy path. I ask for the four other states before I look at the visual again.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Question 03</div>
+                        <div class="cs-rule__title">Which token did you use, and why that one?</div>
+                        <div class="cs-rule__body">A draft that invents a hex value or a spacing number has left the system. The answer has to be a token name and a reason.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Question 04</div>
+                        <div class="cs-rule__title">Would the person in the research recognise this?</div>
+                        <div class="cs-rule__body">The agent has read the synthesis doc. I make it point to the line in it that justifies the layout. If it cannot, the layout is a guess dressed as a decision.</div>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>Iteration is the same session. "Collapse the secondary actions into an overflow, the primary is competing with three things." "The loading state is a spinner, use the skeleton pattern from the list component." "That is the wrong elevation for a sheet on mobile." Each of those is a sentence, and each one lands in working code in under a minute, which is the part that changed the pace of my work more than anything. A round of critique that used to cost an afternoon of moving rectangles now costs the time it takes to say what is wrong.</p>
+                    <p>When it holds up, I push it back to Figma. Not because Figma is the source of truth anymore, but because it is where the rest of the team looks, and a working screen they can annotate beats a link to a branch.</p>
+                </div>
+            </section>
+
+            <!-- 04. Where it fails -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; Where the AI design fails</span>
+                    <h2 class="h2 cs-section__title">It designs the average product. My job is to know what makes ours not average.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>I keep a running list of the ways drafts go wrong, because the pattern is stable enough to design around. These are the ones that show up every week.</p>
+                </div>
+
+                <div class="cs-fixes">
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">The draft</span><div class="cs-fix__before">Flat hierarchy. Title, metadata, and primary action all set at the same visual weight, because that is what most dashboards look like.</div></div>
+                        <div><span class="cs-fix__k">What I change</span><div class="cs-fix__after">Name the one thing, demote everything else. This is a taste call the agent will not make unless CLAUDE.md tells it what the product is for.</div></div>
+                    </div>
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">The draft</span><div class="cs-fix__before">Token drift. A "close enough" grey typed in as a hex value, or a 14px gap where the scale has 12 and 16.</div></div>
+                        <div><span class="cs-fix__k">What I change</span><div class="cs-fix__after">Reject on sight, and this is now a CI check rather than a thing I catch by eye. Every value has to resolve to a token.</div></div>
+                    </div>
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">The draft</span><div class="cs-fix__before">Fluent, generic copy. "Manage your settings." "Get started." Reads fine, says nothing, and never uses the words the users used in research.</div></div>
+                        <div><span class="cs-fix__k">What I change</span><div class="cs-fix__after">I write the copy. The agent gets a glossary of user language from the synthesis doc, and the rule that it never coins a noun we did not hear.</div></div>
+                    </div>
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">The draft</span><div class="cs-fix__before">Pattern borrowing. A confirmation modal where the product's own pattern is an inline undo. Correct in general, wrong for us.</div></div>
+                        <div><span class="cs-fix__k">What I change</span><div class="cs-fix__after">Add the pattern to the skill so it never happens twice. Every correction I make more than once becomes a rule the agent reads next time.</div></div>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>That last row is the whole method. The agent is not getting smarter between sessions. The repo is. Every rejected draft either teaches me something about the product or teaches the system something about the product, and I try to make sure it is the second one as often as possible.</p>
+                </div>
+            </section>
+
+            <!-- 05. The contribution pipeline -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; The contribution pipeline</span>
+                    <h2 class="h2 cs-section__title">The design system is only alive if people other than me can change it. So I stopped being the gate.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Here is the problem every design system owner knows. Contribution is welcome in principle and gated in practice, and the gate is one person's calendar. Zeroheight's 2026 survey found most teams say they encourage open contribution while more than two in five admit to gatekeeping it.<sup>5</sup> I was both of those teams. Engineers would need a token or a variant, find me busy, and ship a local override. Six months later the system described a product that no longer existed.</p>
+                    <p>What I built at Runara is a pipeline where the review is done by an agent that has read the same principles I would apply, and I only see the changes that need a human.</p>
+                </div>
+
+                <div class="cs-archdiag">
+                    <div class="cs-archdiag__hub">
+                        <strong>A pull request against the design system repo</strong>
+                        <span>From anyone on the team. Tokens, a component variant, a doc page, a Code Connect mapping. Often opened by Claude Code from a one-line request in an engineer's terminal.</span>
+                    </div>
+                    <div class="cs-archdiag__rule"></div>
+                    <div class="cs-archdiag__row">
+                        <div class="cs-archdiag__node">
+                            <strong>Deterministic checks</strong>
+                            <span>Token JSON validates against the DTCG schema. Style Dictionary builds all platforms. Contrast holds AA on every theme pair. Visual snapshots diff.</span>
+                        </div>
+                        <div class="cs-archdiag__node">
+                            <strong>The review agent</strong>
+                            <span>Claude Code, run by a GitHub Action on every PR, with the design principles, the component skills, and the change log as context. It reads the diff, not the screenshots.<sup>6</sup></span>
+                        </div>
+                        <div class="cs-archdiag__node">
+                            <strong>The verdict</strong>
+                            <span>One of three lanes, written as a PR review with a reason for every line it objects to. Never a bare approve or reject.</span>
+                        </div>
+                    </div>
+                    <div class="cs-archdiag__rule"></div>
+                    <div class="cs-archdiag__row">
+                        <div class="cs-archdiag__node">
+                            <strong>Lane 1 · Merge</strong>
+                            <span>Additive and inside the rules. A new semantic alias of an existing primitive. A doc fix. A variant that reuses existing tokens and adds every state. The agent approves, CI merges, the variables sync back to Figma.</span>
+                        </div>
+                        <div class="cs-archdiag__node">
+                            <strong>Lane 2 · Flag</strong>
+                            <span>Something is wrong and the fix is knowable. The agent requests changes, cites the principle or the token that was broken, names the owner of the affected component, and posts the same note to them in Slack.</span>
+                        </div>
+                        <div class="cs-archdiag__node">
+                            <strong>Lane 3 · Escalate</strong>
+                            <span>A new pattern, a primitive change, anything that touches more than one component family, or anything the agent is not confident about. It writes a summary and assigns the PR to me.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>The line between the lanes is the design decision here, and I drew it conservatively. The merge lane is narrow on purpose: additive, token-resolved, every state present, no primitive touched, all checks green. Everything else goes to a person. The point was never to remove judgment from the system. It was to stop spending my judgment on the changes that did not need it.</p>
+                    <p>This is what a flag looks like when it lands. It is the part of the pipeline I rewrote most, because a review that says "wrong" without a reason teaches nothing and gets ignored.</p>
+                </div>
+
+                <div class="cs-review">
+                    <div class="cs-review__head">
+                        <span class="cs-review__avatar" aria-hidden="true">R</span>
+                        <div>
+                            <div class="cs-review__who">runara-review <span class="cs-review__bot">bot</span> requested changes</div>
+                            <div class="cs-review__meta">design-system · PR #212 · "Soften muted text for the reports table" · assigned to the author, cc component owner for Table</div>
+                        </div>
+                    </div>
+                    <div class="cs-review__body">
+                        <p><strong>Blocking.</strong> This changes the primitive <code>color.gray.500</code> from <code>#6B6F76</code> to <code>#8A8E95</code>. That primitive is aliased by <code>color.text.muted</code>, which is used by 14 components, not only the reports table. On <code>surface.card</code> the new value measures 3.6:1, below the AA threshold of 4.5:1 for body copy set in the accessibility rule (CLAUDE.md, "Never ship text below AA on any theme pair").</p>
+                        <p><strong>What I think you wanted.</strong> The table's secondary column reads too heavy against the row striping. That is a component-level problem, not a palette-level one.</p>
+                        <p><strong>Suggested fix.</strong> Leave the primitive alone. Add a semantic alias <code>table.cell.secondary</code> pointing at <code>color.gray.500</code>, and change the Table component to use the existing <code>type.body.sm</code> scale for that column. That reads lighter without changing contrast anywhere else. If you make that change, this PR qualifies for the merge lane.</p>
+                        <p class="cs-review__foot">Reasons cited: accessibility rule, primitive-change rule, token-scope rule. Escalated to a human: no. Author notified in Slack.</p>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>Two rules make this work, and neither is about the model. First, the agent has to say what it thinks the author was trying to do. A review that only says no gets worked around. A review that says "here is the version of this that would merge" gets acted on, usually within the hour. Second, it has to name a person. A flag that goes to a channel is nobody's. A flag that goes to the author with the component owner copied gets resolved.</p>
+                </div>
+            </section>
+
+            <!-- 06. What I'm keeping -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; What I'm keeping</span>
+                    <h2 class="h2 cs-section__title">The tools took the handoff away. They did not take the judgment. If anything they made it the whole job.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><strong>The standards are the design work now.</strong> A week spent on tokens, principles, and component rules used to feel like overhead before the "real" design. It is the opposite. It is the only week where what I decide gets multiplied by every draft and every PR that follows.</p>
+                    <p><strong>The interview is the craft.</strong> Ten years ago the skill was producing the screen. Now the screen is cheap, and the skill is knowing, in one look, why this one is wrong for these users. That is the same taste I was building with redlines. It just has somewhere to go faster.</p>
+                    <p><strong>The gate moved, it did not disappear.</strong> The merge lane is small and I intend to keep it small. Every time the agent approves something I would not have, the lane gets narrower, and the rule that would have caught it goes in the repo. That is the part of this workflow I expect to still be doing in a year.</p>
+                    <p><strong>What still worries me.</strong> A system that is easy to contribute to can drift by accretion, one reasonable alias at a time. I read the merged-lane log every Friday. I am not sure yet that is enough.</p>
+                </div>
+
+                <h3 class="h3 cs-h3">References</h3>
+                <ol class="cs-refs">
+                    <li><span>Figma, <a href="https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/" target="_blank" rel="noopener">Figma MCP server: tools and prompts</a>. The design-context, variable-definition, and Code Connect map tools an agent reads a frame through.</span></li>
+                    <li><span>Figma, <a href="https://www.figma.com/resource-library/claude-code-for-designers/" target="_blank" rel="noopener">How designers can use Claude Code</a>, and <a href="https://www.figma.com/blog/introducing-claude-code-to-figma/" target="_blank" rel="noopener">From Claude Code to Figma</a>, February 2026, on pushing built UI back to the canvas as editable layers.</span></li>
+                    <li><span>Figma, <a href="https://www.figma.com/blog/2026-ai-report/" target="_blank" rel="noopener">2026 AI Report</a>. Designers participating in development rose from 21% to 41% year over year.</span></li>
+                    <li><span>W3C Design Tokens Community Group, <a href="https://www.designtokens.org/" target="_blank" rel="noopener">Design Tokens Format Module</a>, first stable release October 2025, and <a href="https://styledictionary.com/" target="_blank" rel="noopener">Style Dictionary</a> for the platform builds.</span></li>
+                    <li><span>zeroheight, <a href="https://report.zeroheight.com/" target="_blank" rel="noopener">Design Systems Report 2026</a>. Token adoption at 84% of teams; most teams encourage contribution while more than two in five gatekeep it.</span></li>
+                    <li><span>Anthropic, <a href="https://code.claude.com/docs/en/github-actions" target="_blank" rel="noopener">Claude Code GitHub Actions</a>. Automated review on pull request events, with CLAUDE.md and repository skills as the review criteria.</span></li>
+                </ol>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js?v=runara1" defer></script>
+</body>
+</html>

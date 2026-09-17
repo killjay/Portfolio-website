@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: var(--s-10);
   align-items: start;
   margin-top: var(--s-8);
@@ -540,15 +540,59 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: var(--s-6); }
 }
-.about-grid__photo {
-  border-radius: var(--radius-m);
-  overflow: hidden;
-  background: var(--bg-card);
-  aspect-ratio: 4/5;
-  max-width: 320px;
+/* Scattered photo collage */
+.about-collage {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1.12;
+  margin-top: var(--s-2);
 }
-.about-grid__photo img {
-  width: 100%; height: 100%; object-fit: cover;
+.about-collage__frame {
+  position: absolute;
+  margin: 0;
+  width: 44%;            /* every frame the same size; */
+  aspect-ratio: 1 / 1;   /* only position + rotation differ */
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-s);
+  box-shadow: 0 10px 26px rgba(40, 26, 14, 0.14);
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease;
+  will-change: transform;
+}
+.about-collage__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--bg-soft);
+}
+.about-collage__frame--1 { top: 0;     left: 0;   transform: rotate(-3.5deg); z-index: 3; }
+.about-collage__frame--2 { top: 8.9%;  left: 36%; transform: rotate(4.5deg);  z-index: 2; }
+.about-collage__frame--3 { top: 30.4%; left: 6%;  transform: rotate(3deg);    z-index: 4; }
+.about-collage__frame--4 { top: 41.1%; left: 42%; transform: rotate(-5.5deg); z-index: 5; }
+.about-collage__frame--5 { top: 58.9%; left: 22%; transform: rotate(2.5deg);  z-index: 6; }
+
+/* keep each subject inside the square crop */
+.about-collage__frame--1 img { object-position: center 35%; }
+.about-collage__frame--2 img { object-position: center 35%; }
+.about-collage__frame--3 img { object-position: 0% center; }
+.about-collage__frame--4 img { object-position: center 30%; }
+.about-collage__frame--5 img { object-position: center 50%; }
+.about-collage__frame:hover {
+  transform: rotate(0deg) scale(1.06);
+  box-shadow: 0 18px 40px rgba(40, 26, 14, 0.22);
+  z-index: 10;
+}
+@media (max-width: 900px) {
+  .about-collage { margin: var(--s-2) auto 0; max-width: 340px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-collage__frame { transition: none; }
+  .about-collage__frame:hover { transform: rotate(0deg); }
 }
 .about-grid__body p {
   font-size: 18px;
@@ -557,7 +601,6 @@ h1, h2, h3, h4, h5 {
   color: var(--ink-2);
   max-width: 60ch;
 }
-.about-grid__body p:first-child { font-size: 20px; }
 .about-grid__body p em { font-style: italic; color: var(--accent); }
 
 .about-contact {
@@ -1722,6 +1765,9 @@ h1, h2, h3, h4, h5 {
   padding: var(--s-16) 0;
   border-top: 1px solid var(--hairline);
 }
+/* Homepage closing block sits flush — no rules above or below it */
+.refrain--bare { border-top: none; }
+main:has(.refrain--bare) + .footer { border-top: none; }
 .refrain__title {
   font-family: var(--font-display);
   font-size: clamp(40px, 6vw, 80px);
@@ -2393,4 +2439,269 @@ body.is-lightbox-open { overflow: hidden; }
     position: static;
     margin: 0 auto var(--s-6);
   }
+}
+
+/* =========================================================
+   Café Cal case study additions
+   ========================================================= */
+:root { --tint-cafecal: #D8E3CF; }   /* sage, dialled down */
+.cs-tint-cafecal { --cs-tint: var(--tint-cafecal); }
+.work-card--cafecal { background: var(--tint-cafecal); }
+
+/* Three-up phone grid */
+.cs-figure-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.cs-figure-grid--light .cs-figure-grid__item { background: #FAF8F5; }
+@media (max-width: 720px) {
+  .cs-figure-grid, .cs-figure-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Type specimen — Café Cal stack (Gambetta / Satoshi / JetBrains Mono, with Google Fonts stand-ins) */
+.cs-specimen--cafecal .cs-specimen__display {
+  font-family: 'Newsreader', 'Libre Baskerville', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(40px, 6vw, 72px);
+}
+.cs-specimen--cafecal .cs-specimen__body {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+.cs-specimen__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--s-4);
+  align-items: baseline;
+}
+.cs-specimen__role {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+@media (max-width: 600px) {
+  .cs-specimen__row { grid-template-columns: 1fr; gap: var(--s-1); }
+}
+
+/* Rules list — numbered product principles */
+.cs-rules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-4);
+  margin: var(--s-6) 0;
+}
+.cs-rule {
+  padding: var(--s-5);
+  background: var(--bg-card);
+  border: 1px solid var(--hairline-2);
+  border-radius: var(--radius-m);
+}
+.cs-rule__num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-2);
+}
+.cs-rule__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: var(--s-2);
+}
+.cs-rule__body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+@media (max-width: 600px) { .cs-rules { grid-template-columns: 1fr; } }
+
+/* Audit finding rows — before / after */
+.cs-fixes { margin: var(--s-6) 0; border-top: 1px solid var(--hairline); }
+.cs-fix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-5);
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--hairline-2);
+}
+.cs-fix__k {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  display: block;
+  margin-bottom: 4px;
+}
+.cs-fix__before, .cs-fix__after {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.cs-fix__after { color: var(--ink); }
+@media (max-width: 600px) { .cs-fix { grid-template-columns: 1fr; gap: var(--s-2); } }
+.cs-figure__caption + .cs-prose,
+.cs-figure__caption + .h3 { margin-top: var(--s-6); }
+
+/* Before / after comparison pair */
+.cs-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-5);
+  margin: var(--s-8) 0 var(--s-3);
+}
+.cs-compare__item { display: flex; flex-direction: column; gap: var(--s-3); }
+.cs-compare__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.cs-compare__label--after { color: var(--accent); }
+.cs-compare__img {
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid var(--hairline-2);
+  background: var(--bg-card);
+}
+.cs-compare__img img { width: 100%; height: auto; display: block; }
+@media (max-width: 600px) { .cs-compare { grid-template-columns: 1fr; } }
+
+/* References */
+.cs-refs { margin: var(--s-6) 0 0; padding: 0; list-style: none; counter-reset: ref; }
+.cs-refs li {
+  counter-increment: ref;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--hairline-2);
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--s-3);
+}
+.cs-refs li::before {
+  content: counter(ref, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-2);
+  padding-top: 3px;
+}
+.cs-refs a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--hairline); text-underline-offset: 3px; }
+.cs-refs a:hover { color: var(--accent); }
+
+/* Flow comparison — two step lists side by side */
+.cs-flows { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); margin: var(--s-6) 0; }
+.cs-flow { background: var(--bg-card); border: 1px solid var(--hairline-2); border-radius: var(--radius-m); padding: var(--s-5); }
+.cs-flow__title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); margin-bottom: var(--s-4); }
+.cs-flow__title--after { color: var(--accent); }
+.cs-flow ol { list-style: none; padding: 0; margin: 0; counter-reset: fl; }
+.cs-flow li { counter-increment: fl; display: grid; grid-template-columns: 24px 1fr; gap: var(--s-2); font-family: var(--font-sans); font-size: 13px; line-height: 1.4; color: var(--ink-2); padding: 5px 0; border-top: 1px solid var(--hairline-2); }
+.cs-flow li:first-child { border-top: none; }
+.cs-flow li::before { content: counter(fl, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); padding-top: 2px; }
+.cs-flow li.is-new { color: var(--ink); font-weight: 500; }
+.cs-flow li.is-new::before { color: var(--accent); }
+.cs-flow li.is-end { color: var(--muted); font-style: italic; }
+@media (max-width: 600px) { .cs-flows { grid-template-columns: 1fr; } }
+
+/* Problem statement */
+.cs-problem { margin: var(--s-6) 0; padding: var(--s-6); background: var(--cs-tint, var(--bg-card)); border-radius: var(--radius-m); }
+.cs-problem__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-bottom: var(--s-3); }
+.cs-problem__text { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 26px); line-height: 1.35; color: var(--ink); }
+
+/* =========================================================
+   Runara case study additions
+   ========================================================= */
+:root { --tint-runara: #D4D9E2; }   /* cool slate, to sit against the warm paper */
+.cs-tint-runara { --cs-tint: var(--tint-runara); }
+.work-card--runara { background: var(--tint-runara); }
+
+/* Agent review card — a PR review as the agent posts it */
+.cs-review {
+  margin: var(--s-6) 0;
+  background: var(--bg-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+.cs-review__head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-3);
+  align-items: center;
+  padding: var(--s-4) var(--s-5);
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--hairline-2);
+}
+.cs-review__avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-review__who {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.cs-review__bot {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  color: var(--muted);
+  margin: 0 4px;
+  vertical-align: middle;
+}
+.cs-review__meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-2);
+  margin-top: 2px;
+}
+.cs-review__body { padding: var(--s-5); }
+.cs-review__body p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: var(--s-3);
+}
+.cs-review__body p:last-child { margin-bottom: 0; }
+.cs-review__body p strong { color: var(--ink); font-weight: 500; }
+.cs-review__body code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--bg-soft);
+  border: 1px solid var(--hairline-2);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.cs-review__foot {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  color: var(--muted-2) !important;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--hairline-2);
+}
+@media (max-width: 600px) {
+  .cs-review__head, .cs-review__body { padding: var(--s-4); }
 }

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 459" width="612" height="459" role="img" aria-label="Runara project preview">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 10px; letter-spacing: 1.3px; fill: #1A1B1D; }
+      .muted { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 10px; letter-spacing: 1.3px; fill: rgba(26,27,29,0.5); }
+      .serif { font-family: 'Libre Baskerville', Georgia, serif; font-size: 13px; fill: #1A1B1D; }
+      .serif-i { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 13px; fill: #C8632E; }
+      .node { fill: #F9F2E6; stroke: rgba(26,27,29,0.14); }
+      .acc { fill: #F9F2E6; stroke: #C8632E; stroke-width: 1.5; }
+      .line { stroke: rgba(26,27,29,0.4); stroke-width: 1.2; fill: none; }
+      .lacc { stroke: #C8632E; stroke-width: 1.2; fill: none; }
+      .dash { stroke: rgba(26,27,29,0.4); stroke-width: 1.2; fill: none; stroke-dasharray: 4 5; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="rgba(26,27,29,0.5)"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C8632E"/></marker>
+  </defs>
+  <rect width="612" height="459" fill="#D4D9E2"/>
+
+  <text x="48" y="64" class="muted">RUNARA · PR REVIEW BY AGENT</text>
+
+  <rect x="48" y="92" width="150" height="76" rx="8" class="node"/>
+  <text x="64" y="118" class="mono">PULL REQUEST</text>
+  <text x="64" y="142" class="serif">Token change</text>
+
+  <path d="M198 130 H252" class="line" marker-end="url(#a)"/>
+
+  <rect x="254" y="92" width="150" height="76" rx="8" class="acc"/>
+  <text x="270" y="118" class="mono">REVIEW AGENT</text>
+  <text x="270" y="142" class="serif">Diff vs principles</text>
+
+  <path d="M404 108 H450 V96 H480" class="lacc" marker-end="url(#b)"/>
+  <path d="M404 130 H480" class="line" marker-end="url(#a)"/>
+  <path d="M404 152 H450 V164 H480" class="line" marker-end="url(#a)"/>
+
+  <rect x="482" y="82" width="90" height="28" rx="6" class="acc"/>
+  <text x="494" y="100" class="mono">MERGE</text>
+  <rect x="482" y="116" width="90" height="28" rx="6" class="node"/>
+  <text x="494" y="134" class="mono">FLAG</text>
+  <rect x="482" y="150" width="90" height="28" rx="6" class="node"/>
+  <text x="494" y="168" class="mono">ESCALATE</text>
+
+  <line x1="48" y1="220" x2="564" y2="220" stroke="rgba(26,27,29,0.14)"/>
+
+  <rect x="48" y="252" width="516" height="132" rx="8" class="node"/>
+  <text x="68" y="280" class="muted">FLAGGED · SENT TO AUTHOR</text>
+  <text x="68" y="308" class="serif">color.text.muted moved to 3.6:1 on surface.card.</text>
+  <text x="68" y="330" class="serif">Below AA for body copy. Blocking.</text>
+  <text x="68" y="360" class="serif-i">Reason cited. Owner named. Fix suggested.</text>
+
+  <text x="48" y="428" class="serif">Runara</text>
+  <text x="108" y="428" class="serif-i">the AI product design workflow I built there</text>
+</svg>

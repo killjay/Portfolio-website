@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Why onboarding is important in D2C apps · Café Cal · Nandha Kumar</title>
+    <meta name="description" content="Café Cal's onboarding was the most honest of the four I compared, and the only one that converted nobody. How a competitor teardown and the subscription-app research turned 8 questions into a 20-step flow with a plan worth paying for.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=cafecal4">
+    <meta name="theme-color" content="#D8E3CF">
+</head>
+<body class="cs-tint-cafecal">
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <div class="container">
+                <a class="cs-back" href="work.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">Café Cal · Founder · Product Design · Onboarding · iOS + Android</p>
+                <h1 class="cs-hero__title reveal">
+                    Why onboarding is important in <span class="highlight">D2C apps.</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Café Cal is an AI calorie tracker I founded and design. Its first onboarding was the cleanest of any app in its category. It was also the only one that converted nobody, because there was nothing to convert to. This is how I found that out, what I borrowed, what I refused to borrow, and what shipped.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Founder. Research, product design, and the SwiftUI build, with a team of three</dd>
+                    </div>
+                    <div>
+                        <dt>When</dt>
+                        <dd>Teardown July 2026. Shipped July 6. Hardened after the August audit</dd>
+                    </div>
+                    <div>
+                        <dt>Surface</dt>
+                        <dd>First-run onboarding and paywall, iOS and Android</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>8 questions became 20 steps. Paid subscriptions live since July 2026</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <section class="container">
+            <div class="cs-cover reveal">
+                <img src="Images/CafeCal/cover.jpg" alt="Three onboarding screens from the redesign: goal weight, the projected path, and the plan reveal">
+            </div>
+        </section>
+
+        <div class="container--prose">
+
+            <!-- 01. The problem -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem</span>
+                    <h2 class="h2 cs-section__title">We had built a first-run that respected people and asked nothing of them.</h2>
+                </header>
+
+                <div class="cs-problem">
+                    <div class="cs-problem__label">Problem statement</div>
+                    <p class="cs-problem__text">New users answered eight clean questions, watched a five-second "calculating" moment, and received a nutrition plan backed by peer-reviewed citations. Then the flow ended. No goal weight, no projection, no permission asks, no account save, no paywall. The plan was credible and nobody was committed to it. Three months after launch, Café Cal had zero revenue because the product had never once asked for any.</p>
+                </div>
+
+                <div class="cs-prose">
+                    <p>I want to be precise about what was wrong, because the flow was not bad. Basics, body measurements, activity, primary goal, a target date, diet, "have you tried other apps," "where did you hear about us." Haptic ruler pickers. An editable plan. A safety cap on aggressive calorie targets. Nobody complained about it, which is exactly why it took me three months to see it as a problem.</p>
+                    <p>The moment it became one was July 2026. We had decided to charge, and the paywall had to live somewhere. Putting it at the end of a flow that built no commitment would have been asking strangers for money.</p>
+                </div>
+            </section>
+
+            <!-- 02. What I learned -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; What I learned</span>
+                    <h2 class="h2 cs-section__title">The research said our onboarding was too short. The teardown showed me why.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Two sources, one week. First, the subscription-app data. RevenueCat's benchmarks across 115,000 apps put about half of all paid conversions on day zero, in the first session, and show hard or trial-inclusive paywalls converting around five times better than freemium.<sup>1</sup> Their onboarding writing makes the counterintuitive point directly: most onboarding is too short, because value and projection screens build momentum rather than friction.<sup>2</sup> Noom runs over a hundred screens and converts through progressive commitment.</p>
+                    <p>Second, I captured the complete first-run of Cal AI, MacroFactor, and MyFitnessPal, screen by screen, and laid ours next to them. Cal AI's 34 screens are engineered for one moment: a soft paywall at the peak of commitment, after your name is on a plan with a goal date.<sup>3</sup> MacroFactor pre-justifies its price with an honest "here's our business model" screen. MyFitnessPal extracts data and dead-ends at "create account."</p>
+                </div>
+
+                <div class="cs-figure">
+                    <div class="cs-figure__img"><img src="Images/CafeCal/calai-teardown.jpg" alt="Three Cal AI onboarding screens from the teardown: desired weight, the weight transition projection, and the $0.00 due today paywall"></div>
+                    <p class="cs-figure__caption">From the teardown. Cal AI's goal weight, projection, and paywall. Captured July 2026. The structure was worth studying. The tone was not worth copying.</p>
+                </div>
+
+                <div class="cs-parity">
+                    <div class="cs-parity__head">
+                        <div class="cs-parity__cell">Mechanic</div>
+                        <div class="cs-parity__cell">Café Cal v1</div>
+                        <div class="cs-parity__cell">Cal AI</div>
+                        <div class="cs-parity__cell">MacroFactor</div>
+                    </div>
+                    <div class="cs-parity__row">
+                        <div class="cs-parity__cell">Goal weight and pace</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
+                    </div>
+                    <div class="cs-parity__row">
+                        <div class="cs-parity__cell">Projection graph</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">three</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">teased</div>
+                    </div>
+                    <div class="cs-parity__row">
+                        <div class="cs-parity__cell">Scientific citations</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">"research-grade"</div>
+                    </div>
+                    <div class="cs-parity__row">
+                        <div class="cs-parity__cell">Health and notification asks</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">after reveal</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">not captured</div>
+                    </div>
+                    <div class="cs-parity__row">
+                        <div class="cs-parity__cell">Paywall moment</div>
+                        <div class="cs-parity__cell cs-parity__cell--n">none</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">soft, at the end</div>
+                        <div class="cs-parity__cell cs-parity__cell--y">premium-only, pre-justified</div>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>The one-line verdict I wrote at the top of the teardown: <em>ours is the most polished and honest of the four, and the most commercially naive.</em> We had the credibility edge, peer-reviewed sources on the plan reveal that none of the slick apps could match. What we lacked was structure: the mechanics that turn minutes of answering questions into a commitment.</p>
+                </div>
+            </section>
+
+            <!-- 03. Decisions -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; What I decided</span>
+                    <h2 class="h2 cs-section__title">Keep the spine. Borrow the mechanics. Leave the tricks.</h2>
+                </header>
+
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Borrowed</span>
+                    <div class="cs-decision__body">
+                        <strong>Goal weight and weekly pace, with the safety cap as the default.</strong> v1 collected a target date but never a target weight, so it could not make a concrete promise. v2 adds a goal-weight ruler and a pace slider with "Use recommended" preselected. Our old safety cap was a warning that appeared after you chose badly. Now it is the choice you have to work to leave.
+                    </div>
+                </div>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Borrowed</span>
+                    <div class="cs-decision__body">
+                        <strong>One projection, drawn from real inputs.</strong> With weight, goal, and pace, we can plot an honest curve from today to the goal date. It appears once mid-flow and again on the plan reveal. Cal AI shows three. One is enough when it is true.
+                    </div>
+                </div>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Borrowed</span>
+                    <div class="cs-decision__body">
+                        <strong>Every hard ask moves to after the reveal.</strong> Apple Health, notifications, and the paywall all come after the user has seen their plan, when sunk cost is highest and the value is visible. All three are skippable. The paywall carries a 3-day trial and says so before it says a price.
+                    </div>
+                </div>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Refused</span>
+                    <div class="cs-decision__body">
+                        <strong>No social proof we could not prove.</strong> We had four ratings. So no "5M users," no testimonial, no "90% of users say." The plan reveal cites five real DOIs instead. In a health app, a small lie on the money screen poisons every number after it.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04. The flow -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; The flow, before and after</span>
+                    <h2 class="h2 cs-section__title">Eight questions became twenty steps. It got longer, and it got faster to commit to.</h2>
+                </header>
+
+                <div class="cs-flows">
+                    <div class="cs-flow">
+                        <div class="cs-flow__title">v1 · April to June 2026</div>
+                        <ol>
+                            <li>Tell us about yourself (name, sex, date of birth)</li>
+                            <li>Body measurements</li>
+                            <li>How active are you?</li>
+                            <li>Primary goal</li>
+                            <li>When do you want to reach it?</li>
+                            <li>Diet and restrictions</li>
+                            <li>Tried other apps?</li>
+                            <li>Where did you hear about us?</li>
+                            <li class="is-end">Calculating, then plan reveal, then "Let's get started"</li>
+                        </ol>
+                    </div>
+                    <div class="cs-flow">
+                        <div class="cs-flow__title cs-flow__title--after">v2 · Shipped July 6, 2026</div>
+                        <ol>
+                            <li class="is-new">Welcome</li>
+                            <li>Name (only if sign-in gave us none)</li>
+                            <li>Gender</li>
+                            <li>Activity</li>
+                            <li>Where did you hear about us?</li>
+                            <li>Tried other apps?</li>
+                            <li class="is-new">Why this works (value)</li>
+                            <li>Body metrics</li>
+                            <li>Date of birth</li>
+                            <li>Primary goal</li>
+                            <li class="is-new">Goal weight</li>
+                            <li class="is-new">Reassurance ("5 kg is very achievable")</li>
+                            <li class="is-new">Pace, recommended by default</li>
+                            <li class="is-new">What's stopping you? (multi-select)</li>
+                            <li class="is-new">Projection</li>
+                            <li>Diet</li>
+                            <li>Allergies</li>
+                            <li class="is-new">Trust (how we handle your data)</li>
+                            <li class="is-new">Apple Health, skippable</li>
+                            <li class="is-new">Notifications, skippable</li>
+                            <li class="is-end">Calculating, plan reveal with projection, then the paywall with a 3-day trial</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="cs-figure-grid cs-figure-grid--light">
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-goal-weight.png" alt="Goal weight step with a haptic ruler picker"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-pace.png" alt="Pace step, 0.5 kg per week, with the recommended safe default highlighted"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-projection.png" alt="Projection step showing the weight transition curve to the goal date"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-plan-reveal.png" alt="Plan reveal: goal, projected path, daily macro recommendation, and the peer-reviewed sources"></div>
+                </div>
+                <p class="cs-figure__caption">The four screens that did not exist in v1. Goal weight, pace, projection, and the plan reveal that now carries the projection above the macros.</p>
+
+                <div class="cs-figure-grid cs-figure-grid--light">
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-barrier.png" alt="What's stopping you from reaching your goals, a multi-select barrier question"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-calculating.png" alt="Calculating screen at 42 percent, listing the daily recommendations being prepared"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-all-done.png" alt="All done screen with a Generate my plan button"></div>
+                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/paywall.png" alt="Paywall after the plan reveal: yearly plan selected, Try free for 3 days, no commitment copy"></div>
+                </div>
+                <p class="cs-figure__caption">The barrier question, the calculating moment we kept, the hand-off, and the paywall that now has somewhere to stand.</p>
+            </section>
+
+            <!-- 05. What happened -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; What happened next</span>
+                    <h2 class="h2 cs-section__title">It shipped, it charged, and the audit a month later showed me the parts I had rushed.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>v2 went live on July 6 with the first paywall. Café Cal has had paying subscribers since. That is the outcome the problem statement asked for, and I am not going to dress it up with a conversion percentage from a base of a few hundred installs.</p>
+                    <p>What I will report is what the August 10 audit found in this exact flow, because it is the honest second half of the story. The paywall had no back, skip, or close, and quitting at it destroyed all twenty answers. The projection rendered an empty card for four of the six goals. The money screen had the old brand name on it. All three were fixed within days. The barrier question became multi-select on August 22 after watching people pick one reason when they clearly had three.</p>
+                </div>
+
+                <div class="cs-fixes">
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Quitting at the paywall lost every onboarding answer and restarted at step one.</div></div>
+                        <div><span class="cs-fix__k">Fixed, same day</span><div class="cs-fix__after">Answers persist before the paywall. Relaunch resumes at the plan.</div></div>
+                    </div>
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Projection was empty for maintain, build muscle, eat healthier, and medical tracking.</div></div>
+                        <div><span class="cs-fix__k">Fixed, day 2</span><div class="cs-fix__after">Goal-appropriate projections for every goal, and the weight-loss chart never shows for someone who did not ask to lose weight.</div></div>
+                    </div>
+                    <div class="cs-fix">
+                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Lapsed subscribers hit the paywall on launch and could not reach their data.</div></div>
+                        <div><span class="cs-fix__k">Fixed, Aug 13</span><div class="cs-fix__after">Grace access to Settings, export, and deletion, and a save offer instead of a lockout.</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 06. Reflection -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; What I'm keeping</span>
+                    <h2 class="h2 cs-section__title">Honesty was never the problem. Honesty without structure was.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><strong>Length is not friction if every screen gives something back.</strong> I had been proud of eight questions. The research and the teardown both said the same thing: people will answer twenty if the output is visibly theirs, and the projection they see at step fifteen is what makes them believe the plan at step twenty-one.</p>
+                    <p><strong>Build the paywall's exit before its entrance.</strong> I designed the moment to ask for money and forgot to design the moment someone says no. The audit caught it. Next time it is in the first sketch.</p>
+                </div>
+
+                <h3 class="h3 cs-h3">References</h3>
+                <ol class="cs-refs">
+                    <li><span>RevenueCat, <a href="https://www.revenuecat.com/state-of-subscription-apps" target="_blank" rel="noopener">State of Subscription Apps 2026</a>. About 50% of paid conversions on day 0; hard paywall trial-to-paid 10.7% vs 2.1% freemium.</span></li>
+                    <li><span>RevenueCat, <a href="https://www.revenuecat.com/blog/growth/why-your-onboarding-experience-might-be-too-short" target="_blank" rel="noopener">Why your onboarding experience might be too short</a>, and <a href="https://www.revenuecat.com/blog/growth/web-to-app-onboarding-funnel" target="_blank" rel="noopener">Inside Noom's onboarding funnel</a>.</span></li>
+                    <li><span>Primary teardown of Cal AI, MacroFactor, and MyFitnessPal iOS onboarding, July 2026. Cal AI structure also documented at <a href="https://tasu.ai/library/cal-ai" target="_blank" rel="noopener">tasu.ai, Cal AI Teardown</a>.</span></li>
+                </ol>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js?v=cafecal4" defer></script>
+</body>
+</html>
