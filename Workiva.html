@@ -66,20 +66,38 @@
                         <dd>Anomaly Detection</dd>
                     </div>
                 </dl>
+
+                <div class="cs-tldr reveal">
+                    <div class="cs-tldr__label">Long story short</div>
+                    <ul class="cs-tldr__list">
+                        <li>
+                            <span class="cs-tldr__key">01 Research</span>
+                            <span class="cs-tldr__val">Interviewed 6 analysts and mapped the review journey. The problem wasn't finding anomalies, it was trusting them.</span>
+                        </li>
+                        <li>
+                            <span class="cs-tldr__key">02 Design</span>
+                            <span class="cs-tldr__val">Designed an AI panel that sits beside the spreadsheet, pins each anomaly, and ranks the likely reasons behind it.</span>
+                        </li>
+                        <li>
+                            <span class="cs-tldr__key">03 Outcome</span>
+                            <span class="cs-tldr__val">A projected 45% cut in review time, with 89% anomaly detection accuracy.</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- Body -->
         <div class="container--prose">
 
-            <!-- Challenge -->
+            <!-- The question -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The challenge</span>
-                    <h2 class="h2 cs-section__title">The Challenge</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The question</span>
+                    <h2 class="h2 cs-section__title">Review couldn't keep up</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>Workiva users were spending <strong>73% more time</strong> than necessary reviewing collaborative reports for data anomalies and formatting inconsistencies. Datasets kept growing, compliance deadlines kept tightening, and manual review couldn't keep up.</p>
+                    <p>Workiva users were spending <strong>73% more time</strong> than necessary reviewing collaborative reports for data anomalies and formatting inconsistencies. Datasets kept growing, compliance deadlines kept tightening, and the review was still done by eye.</p>
                 </div>
                 <div class="stat-grid">
                     <div class="stat">
@@ -87,231 +105,139 @@
                         <div class="stat__label">Additional review time</div>
                     </div>
                     <div class="stat">
-                        <div class="stat__value">6</div>
-                        <div class="stat__label">User interviews conducted</div>
-                    </div>
-                    <div class="stat">
                         <div class="stat__value">30%</div>
                         <div class="stat__label">Increase in revision cycles</div>
                     </div>
+                    <div class="stat">
+                        <div class="stat__value">6</div>
+                        <div class="stat__label">Analysts interviewed</div>
+                    </div>
                 </div>
+                <blockquote class="cs-pull">
+                    <p class="cs-pull__text">How might we help analysts <em>trust</em> what an AI flags in their spreadsheet?</p>
+                </blockquote>
             </section>
 
-            <!-- Research -->
+            <!-- Speaking to users -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Research</span>
-                    <h2 class="h2 cs-section__title">Research &amp; Discovery</h2>
-                    <p class="cs-section__sub">Understanding the Problem Space</p>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Speaking to users</span>
+                    <h2 class="h2 cs-section__title">Three problems, in their words</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>I spoke with Business Analysts and MIS professionals about how they actually do anomaly review today. Most relied on domain knowledge plus manual scanning, which produced inconsistent results and missed outliers.</p>
-                </div>
-                <div class="step-grid">
-                    <div class="step">
-                        <div class="step__num">Step 01</div>
-                        <h3 class="step__title">User Interviews</h3>
-                        <p class="step__desc">6 participants across Business Analysts and MIS students using structured 18-question framework.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step__num">Step 02</div>
-                        <h3 class="step__title">Thematic Analysis</h3>
-                        <p class="step__desc">Identified 3 core themes: automatic flagging, learnability, and visualization needs.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step__num">Step 03</div>
-                        <h3 class="step__title">Competitive Analysis</h3>
-                        <p class="step__desc">Evaluated existing solutions and identified gaps in enterprise-grade anomaly detection.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Key insights -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Insights</span>
-                    <h2 class="h2 cs-section__title">Key User Insights</h2>
-                </header>
-
-                <blockquote class="cs-quote">
-                    <p class="cs-quote__text">"Ideally it would tell me what the problem could be as well. So let's say there's an increase in acquisitions this month. Maybe we can tell me that it's possibly because this variable seems to have too many missing values."</p>
-                    <p class="cs-quote__author">Business Analyst, interview participant</p>
-                </blockquote>
-
-                <blockquote class="cs-quote">
-                    <p class="cs-quote__text">"An alert system basically — like the moment it finds out an alert and it should be real time. It should actually tell you where exactly is the error instead of just telling that there is something wrong."</p>
-                    <p class="cs-quote__author">MIS Graduate Student, interview participant</p>
-                </blockquote>
-
-                <div class="step-grid">
-                    <div class="step">
-                        <div class="step__num">Insight #1</div>
-                        <h3 class="step__title">Flagging</h3>
-                        <p class="step__desc">Users need automated systems that can identify anomalies and provide contextual explanations for why data points are flagged as unusual.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step__num">Insight #2</div>
-                        <h3 class="step__title">Real-time Alerts</h3>
-                        <p class="step__desc">Immediate notification systems that pinpoint exact locations of errors rather than general warnings about data quality issues.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step__num">Insight #3</div>
-                        <h3 class="step__title">Visual Hierarchy</h3>
-                        <p class="step__desc">Clear color-coding and visual indicators that make anomalies immediately recognizable within large datasets.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Personas -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; User personas</span>
-                    <h2 class="h2 cs-section__title">User Personas</h2>
-                </header>
-
-                <div class="persona">
-                    <div class="persona__head">
-                        <div class="persona__photo">
-                            <img src="Images/Sarah Mitchell.png" alt="Sarah Mitchell">
-                        </div>
-                        <div>
-                            <h3 class="persona__name">Sarah Mitchell</h3>
-                            <p class="persona__role">Novice User</p>
-                            <div class="persona__details">
-                                <div><strong>Age:</strong> 27</div>
-                                <div><strong>Role:</strong> Junior Analyst</div>
-                                <div><strong>Experience:</strong> 1 year</div>
-                                <div><strong>Tech:</strong> Moderate</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <blockquote class="persona__quote">
-                        "I need tools that guide me through the process and explain what's happening at each step."
-                    </blockquote>
-
-                    <div class="persona__cols">
-                        <div>
-                            <div class="persona__col-title">Goals</div>
-                            <ul>
-                                <li>Learn anomaly detection best practices quickly</li>
-                                <li>Gain confidence in identifying data issues</li>
-                                <li>Understand why certain data points are flagged</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="persona__col-title">Pain Points</div>
-                            <ul>
-                                <li>Overwhelmed by complex datasets</li>
-                                <li>Unsure which anomalies are critical</li>
-                                <li>Needs contextual help and guidance</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: var(--s-5);">
-                        <div class="persona__col-title">Tools Used</div>
-                        <div class="persona__tags">
-                            <span class="persona__tag">Excel</span>
-                            <span class="persona__tag">Workiva</span>
-                            <span class="persona__tag">Google Sheets</span>
-                        </div>
-                    </div>
+                    <p>I interviewed 6 Business Analysts and MIS students using an 18-question guide, then ran a thematic analysis. Everyone relied on domain knowledge plus manual scanning. Three problems came up again and again.</p>
                 </div>
 
-                <div class="persona">
-                    <div class="persona__head">
-                        <div class="persona__photo">
-                            <img src="Images/David Chen.png" alt="David Chen">
-                        </div>
-                        <div>
-                            <h3 class="persona__name">David Chen</h3>
-                            <p class="persona__role">Experienced User</p>
-                            <div class="persona__details">
-                                <div><strong>Age:</strong> 42</div>
-                                <div><strong>Role:</strong> Senior Analyst</div>
-                                <div><strong>Experience:</strong> 15 years</div>
-                                <div><strong>Tech:</strong> Advanced</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <blockquote class="persona__quote">
-                        "I need speed and accuracy. Show me the anomalies, let me decide what to do with them."
-                    </blockquote>
-
-                    <div class="persona__cols">
-                        <div>
-                            <div class="persona__col-title">Goals</div>
-                            <ul>
-                                <li>Process large datasets efficiently</li>
-                                <li>Customize detection parameters for specific use cases</li>
-                                <li>Integrate findings into automated workflows</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="persona__col-title">Pain Points</div>
-                            <ul>
-                                <li>Manual detection is time-consuming</li>
-                                <li>Inconsistent results across team members</li>
-                                <li>Difficulty prioritizing high-impact anomalies</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: var(--s-5);">
-                        <div class="persona__col-title">Tools Used</div>
-                        <div class="persona__tags">
-                            <span class="persona__tag">Workiva</span>
-                            <span class="persona__tag">Python</span>
-                            <span class="persona__tag">Tableau</span>
-                            <span class="persona__tag">SQL</span>
-                        </div>
-                    </div>
+                <div class="issue">
+                    <div class="issue__label">Problem 01</div>
+                    <h3 class="issue__title">A flag without a reason is just more work</h3>
+                    <p class="issue__desc">"Ideally it would tell me what the problem could be as well. Maybe we can tell me that it's possibly because this variable seems to have too many missing values."<br><em>Business Analyst</em></p>
                 </div>
-            </section>
+                <div class="issue">
+                    <div class="issue__label">Problem 02</div>
+                    <h3 class="issue__title">"Something's wrong" isn't an answer</h3>
+                    <p class="issue__desc">"It should actually tell you where exactly is the error instead of just telling that there is something wrong."<br><em>MIS graduate student</em></p>
+                </div>
+                <div class="issue">
+                    <div class="issue__label">Problem 03</div>
+                    <h3 class="issue__title">Two users with opposite needs</h3>
+                    <p class="issue__desc">Newer analysts couldn't tell an anomaly from a normal spike and wanted guidance. Senior analysts wanted speed and control: "Show me the anomalies, let me decide what to do with them."</p>
+                </div>
 
-            <!-- Wireframes -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Wireframes</span>
-                    <h2 class="h2 cs-section__title">Wireframes</h2>
-                </header>
                 <figure class="cs-figure">
                     <div class="cs-figure__img">
-                        <img src="Images/Workiva/Frame 34.png" alt="Workiva wireframes">
+                        <img src="Images/Workiva/workiva novice.png" alt="Journey map of a novice analyst moving from overwhelmed to confident across five review stages, with pain points and AI opportunities at each stage">
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 1. Low-fidelity wireframes exploring different approaches to anomaly visualization.</figcaption>
+                    <figcaption class="cs-figure__caption">Fig 1. Novice analyst journey. The lowest point is cleaning and analysis, where "Is this pattern normal or an anomaly?" goes unanswered.</figcaption>
                 </figure>
             </section>
 
-            <!-- Design Solution -->
+            <!-- Idea we dropped -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Solution</span>
-                    <h2 class="h2 cs-section__title">Design Solution</h2>
-                    <p class="cs-section__sub">AI-Powered Anomaly Detection Interface</p>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Early concept</span>
+                    <h2 class="h2 cs-section__title">The pop-up we dropped</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>The design pairs a machine learning model with an interface that flags anomalies in real time inside the Workiva spreadsheet, then explains what triggered the flag and what to do next.</p>
+                    <p>My first sketches put the AI in a floating pop-up over the spreadsheet, with its own projects panel. It looked clean on paper, but it covered the data the analyst was trying to check.</p>
+                    <p>Interviewees kept describing the same habit: they looked at the numbers and the chart <em>at the same time</em>. So I moved the AI into a docked side panel. The spreadsheet, the chart and the explanation all stay visible together.</p>
                 </div>
                 <figure class="cs-figure">
                     <div class="cs-figure__img">
-                        <img src="Images/Workiva/Group 20 1.png" alt="Workiva final design">
+                        <img src="Images/Workiva/Frame 34.png" alt="Hand-drawn wireframes moving from a floating AI pop-up to a docked side panel next to the spreadsheet">
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 2. High-fidelity prototype of the integrated anomaly detection system.</figcaption>
+                    <figcaption class="cs-figure__caption">Fig 2. Sketches, left to right: floating AI pop-up, then the docked panel built for multitasking.</figcaption>
+                </figure>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Decision</span>
+                    <div class="cs-decision__body"><strong>Docked panel over pop-up.</strong> An AI that hides the spreadsheet asks for blind trust. One that sits next to it lets the analyst check its work.</div>
+                </div>
+            </section>
+
+            <!-- Flow -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; The flow</span>
+                    <h2 class="h2 cs-section__title">From raw sheet to report</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Each problem became one step in the flow: detect the outlier, explain it, tune it if needed, and add it to the report.</p>
+                </div>
+                <figure class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/Workiva/Frame 33.png" alt="User flow from opening Workiva and importing data, through graphing and AI outlier detection, to the anomaly insights panel, detection settings and adding to a report">
+                    </div>
+                    <figcaption class="cs-figure__caption">Fig 3. User flow, from importing data to adding a finding to the report.</figcaption>
                 </figure>
             </section>
 
-            <!-- Impact -->
+            <!-- Final designs -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(07) &nbsp; Impact</span>
-                    <h2 class="h2 cs-section__title">Impact &amp; Results</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Final designs</span>
+                    <h2 class="h2 cs-section__title">Find it, understand it, tune it</h2>
                 </header>
+
+                <h3 class="h3 cs-h3">Pinpointed, not just flagged</h3>
                 <div class="cs-prose">
-                    <p>The design goes after the workflow bottlenecks users described and gives Workiva a stronger position in AI-assisted financial data analysis.</p>
+                    <p>The AI marks the exact point on the chart and states it plainly: the date, the value, and the expected range it fell outside. <em>Answers problem 02.</em></p>
                 </div>
+                <figure class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/Workiva/final-explain.png" alt="Workiva spreadsheet with the AI panel docked on the right, showing a marked revenue spike, a plain-language summary and ranked possible explanations">
+                    </div>
+                    <figcaption class="cs-figure__caption">Fig 4. Summary: "Revenue was unexpectedly high on Friday, August 30, 2019," with the expected range underneath.</figcaption>
+                </figure>
+
+                <h3 class="h3 cs-h3">Reasons, ranked by strength</h3>
+                <div class="cs-prose">
+                    <p>Each flag comes with possible explanations scored by strength. Opening one shows the evidence chart, which the analyst can add to their workspace next to the original. <em>Answers problem 01.</em></p>
+                </div>
+                <figure class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/Workiva/final-compare.png" alt="An expanded explanation, 'Seller is Northwind Traders' at 71%, with its evidence chart added to the workspace beside the original revenue chart">
+                    </div>
+                    <figcaption class="cs-figure__caption">Fig 5. Drilling into "Seller is Northwind Traders" (71%) and comparing it with the original chart.</figcaption>
+                </figure>
+
+                <h3 class="h3 cs-h3">Control for experts, defaults for everyone else</h3>
+                <div class="cs-prose">
+                    <p>Newer analysts never need to leave the defaults. Senior analysts can open settings to change sensitivity, pick the parameters to explain by, and restyle how anomalies are marked. <em>Answers problem 03.</em></p>
+                </div>
+                <figure class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/Workiva/final-settings.png" alt="Anomaly detection settings in the AI panel: sensitivity slider at 83%, explain-by parameters, anomaly shape, size and color">
+                    </div>
+                    <figcaption class="cs-figure__caption">Fig 6. Detection settings: sensitivity, explain-by parameters, and marker style.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Impact & learnings -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Impact</span>
+                    <h2 class="h2 cs-section__title">Impact &amp; learnings</h2>
+                </header>
                 <div class="stat-grid stat-grid--2">
                     <div class="stat">
                         <div class="stat__value"><em>45%</em></div>
@@ -323,13 +249,20 @@
                     </div>
                 </div>
 
-                <h3 class="h3" style="margin-top: var(--s-8); margin-bottom: var(--s-4);">Key Learnings</h3>
-                <div class="cs-prose">
-                    <ul>
-                        <li>For enterprise adoption, AI has to be explainable before it can be accurate.</li>
-                        <li>Real-time feedback keeps users trusting an automated system. Without it, trust falls apart fast.</li>
-                        <li>Visual hierarchy and progressive disclosure help people move through dense data without getting lost.</li>
-                    </ul>
+                <div class="issue" style="margin-top: var(--s-8);">
+                    <div class="issue__label">Learning 01</div>
+                    <h3 class="issue__title">Explainable comes before accurate</h3>
+                    <p class="issue__desc">An 89% accurate flag that nobody trusts saves no time. For enterprise analysts, the explanation is what turns a flag into a decision.</p>
+                </div>
+                <div class="issue">
+                    <div class="issue__label">Learning 02</div>
+                    <h3 class="issue__title">Where the AI sits changes how much people trust it</h3>
+                    <p class="issue__desc">Moving from a pop-up to a docked panel was a layout change, but it was really about trust. Analysts believe what they can check against the data.</p>
+                </div>
+                <div class="issue">
+                    <div class="issue__label">Learning 03</div>
+                    <h3 class="issue__title">Design for both ends, then hide the difference</h3>
+                    <p class="issue__desc">Novice and expert needs looked like they conflicted. Good defaults plus settings one tap away served both without two separate modes.</p>
                 </div>
             </section>
 
@@ -338,7 +271,7 @@
         <!-- Next project -->
         <section class="cs-next">
             <div class="container">
-                <span class="eyebrow reveal">(08) &nbsp; Next case study</span>
+                <span class="eyebrow reveal">(07) &nbsp; Next case study</span>
                 <div class="work-grid" style="margin-top: var(--s-6);">
                     <a class="work-card work-card--velotic reveal" href="Velotic.html">
                         <div class="work-card__media">

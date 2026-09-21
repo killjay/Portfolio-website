@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Designing Intel's virtual demo · Nandha Kumar</title>
+    <meta name="description" content="How a 12-person team at XR Labs turned Intel's startup portfolio into a walkable 3D city, so deep-tech startups could demo hardware nobody could carry into a meeting.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=toc5">
+    <meta name="theme-color" content="#CFDCE6">
+</head>
+<body class="cs-tint-xrlabs">
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <div class="container">
+                <a class="cs-back" href="work.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">XR Labs · Intel Startup Program · WebGL · Spatial UI</p>
+                <h1 class="cs-hero__title reveal">
+                    Designing Intel's <span class="highlight">virtual demo</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Intel's startup program backed more than 40 deep-tech companies making robots, sensors, inspection rigs and server hardware. None of it fits in a pitch deck. At XR Labs we built the Intel Virtual Demo Zone: a 3D city in the browser where every startup's product runs inside the building it was made for.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Client</dt>
+                        <dd>Intel Startup Program</dd>
+                    </div>
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Product Designer on a team of 12: product managers, 3D artists, developers</dd>
+                    </div>
+                    <div>
+                        <dt>Timeline</dt>
+                        <dd>1 year, 2021 to 2022</dd>
+                    </div>
+                    <div>
+                        <dt>Platform</dt>
+                        <dd>Web (WebGL), with AR and VR builds</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Stats teaser strip -->
+        <section class="container reveal">
+            <div class="cs-statstrip">
+                <div class="cs-stat">
+                    <div class="cs-stat__num">40+</div>
+                    <div class="cs-stat__label">Startups in one portal</div>
+                    <div class="cs-stat__cap">Across manufacturing, healthcare, energy, finance, retail and more</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">2×</div>
+                    <div class="cs-stat__label">Sales inquiries</div>
+                    <div class="cs-stat__cap">As reported by startups after launch</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">20→50%</div>
+                    <div class="cs-stat__label">Online conversion</div>
+                    <div class="cs-stat__cap">Marketers running virtual demos through the platform</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <section class="container">
+            <div class="cs-cover reveal">
+                <img src="Images/XRLabs/landing.png" alt="Intel Virtual Demo landing screen. A foggy 3D city with a Start the Experience button">
+            </div>
+        </section>
+
+        <div class="container--prose">
+
+            <!-- 01. Problem space -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem space</span>
+                    <h2 class="h2 cs-section__title">Forty products you had to see to believe, and no room to show them in.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The Intel Startup Program is a launchpad for deep-tech companies. When we started, its portfolio held more than 40 of them: an AI camera that inspects bottles on a production line, a robotic arm that sorts parcels, a sensor that watches a hospital bed, a tag system that tracks servers in a rack.</p>
+                    <p>Each one is hard to explain in words. A buyer has to see it working in their own setting before it clicks. And in 2021 almost every one of those meetings was a video call, so the startups were stuck with slides and product videos.</p>
+                    <p>Intel wanted three things from the program: more visibility for the startups, better conversations with the people who found them, and stronger fundraising. All three came down to the same gap.</p>
+                </div>
+
+                <div class="cs-problem">
+                    <div class="cs-problem__label">Problem statement</div>
+                    <p class="cs-problem__text">An investor or plant manager couldn't stand next to a startup's product, so they never saw the moment it solved their problem. The portfolio was strong and invisible. A list of 40 logos gave no one a reason to click on any of them.</p>
+                </div>
+            </section>
+
+            <!-- 02. Goals + audiences -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Who we were designing for</span>
+                    <h2 class="h2 cs-section__title">Three audiences, arriving with three different questions.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>One portal had to serve all of them, and each group arrived looking for something different:</p>
+                    <ul>
+                        <li><strong>Customers</strong> ask "what would this do in my building?" They think in industries and rooms, not in company names.</li>
+                        <li><strong>Investors</strong> ask "who is doing what, and how does it compare?" They want to scan the whole portfolio quickly.</li>
+                        <li><strong>Startups</strong> ask "can I show someone this without shipping hardware to them?" They need a demo they can link to from their own website.</li>
+                    </ul>
+                    <p>That split shaped the whole product. Customers needed to wander, investors needed to search, and startups needed a demo that told their story in under a minute.</p>
+                </div>
+
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Success</span>
+                    <div class="cs-decision__body">
+                        The program's goal was growth and lead generation for the startups. For us that meant qualified inquiries: people who had watched a product solve a problem in context and then got in touch.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. Designed solution -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; The designed solution</span>
+                    <h2 class="h2 cs-section__title">A city you can zoom into, down to the machine.</h2>
+                    <p class="cs-section__sub">The portfolio became a place. Industries are districts, districts hold buildings, buildings hold rooms, and rooms hold the products. Every level uses the same small set of controls, so moving from a skyline to a single sensor never feels like switching apps.</p>
+                </header>
+
+                <div class="cs-rules">
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Level 01</div>
+                        <div class="cs-rule__title">City</div>
+                        <div class="cs-rule__body">Industries as labelled districts: manufacturing, hospitals, hotels, energy, banking, retail, stadiums, aviation, roadways.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Level 02</div>
+                        <div class="cs-rule__title">Zone</div>
+                        <div class="cs-rule__body">A digital twin of one site, such as a factory, split into areas like the manufacturing floor, storage, packaging and quality control.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Level 03</div>
+                        <div class="cs-rule__title">Solution</div>
+                        <div class="cs-rule__body">A startup's product placed where it would really be installed, with a one-line explanation and an Explore action.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Level 04</div>
+                        <div class="cs-rule__title">Demo</div>
+                        <div class="cs-rule__body">A short interactive story that shows the problem, lets you install the fix, and plays the real footage.</div>
+                    </div>
+                </div>
+
+                <h3 class="h3 cs-h3">Scene-based navigation</h3>
+                <div class="cs-prose">
+                    <p>The first screen is the whole portfolio at once. Each industry is a pinned label on the skyline, so a hospital buyer finds the hospital without reading a single startup name. Clicking a label flies the camera into that zone. The camera move is deliberate: it shows people where they came from, which matters when the next click takes them one level deeper.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <video autoplay loop muted playsinline preload="metadata" poster="Images/XRLabs/city-to-zone.jpg">
+                            <source src="Images/XRLabs/city-to-zone.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="cs-figure__caption">Fig 1. City to zone. Industrial | Manufacturing opens a factory twin with its own labelled areas.</p>
+                </div>
+
+                <h3 class="h3 cs-h3">A menu for people who already know what they want</h3>
+                <div class="cs-prose">
+                    <p>Wandering works for customers. It's slow for an investor who wants the fintech startups. The menu is a second route to the same content. At the city level it offers Industries and Startups, with a solution count on every row. Inside a zone it switches to Solutions and Zones, grouped by startup with thumbnails. The scene blurs behind the panel so the menu reads clearly and you still know where you are.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <video autoplay loop muted playsinline preload="metadata" poster="Images/XRLabs/menu.jpg">
+                            <source src="Images/XRLabs/menu.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="cs-figure__caption">Fig 2. The same menu at two levels. Industries and Startups in the city; Solutions and Zones inside Manufacturing.</p>
+                </div>
+
+                <h3 class="h3 cs-h3">Digital twin environments</h3>
+                <div class="cs-prose">
+                    <p>A product only makes sense in the room it was built for, so every zone is a twin of a real site. Addverb's material mover and sorting arm sit on a packaging line. The early-detection monitor sits beside a hospital bed. Rack sensors and asset tags hang in a server aisle. The home, back and share controls stay in the same corners of every zone, so moving from a factory to a ward to a data center never changes how you get around.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <video autoplay loop muted playsinline preload="metadata" poster="Images/XRLabs/zones.jpg">
+                            <source src="Images/XRLabs/zones.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="cs-figure__caption">Fig 3. Packaging line, hospital ward, server room. Three industries, one set of controls.</p>
+                </div>
+
+                <h3 class="h3 cs-h3">Interactive demos</h3>
+                <div class="cs-prose">
+                    <p>This was the part the startups cared about most. A demo follows the same short script every time. First, the current pain is pinned to the machine: reliance on human judgement, low accuracy on defective items, heavy energy use. Then the viewer installs the startup's product on the line themselves, and real footage plays in place. The viewer watches the problem and the fix happen on the same machine, which is the one thing a slide deck couldn't show.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <video autoplay loop muted playsinline preload="metadata" poster="Images/XRLabs/demo.jpg">
+                            <source src="Images/XRLabs/demo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="cs-figure__caption">Fig 4. CamCom's AI visual inspection demo. Problems first, then the viewer installs the hub, then the footage plays.</p>
+                </div>
+            </section>
+
+            <!-- 04. Principles -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; Design principles</span>
+                    <h2 class="h2 cs-section__title">What we kept coming back to.</h2>
+                </header>
+                <div class="cs-rules">
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">01</div>
+                        <div class="cs-rule__title">Let the place do the explaining</div>
+                        <div class="cs-rule__body">If a product needs a paragraph of explanation, move it to the room where it would be installed. The setting answers "what is this for?" before any copy does.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">02</div>
+                        <div class="cs-rule__title">Two routes to every product</div>
+                        <div class="cs-rule__body">Browse through space or jump through the menu. Both land in the same place, so wanderers and searchers never end up in two different products.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">03</div>
+                        <div class="cs-rule__title">Show the problem before the product</div>
+                        <div class="cs-rule__body">Every demo opens on what is broken today. The fix only means something once the viewer has seen what it replaces.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">04</div>
+                        <div class="cs-rule__title">Keep the 2D layer quiet</div>
+                        <div class="cs-rule__body">Labels, panels and controls use one dark style and stay in fixed corners. The 3D scene carries the detail, and the interface stays simple on top of it.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05. Impact -->
+            <section class="cs-section reveal cs-impact">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; What happened</span>
+                    <h2 class="h2 cs-section__title">Launched at Intel Innovate 2022.</h2>
+                </header>
+
+                <div class="cs-bignums">
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">16+ / 35+</div>
+                        <div class="cs-bignum__label">Investors and startups at launch</div>
+                        <div class="cs-bignum__cap">From around the world, at the Intel Innovate 2022 launch.</div>
+                    </div>
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">2×</div>
+                        <div class="cs-bignum__label">Sales inquiries</div>
+                        <div class="cs-bignum__cap">Startups reported double the inquiries and better customer engagement.</div>
+                    </div>
+                    <div class="cs-bignum">
+                        <div class="cs-bignum__num">+50%</div>
+                        <div class="cs-bignum__label">Webpage engagement</div>
+                        <div class="cs-bignum__cap">On startup websites that embedded their interactive demo. Marketers running virtual demos saw conversion rise from 20% to 50%.</div>
+                    </div>
+                </div>
+
+                <div class="cs-prose">
+                    <p>The embed number is the one I value most. Startups took their demo out of Intel's portal and put it on their own homepages. The demo was built for a single portal, but it worked well enough to be used on its own.</p>
+                </div>
+            </section>
+
+            <!-- 06. Reflection -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; What I took from it</span>
+                    <h2 class="h2 cs-section__title">3D was the hook. The interface on top of it did the work.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><strong>Context is a design material.</strong> Most of the explaining in this product is done by where things sit, not by what the copy says. I still start many projects by asking where the user will be standing when they need this, even when the answer is a spreadsheet.</p>
+                    <p><strong>Spatial products still need boring UI.</strong> The city gets the attention, but finding things depends on the menu, the breadcrumb, the back button and the counts on each row. In an immersive product, a consistent and predictable 2D layer is what makes the 3D usable.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="Nandha_Ilangovan.pdf" target="_blank" rel="noopener">Resume</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js?v=toc5" defer></script>
+</body>
+</html>

@@ -2705,3 +2705,10 @@ body.is-lightbox-open { overflow: hidden; }
 @media (max-width: 600px) {
   .cs-review__head, .cs-review__body { padding: var(--s-4); }
 }
+
+/* =========================================================
+   XR Labs case study additions
+   ========================================================= */
+:root { --tint-xrlabs: #CFDCE6; }   /* pale sky, from the Intel city renders */
+.cs-tint-xrlabs { --cs-tint: var(--tint-xrlabs); }
+.work-card--xrlabs { background: var(--tint-xrlabs); }
