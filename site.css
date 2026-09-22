@@ -686,6 +686,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted);
+  white-space: nowrap;
 }
 @media (max-width: 720px) {
   .work-row { grid-template-columns: 1fr; gap: var(--s-3); }
@@ -2712,3 +2713,63 @@ body.is-lightbox-open { overflow: hidden; }
 :root { --tint-xrlabs: #CFDCE6; }   /* pale sky, from the Intel city renders */
 .cs-tint-xrlabs { --cs-tint: var(--tint-xrlabs); }
 .work-card--xrlabs { background: var(--tint-xrlabs); }
+
+/* =========================================================
+   Pixel & Mortar case study additions
+   ========================================================= */
+:root { --tint-pm: #EDE6DC; }   /* warm cream, from the P&M editor chrome */
+.cs-tint-pm { --cs-tint: var(--tint-pm); }
+.cs-rules--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 800px) { .cs-rules--3 { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   Resume page
+   ========================================================= */
+.resume-hero { padding: var(--s-12) 0 var(--s-8); }
+.resume-hero__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-5);
+  flex-wrap: wrap;
+  margin-top: var(--s-3);
+}
+.resume-view { padding-bottom: var(--s-16); }
+.resume-sheet {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--s-6);
+}
+.resume-sheet__status {
+  padding: var(--s-12) var(--s-5);
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--hairline);
+  border-radius: var(--radius-m);
+}
+.resume-sheet__status a { color: var(--accent); text-decoration: underline; }
+.resume-page {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(26, 27, 29, 0.06), 0 24px 60px -24px rgba(26, 27, 29, 0.28);
+}
+.resume-page canvas { display: block; width: 100%; height: 100%; }
+.resume-page--native { display: block; border: 0; aspect-ratio: 816 / 1056; }
+.resume-page__link { position: absolute; }
+.resume-page__link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.resume-view__foot {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--s-8);
+}
+@media (max-width: 720px) {
+  .resume-hero { padding: var(--s-10) 0 var(--s-6); }
+  .resume-sheet { gap: var(--s-4); }
+  .resume-view { padding-bottom: var(--s-10); }
+}

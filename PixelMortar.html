@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>A 3D room editor for interior designers · Nandha Kumar</title>
+    <meta name="description" content="How we designed the P&M 3D Creator at XR Labs: a room editor inside Pixel & Mortar's interior design platform, laid out so designers could build, check and share a 3D room without learning a 3D tool.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=toc5">
+    <meta name="theme-color" content="#EDE6DC">
+</head>
+<body class="cs-tint-pm">
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <div class="container">
+                <a class="cs-back" href="work.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">XR Labs · Pixel &amp; Mortar · 3D Editor · Web</p>
+                <h1 class="cs-hero__title reveal">
+                    A 3D editor for people who <span class="highlight">don't do 3D</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Pixel &amp; Mortar's designers already had the client brief, the moodboard and the product list in their platform. They didn't have a way to put them in a room. At XR Labs we designed the P&amp;M 3D Creator: a room editor where a designer lays out a space in 2D, checks it in 3D and AR, and sends it to the client, without learning a 3D tool.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Client</dt>
+                        <dd>Pixel &amp; Mortar</dd>
+                    </div>
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Product Designer on the XR Labs team</dd>
+                    </div>
+                    <div>
+                        <dt>Timeline</dt>
+                        <dd>6 months, 2020</dd>
+                    </div>
+                    <div>
+                        <dt>Platform</dt>
+                        <dd>Web, with 3D and AR views</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <section class="container">
+            <div class="cs-cover reveal">
+                <img src="Images/PM/selection.jpg?v=2" alt="The P&amp;M 3D Creator in 2D Plan mode. Door library on the left, a furnished room plan in the middle with a sofa selected, and the sofa's product details on the right">
+            </div>
+        </section>
+
+        <div class="container--prose">
+
+            <!-- 01. Problem -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem</span>
+                    <h2 class="h2 cs-section__title">The hard part of a 3D editor is everything around the 3D.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Pixel &amp; Mortar runs interior design projects on its own platform. Each project already holds the client's details, their style and budget, moodboards, and a catalogue of real products with real prices. MX 3D Studio was the missing step: turning that brief into a room the client could walk around.</p>
+                    <p>A room editor needs a lot of controls. Draw walls, place doors and windows, drop in furniture, paint surfaces, set cameras and lights, measure, switch units. Put all of that on screen at once and you get a CAD tool, which is exactly what the people using it didn't want to learn.</p>
+                </div>
+
+                <div class="cs-problem">
+                    <div class="cs-problem__label">Problem statement</div>
+                    <p class="cs-problem__text">An interior designer needed to build a room, keep it inside the client's style and budget, and share it, all in one sitting. The editor had to offer the full set of 3D controls while only showing the few that mattered for what the designer was doing at that moment.</p>
+                </div>
+            </section>
+
+            <!-- 02. Layout -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; The decision</span>
+                    <h2 class="h2 cs-section__title">Three zones, each answering one question.</h2>
+                    <p class="cs-section__sub">We split the editor by job rather than by feature. Every control lives in the zone that matches the question the designer is asking.</p>
+                </header>
+
+                <div class="cs-rules cs-rules--3">
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Left</div>
+                        <div class="cs-rule__title">What can I add?</div>
+                        <div class="cs-rule__body">The library. Doors, windows and furniture as picture tiles, dragged straight onto the walls or floor. No menus, no file imports.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Middle</div>
+                        <div class="cs-rule__title">Where does it go?</div>
+                        <div class="cs-rule__body">The plan, with one row of tools above it: select, pan, draw a room, add objects, cameras, lights, units and visibility. Zoom and undo sit in the corner.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Right</div>
+                        <div class="cs-rule__title">Does it fit the brief?</div>
+                        <div class="cs-rule__body">The context panel. With nothing selected it shows the client, style, budget, moodboard and products. Select something and it becomes that object's editor.</div>
+                    </div>
+                </div>
+
+                <h3 class="h3 cs-h3">The right panel changes with the selection</h3>
+                <div class="cs-prose">
+                    <p>This was the decision that kept the editor small. Instead of a permanent properties panel full of empty fields, the right side shows the brief until the designer picks something. Click the sofa and it shows the product: its price, material, colour and product ID from the catalogue. Click a wall and it shows the wall's height, width and angle, with its paint or texture.</p>
+                </div>
+                <div class="cs-compare">
+                    <div class="cs-compare__item">
+                        <span class="cs-compare__label">Nothing selected</span>
+                        <div class="cs-compare__img"><img src="Images/PM/default.jpg?v=2" alt="Empty plan. The right panel shows Client Details (Monica, Art Deco, budget INR 90,000), 2D Moodboard, and List of Products"></div>
+                    </div>
+                    <div class="cs-compare__item">
+                        <span class="cs-compare__label cs-compare__label--after">Wall selected</span>
+                        <div class="cs-compare__img"><img src="Images/PM/wall.jpg?v=2" alt="North West Wall selected. The right panel shows its height, width and angle, and a Paint material picker with colour swatches"></div>
+                    </div>
+                </div>
+                <p class="cs-figure__caption">Fig 1. Same screen, two states. The panel follows the selection, so the designer never looks for the right settings.</p>
+
+                <h3 class="h3 cs-h3">The budget never leaves the screen</h3>
+                <div class="cs-prose">
+                    <p>Every product in the library is a real item with a real price. The running total sits in the bottom-right corner in every state, so a designer sees the effect of swapping a sofa before the client does. For this product, staying on budget was part of the design work, not a separate step afterwards.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/PM/material-paint.jpg?v=2" alt="A wall being painted with a custom colour. The line-drawing door library is on the left and the INR 16,000 total is visible in the corner" loading="lazy">
+                    </div>
+                    <p class="cs-figure__caption">Fig 2. Painting a wall with a custom colour. The total in the corner stays visible while you edit.</p>
+                </div>
+            </section>
+
+            <!-- 03. From plan to client -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; From plan to client</span>
+                    <h2 class="h2 cs-section__title">One model, three ways to look at it.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>2D Plan, 3D View and AR are tabs on the same model, not separate tools. The designer arranges in 2D, where placing things is precise, then flips to 3D to see the room the way the client will. In 3D the panels step back: the render takes the space, and the right side only keeps a list of saved views to present from.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/PM/view-3d.jpg" alt="3D View tab showing a rendered living room with a yellow sofa, two leather armchairs and a wall unit, with a Render Views selector on the right" loading="lazy">
+                    </div>
+                    <p class="cs-figure__caption">Fig 3. The same room in 3D View. The editing panels are gone, and the views are saved for presenting.</p>
+                </div>
+
+                <div class="cs-prose">
+                    <p>Sharing is the last step and the one with consequences, because it goes in front of the client. Share to Client opens a review first: the model, the saved views that will go with it, and a count of what's selected. The designer checks exactly what the client will see before sending it.</p>
+                </div>
+                <div class="cs-figure">
+                    <div class="cs-figure__img">
+                        <img src="Images/PM/share.jpg" alt="Share review dialog titled Please review once before you share the following, listing the model, four rendered views, and a Share with client button" loading="lazy">
+                    </div>
+                    <p class="cs-figure__caption">Fig 4. Review before sharing. The model, its views and the selection count, then one button.</p>
+                </div>
+            </section>
+
+            <!-- 04. Reflection -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; What I took from it</span>
+                    <h2 class="h2 cs-section__title">Show less, based on what's selected.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The 3D Creator shipped to Pixel &amp; Mortar's designers as part of their platform. It was my first time designing a tool with this many controls, and two things stayed with me.</p>
+                    <p><strong>Selection is the best filter you have.</strong> A dense editor stays usable when most of its controls only appear once there's something to use them on. I've used the same pattern since in dashboards and settings screens that have nothing to do with 3D.</p>
+                    <p><strong>Put the user's real constraint on screen.</strong> For these designers the constraint was the client's budget and style, not the geometry. Keeping the brief and the total visible while they worked mattered as much as any drawing tool.</p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__cols">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js?v=toc5" defer></script>
+</body>
+</html>
