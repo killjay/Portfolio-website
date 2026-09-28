@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Why onboarding is important in D2C apps · Café Cal · Nandha Kumar</title>
-    <meta name="description" content="Café Cal's onboarding was the most honest of the four I compared, and the only one that converted nobody. How a competitor teardown and the subscription-app research turned 8 questions into a 20-step flow with a plan worth paying for.">
+    <title>Motion for an app that has to wait · Café Cal · Nandha Kumar</title>
+    <meta name="description" content="An AI calorie tracker spends a lot of its life waiting. How I designed Café Cal's motion around three jobs, continuity, honest waiting and restraint, shipped it on iOS and Android from one token file, and use Claude Opus 5.5 to design, port and rebuild it. Every demo on the page is live code running the shipping values.">
     <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="site.css?v=cafecal4">
+    <link rel="stylesheet" href="site.css?v=cafecal7">
     <meta name="theme-color" content="#D8E3CF">
 </head>
-<body class="cs-tint-cafecal">
+<body class="cs-tint-cafecal" data-motion-page>
 
     <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
 
@@ -37,40 +37,77 @@
             <div class="container">
                 <a class="cs-back" href="work.html">← All work</a>
 
-                <p class="cs-hero__tags reveal">Café Cal · Founder · Product Design · Onboarding · iOS + Android</p>
+                <p class="cs-hero__tags reveal">Café Cal · Founder · Motion Design · SwiftUI + Compose · Claude Opus 5.5</p>
                 <h1 class="cs-hero__title reveal">
-                    Why onboarding is important in <span class="highlight">D2C apps.</span>
+                    Motion for an app that <span class="highlight">has to wait.</span>
                 </h1>
                 <p class="lede cs-hero__lede reveal">
-                    Café Cal is an AI calorie tracker I founded and design. Its first onboarding was the cleanest of any app in its category. It was also the only one that converted nobody, because there was nothing to convert to. This is how I found that out, what I borrowed, what I refused to borrow, and what shipped.
+                    Café Cal reads a photo of your plate and tells you what is on it. That takes a few seconds, and a calorie tracker is full of seconds like that. This is how I designed the motion that fills them, shipped it on two platforms from one token file, and how I work with Claude Opus 5.5 to do it. Every demo on this page is live code running the shipping values. Press things.
                 </p>
 
                 <dl class="cs-meta reveal">
                     <div>
                         <dt>Role</dt>
-                        <dd>Founder. Research, product design, and the SwiftUI build, with a team of three</dd>
+                        <dd>Founder. Motion direction and the SwiftUI build, with a team of three</dd>
                     </div>
                     <div>
                         <dt>When</dt>
-                        <dd>Teardown July 2026. Shipped July 6. Hardened after the August audit</dd>
+                        <dd>March to September 2026. Capture flight and splash shipped August 10</dd>
                     </div>
                     <div>
-                        <dt>Surface</dt>
-                        <dd>First-run onboarding and paywall, iOS and Android</dd>
+                        <dt>System</dt>
+                        <dd>One token file, ported value for value to Compose. About 140 haptic call sites</dd>
                     </div>
                     <div>
-                        <dt>Outcome</dt>
-                        <dd>8 questions became 20 steps. Paid subscriptions live since July 2026</dd>
+                        <dt>Tools</dt>
+                        <dd>SwiftUI, Jetpack Compose, Claude Opus 5.5</dd>
                     </div>
                 </dl>
             </div>
         </section>
 
-        <!-- Cover -->
+        <!-- Cover: the live splash -->
         <section class="container">
-            <div class="cs-cover reveal">
-                <img src="Images/CafeCal/cover.jpg" alt="Three onboarding screens from the redesign: goal weight, the projected path, and the plan reveal">
-            </div>
+            <figure class="mo-demo mo-demo--cover reveal" data-demo="splash">
+                <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Press Replay to run the splash again</p>
+                <div class="mo-demo__stage">
+                    <div class="mo-phone">
+                        <div class="mo-screen">
+                            <div class="sp-screen">
+                                <div class="sp-word" aria-label="Café Cal">
+                                    <span class="sp-line sp-line--1" aria-hidden="true">Cafe<span class="sp-acc"><span class="sp-ghost">Caf</span>é</span></span>
+                                    <span class="sp-line sp-line--2" aria-hidden="true">Cal</span>
+                                </div>
+                                <div class="sp-tag">Your nutrition companion</div>
+                            </div>
+                            <div class="sp-home" aria-hidden="true">
+                                <div class="sp-home__h">Today</div>
+                                <div class="sp-home__d">Monday, Sept 28</div>
+                                <div class="app-card" style="margin-top:18px">
+                                    <div class="app-lbl">Remaining</div>
+                                    <div class="app-kcal" style="margin-top:8px">1,240</div>
+                                    <div class="app-track"><i></i></div>
+                                </div>
+                                <div class="app-row">
+                                    <div class="app-chip"><span class="app-lbl">Protein</span><b>82 g</b></div>
+                                    <div class="app-chip"><span class="app-lbl">Carbs</span><b>140 g</b></div>
+                                    <div class="app-chip"><span class="app-lbl">Fats</span><b>38 g</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mo-demo__bar">
+                    <button class="mo-btn" type="button" data-act="replay">Replay</button>
+                    <p class="mo-demo__note">The splash, in three beats: reveal, hold while the app loads, exit.</p>
+                </div>
+                <figcaption class="mo-demo__spec">
+                    <div><b>Reveal</b>Feathered wipe, easeOut 0.7s, 0.18s line stagger</div>
+                    <div><b>Accent</b>Drops at 0.62s on .smooth(0.44). No bounce</div>
+                    <div><b>Hold</b>Breathes to 1.012 on easeInOut 2.6s while auth and billing load</div>
+                    <div><b>Exit</b>Scale 1.06 and fade, easeInOut 0.45s</div>
+                </figcaption>
+            </figure>
         </section>
 
         <div class="container--prose">
@@ -79,229 +116,342 @@
             <section class="cs-section reveal">
                 <header class="cs-section__head">
                     <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem</span>
-                    <h2 class="h2 cs-section__title">We had built a first-run that respected people and asked nothing of them.</h2>
+                    <h2 class="h2 cs-section__title">Every wait in the app looked like something had broken.</h2>
                 </header>
 
                 <div class="cs-problem">
                     <div class="cs-problem__label">Problem statement</div>
-                    <p class="cs-problem__text">New users answered eight clean questions, watched a five-second "calculating" moment, and received a nutrition plan backed by peer-reviewed citations. Then the flow ended. No goal weight, no projection, no permission asks, no account save, no paywall. The plan was credible and nobody was committed to it. Three months after launch, Café Cal had zero revenue because the product had never once asked for any.</p>
+                    <p class="cs-problem__text">An AI calorie tracker waits a lot. It waits on sign-in at launch, on the maths behind your plan, and on a model reading your plate. In our first builds each of those waits was a spinner or a hard cut. The worst was the camera. You pressed the shutter, the screen flashed white, and the app jumped to Home with your photo gone. The note we left ourselves in the code says it plainly: the swap "read as the app crashing rather than as a photo being taken."</p>
                 </div>
 
                 <div class="cs-prose">
-                    <p>I want to be precise about what was wrong, because the flow was not bad. Basics, body measurements, activity, primary goal, a target date, diet, "have you tried other apps," "where did you hear about us." Haptic ruler pickers. An editable plan. A safety cap on aggressive calorie targets. Nobody complained about it, which is exactly why it took me three months to see it as a problem.</p>
-                    <p>The moment it became one was July 2026. We had decided to charge, and the paywall had to live somewhere. Putting it at the end of a flow that built no commitment would have been asking strangers for money.</p>
+                    <p>None of this was a delight problem, and adding bounce would not have fixed it. People were asking three plain questions and the app answered none of them. <em>Where did my photo go? Is it actually working? Did that count?</em> The motion work was about answering those three questions, on both platforms, without saying anything untrue.</p>
                 </div>
             </section>
 
-            <!-- 02. What I learned -->
+            <!-- 02. Principles -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; What I learned</span>
-                    <h2 class="h2 cs-section__title">The research said our onboarding was too short. The teardown showed me why.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Three jobs</span>
+                    <h2 class="h2 cs-section__title">One job for each question, and a curve to match.</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>Two sources, one week. First, the subscription-app data. RevenueCat's benchmarks across 115,000 apps put about half of all paid conversions on day zero, in the first session, and show hard or trial-inclusive paywalls converting around five times better than freemium.<sup>1</sup> Their onboarding writing makes the counterintuitive point directly: most onboarding is too short, because value and projection screens build momentum rather than friction.<sup>2</sup> Noom runs over a hundred screens and converts through progressive commitment.</p>
-                    <p>Second, I captured the complete first-run of Cal AI, MacroFactor, and MyFitnessPal, screen by screen, and laid ours next to them. Cal AI's 34 screens are engineered for one moment: a soft paywall at the peak of commitment, after your name is on a plan with a goal date.<sup>3</sup> MacroFactor pre-justifies its price with an honest "here's our business model" screen. MyFitnessPal extracts data and dead-ends at "create account."</p>
+                    <p>The token file opens with its own grammar: <em>physics-based springs for interactive, easeOut for data fill.</em> Everything below follows from that line and three jobs.</p>
                 </div>
-
-                <div class="cs-figure">
-                    <div class="cs-figure__img"><img src="Images/CafeCal/calai-teardown.jpg" alt="Three Cal AI onboarding screens from the teardown: desired weight, the weight transition projection, and the $0.00 due today paywall"></div>
-                    <p class="cs-figure__caption">From the teardown. Cal AI's goal weight, projection, and paywall. Captured July 2026. The structure was worth studying. The tone was not worth copying.</p>
-                </div>
-
-                <div class="cs-parity">
-                    <div class="cs-parity__head">
-                        <div class="cs-parity__cell">Mechanic</div>
-                        <div class="cs-parity__cell">Café Cal v1</div>
-                        <div class="cs-parity__cell">Cal AI</div>
-                        <div class="cs-parity__cell">MacroFactor</div>
-                    </div>
-                    <div class="cs-parity__row">
-                        <div class="cs-parity__cell">Goal weight and pace</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
-                    </div>
-                    <div class="cs-parity__row">
-                        <div class="cs-parity__cell">Projection graph</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">three</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">teased</div>
-                    </div>
-                    <div class="cs-parity__row">
-                        <div class="cs-parity__cell">Scientific citations</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">yes</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">"research-grade"</div>
-                    </div>
-                    <div class="cs-parity__row">
-                        <div class="cs-parity__cell">Health and notification asks</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">no</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">after reveal</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">not captured</div>
-                    </div>
-                    <div class="cs-parity__row">
-                        <div class="cs-parity__cell">Paywall moment</div>
-                        <div class="cs-parity__cell cs-parity__cell--n">none</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">soft, at the end</div>
-                        <div class="cs-parity__cell cs-parity__cell--y">premium-only, pre-justified</div>
-                    </div>
-                </div>
-
-                <div class="cs-prose">
-                    <p>The one-line verdict I wrote at the top of the teardown: <em>ours is the most polished and honest of the four, and the most commercially naive.</em> We had the credibility edge, peer-reviewed sources on the plan reveal that none of the slick apps could match. What we lacked was structure: the mechanics that turn minutes of answering questions into a commitment.</p>
-                </div>
+                <ol class="mo-rules">
+                    <li><code>.smooth(0.5)</code><p><strong>Continuity.</strong> Anything you create travels to where it lives. It never teleports. Where precision matters, the curve does not overshoot.</p></li>
+                    <li><code>linear · 5.0s → 1.2s</code><p><strong>Honest waiting.</strong> Show the real stages of the work. Show them in full once, then get out of the way.</p></li>
+                    <li><code>spring(0.4, 0.85)</code><p><strong>Restraint.</strong> Celebrate only what the person chose to chase. Stay quiet about everything else. Frequent actions get the least motion.</p></li>
+                </ol>
             </section>
 
-            <!-- 03. Decisions -->
+            <!-- 03. Continuity -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; What I decided</span>
-                    <h2 class="h2 cs-section__title">Keep the spine. Borrow the mechanics. Leave the tricks.</h2>
-                </header>
-
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Borrowed</span>
-                    <div class="cs-decision__body">
-                        <strong>Goal weight and weekly pace, with the safety cap as the default.</strong> v1 collected a target date but never a target weight, so it could not make a concrete promise. v2 adds a goal-weight ruler and a pace slider with "Use recommended" preselected. Our old safety cap was a warning that appeared after you chose badly. Now it is the choice you have to work to leave.
-                    </div>
-                </div>
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Borrowed</span>
-                    <div class="cs-decision__body">
-                        <strong>One projection, drawn from real inputs.</strong> With weight, goal, and pace, we can plot an honest curve from today to the goal date. It appears once mid-flow and again on the plan reveal. Cal AI shows three. One is enough when it is true.
-                    </div>
-                </div>
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Borrowed</span>
-                    <div class="cs-decision__body">
-                        <strong>Every hard ask moves to after the reveal.</strong> Apple Health, notifications, and the paywall all come after the user has seen their plan, when sunk cost is highest and the value is visible. All three are skippable. The paywall carries a 3-day trial and says so before it says a price.
-                    </div>
-                </div>
-                <div class="cs-decision">
-                    <span class="cs-decision__label">Refused</span>
-                    <div class="cs-decision__body">
-                        <strong>No social proof we could not prove.</strong> We had four ratings. So no "5M users," no testimonial, no "90% of users say." The plan reveal cites five real DOIs instead. In a health app, a small lie on the money screen poisons every number after it.
-                    </div>
-                </div>
-            </section>
-
-            <!-- 04. The flow -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; The flow, before and after</span>
-                    <h2 class="h2 cs-section__title">Eight questions became twenty steps. It got longer, and it got faster to commit to.</h2>
-                </header>
-
-                <div class="cs-flows">
-                    <div class="cs-flow">
-                        <div class="cs-flow__title">v1 · April to June 2026</div>
-                        <ol>
-                            <li>Tell us about yourself (name, sex, date of birth)</li>
-                            <li>Body measurements</li>
-                            <li>How active are you?</li>
-                            <li>Primary goal</li>
-                            <li>When do you want to reach it?</li>
-                            <li>Diet and restrictions</li>
-                            <li>Tried other apps?</li>
-                            <li>Where did you hear about us?</li>
-                            <li class="is-end">Calculating, then plan reveal, then "Let's get started"</li>
-                        </ol>
-                    </div>
-                    <div class="cs-flow">
-                        <div class="cs-flow__title cs-flow__title--after">v2 · Shipped July 6, 2026</div>
-                        <ol>
-                            <li class="is-new">Welcome</li>
-                            <li>Name (only if sign-in gave us none)</li>
-                            <li>Gender</li>
-                            <li>Activity</li>
-                            <li>Where did you hear about us?</li>
-                            <li>Tried other apps?</li>
-                            <li class="is-new">Why this works (value)</li>
-                            <li>Body metrics</li>
-                            <li>Date of birth</li>
-                            <li>Primary goal</li>
-                            <li class="is-new">Goal weight</li>
-                            <li class="is-new">Reassurance ("5 kg is very achievable")</li>
-                            <li class="is-new">Pace, recommended by default</li>
-                            <li class="is-new">What's stopping you? (multi-select)</li>
-                            <li class="is-new">Projection</li>
-                            <li>Diet</li>
-                            <li>Allergies</li>
-                            <li class="is-new">Trust (how we handle your data)</li>
-                            <li class="is-new">Apple Health, skippable</li>
-                            <li class="is-new">Notifications, skippable</li>
-                            <li class="is-end">Calculating, plan reveal with projection, then the paywall with a 3-day trial</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="cs-figure-grid cs-figure-grid--light">
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-goal-weight.png" alt="Goal weight step with a haptic ruler picker"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-pace.png" alt="Pace step, 0.5 kg per week, with the recommended safe default highlighted"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-projection.png" alt="Projection step showing the weight transition curve to the goal date"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-plan-reveal.png" alt="Plan reveal: goal, projected path, daily macro recommendation, and the peer-reviewed sources"></div>
-                </div>
-                <p class="cs-figure__caption">The four screens that did not exist in v1. Goal weight, pace, projection, and the plan reveal that now carries the projection above the macros.</p>
-
-                <div class="cs-figure-grid cs-figure-grid--light">
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-barrier.png" alt="What's stopping you from reaching your goals, a multi-select barrier question"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-calculating.png" alt="Calculating screen at 42 percent, listing the daily recommendations being prepared"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/ob-all-done.png" alt="All done screen with a Generate my plan button"></div>
-                    <div class="cs-figure-grid__item"><img src="Images/CafeCal/paywall.png" alt="Paywall after the plan reveal: yearly plan selected, Try free for 3 days, no commitment copy"></div>
-                </div>
-                <p class="cs-figure__caption">The barrier question, the calculating moment we kept, the hand-off, and the paywall that now has somewhere to stand.</p>
-            </section>
-
-            <!-- 05. What happened -->
-            <section class="cs-section reveal">
-                <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; What happened next</span>
-                    <h2 class="h2 cs-section__title">It shipped, it charged, and the audit a month later showed me the parts I had rushed.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Continuity</span>
+                    <h2 class="h2 cs-section__title">The photo you take is the photo that lands on the card.</h2>
                 </header>
                 <div class="cs-prose">
-                    <p>v2 went live on July 6 with the first paywall. Café Cal has had paying subscribers since. That is the outcome the problem statement asked for, and I am not going to dress it up with a conversion percentage from a base of a few hundred installs.</p>
-                    <p>What I will report is what the August 10 audit found in this exact flow, because it is the honest second half of the story. The paywall had no back, skip, or close, and quitting at it destroyed all twenty answers. The projection rendered an empty card for four of the six goals. The money screen had the old brand name on it. All three were fixed within days. The barrier question became multi-select on August 22 after watching people pick one reason when they clearly had three.</p>
+                    <p>The fix was to stop cutting and fly the photo. The shutter freezes the frame for 50 ms so the moment registers as capture, not failure. The photo then lifts onto an overlay above the tab bar, because SwiftUI's matched geometry cannot cross a tab switch. It flies into the thumbnail on the new processing card while a black backdrop hides the swap and dissolves. The landing is a light tap on the wrist.</p>
+                    <p>The flight uses <code>.smooth</code> and not a spring, and the token comment says why: <em>an overshoot would leave the flying photo a few points off.</em> Bounce is expressive. Here it would just be wrong.</p>
                 </div>
 
+                <figure class="mo-demo" data-demo="capture">
+                    <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Press Replay, or slow it to ¼× with the speed control</p>
+                    <div class="mo-demo__stage">
+                        <div class="mo-phone">
+                            <div class="mo-screen mo-screen--video">
+                                <video class="mo-video no-zoom" muted playsinline loop preload="metadata" poster="Images/CafeCal/motion/capture-flight-poster.jpg" aria-label="Screen recording of Café Cal on iPhone: the shutter is pressed, the frame freezes, and the photo flies into the processing card on Home">
+                                    <source src="Images/CafeCal/motion/capture-flight.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-demo__bar">
+                        <button class="mo-btn" type="button" data-act="video-replay">Replay</button>
+                        <p class="mo-demo__note">Screen recording from the shipping iOS app, dark mode. The ¼× control slows it down.</p>
+                    </div>
+                    <figcaption class="mo-demo__spec">
+                        <div><b>Shutter</b>spring(0.2, 0.6) to 0.85, medium impact</div>
+                        <div><b>Freeze</b>50 ms hold, chrome out in 0.05s</div>
+                        <div><b>Flight</b>.smooth(0.5), corner 0 → 18pt, backdrop easeOut 0.32s</div>
+                        <div><b>Card</b>spring(0.42, 0.82), scale 0.96 from the top</div>
+                        <div><b>Land</b>540 ms, light impact, same-frame hand-off</div>
+                        <div><b>Wait</b>Sweep 1.4s linear, prompt every 2.2s</div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- 04. Honest waiting -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; Honest waiting</span>
+                    <h2 class="h2 cs-section__title">Show the work once. The second time, just give the answer.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Buell and Norton's labor illusion research is the reason the plan screen does not appear instantly. When a service shows the work it is doing, people prefer it even over an instant result. In one of their studies, 62% of people chose a 30-second wait with visible progress, against 42% when the wait was blind.<sup>1</sup> The same paper sets the limit I design to: effort cannot rescue a bad result.</p>
+                    <p>So the first plan takes five seconds and names four real stages as it goes. Regenerating it takes 1.2. You have already watched the work once, and making you watch it again would be theatre. The meal scan follows the same rule, with a café voice. <em>Frothing up the macros</em> is a joke, but the skeleton it sits on is held for at least 900 ms, so a fast answer never flickers.</p>
+                </div>
+
+                <figure class="mo-demo" data-demo="calc">
+                    <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Tap Build the plan to watch the wait</p>
+                    <div class="mo-demo__stage">
+                        <div class="mo-phone">
+                            <div class="mo-screen">
+                                <div class="calc-view">
+                                    <div class="calc-pct" aria-live="off">0%</div>
+                                    <div class="calc-track"><div class="calc-fill"></div></div>
+                                    <div class="calc-status"><span>Analyzing your profile…</span></div>
+                                </div>
+                                <div class="calc-reveal">
+                                    <div class="calc-title">Your plan is ready</div>
+                                    <div class="calc-sub">Built from your answers. Every number cites its source.</div>
+                                    <div class="calc-grid">
+                                        <div class="calc-card">
+                                            <svg viewBox="0 0 100 92"><rect x="2" y="2" width="96" height="88" rx="13" stroke="#FF8C00" opacity=".15"/><rect class="calc-ring" x="2" y="2" width="96" height="88" rx="13" stroke="#FF8C00" pathLength="1"/></svg>
+                                            <div class="calc-val"><b>1,850</b><small>Calories</small></div>
+                                        </div>
+                                        <div class="calc-card">
+                                            <svg viewBox="0 0 100 92"><rect x="2" y="2" width="96" height="88" rx="13" stroke="#60A5FA" opacity=".15"/><rect class="calc-ring" x="2" y="2" width="96" height="88" rx="13" stroke="#60A5FA" pathLength="1"/></svg>
+                                            <div class="calc-val"><b>210g</b><small>Carbs</small></div>
+                                        </div>
+                                        <div class="calc-card">
+                                            <svg viewBox="0 0 100 92"><rect x="2" y="2" width="96" height="88" rx="13" stroke="#4ADE80" opacity=".15"/><rect class="calc-ring" x="2" y="2" width="96" height="88" rx="13" stroke="#4ADE80" pathLength="1"/></svg>
+                                            <div class="calc-val"><b>120g</b><small>Protein</small></div>
+                                        </div>
+                                        <div class="calc-card">
+                                            <svg viewBox="0 0 100 92"><rect x="2" y="2" width="96" height="88" rx="13" stroke="#FACC15" opacity=".15"/><rect class="calc-ring" x="2" y="2" width="96" height="88" rx="13" stroke="#FACC15" pathLength="1"/></svg>
+                                            <div class="calc-val"><b>60g</b><small>Fats</small></div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-cite">Cites 5 peer-reviewed sources</div>
+                                    <button class="rl-rec calc-cta" type="button" data-act="calc">Build the plan</button>
+                                </div>
+                            </div>
+                            <div class="mo-haptic" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    <div class="mo-demo__bar">
+                        <button class="mo-btn" type="button" data-act="calc">Build the plan</button>
+                        <p class="mo-demo__note">Tap Build the plan on the phone, or use the button, to run it again. Sample numbers.</p>
+                    </div>
+                    <figcaption class="mo-demo__spec">
+                        <div><b>Minimum</b>5.0s first run, 1.2s after that</div>
+                        <div><b>Stages</b>Copy changes at 25, 50 and 75%, easeInOut 0.3s</div>
+                        <div><b>Reveal</b>Cross-fade 0.3s, then rings trace each card, easeOut 1.2s</div>
+                        <div><b>Slow save</b>Past the minimum + 0.3s, "Finalizing your plan…"</div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- 05. Touch -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Touch</span>
+                    <h2 class="h2 cs-section__title">Where your finger leads, the motion follows and adds nothing.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The ruler picker sets weight, height, goal and pace, so it is the most-touched control in onboarding. It gets no easing flourish. It follows the finger one to one and snaps to each step. Every value you cross is a medium haptic detent, so you can feel 0.5 kg without looking. The number rolls only the digits that changed. "Use recommended" glides there in a quarter-second and clicks through every value on the way, so the jump still feels like it was made with a hand.</p>
+                </div>
+
+                <figure class="mo-demo" data-demo="ruler">
+                    <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Drag the ruler, or tap Use recommended</p>
+                    <div class="mo-demo__stage">
+                        <div class="mo-phone">
+                            <div class="mo-screen">
+                                <div class="rl-view">
+                                    <div class="rl-q">What's your goal weight?</div>
+                                    <div class="rl-readout" aria-live="polite"><small>kg</small></div>
+                                    <div class="rl-sub"></div>
+                                    <div class="rl-wrap">
+                                        <canvas class="rl-canvas" tabindex="0" role="slider" aria-label="Goal weight, drag or use the arrow keys"></canvas>
+                                        <div class="rl-needle"></div>
+                                    </div>
+                                    <div class="rl-hint">Drag, or use ← →</div>
+                                    <button class="rl-rec" type="button" data-act="recommend">Use recommended</button>
+                                </div>
+                            </div>
+                            <div class="mo-haptic" aria-live="off"></div>
+                        </div>
+                    </div>
+                    <figcaption class="mo-demo__spec">
+                        <div><b>Ticks</b>16pt apart. Major 36pt, medium 22, minor 11</div>
+                        <div><b>Detent</b>Medium impact on every step crossed</div>
+                        <div><b>Readout</b>numericText, easeInOut 0.12s</div>
+                        <div><b>Recommend</b>Glide on easeOut 0.25s</div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- 06. Restraint -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Restraint</span>
+                    <h2 class="h2 cs-section__title">We shipped confetti for a biscuit, then took it back.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Hitting a goal earns the biggest moment in the app. A disc springs in, a check draws itself, and 90 pieces of confetti fall in that goal's own colour. Our first version used the same trigger for every nutrient, including the ones with a cap, so going over your sugar limit set off a celebration. On August 10 we replaced it with a warning. On September 21 we softened the warning too, because the rejection buzz was, in the commit's words, <em>"literally a rejection buzz for eating a biscuit."</em></p>
+                    <p>On September 24 we limited each goal to one celebration per day. Anything that happens often has to become quiet, or it stops meaning anything.</p>
+                </div>
+
+                <figure class="mo-demo" data-demo="celebrate">
+                    <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Log a protein shake or a biscuit</p>
+                    <div class="mo-demo__stage">
+                        <div class="mo-phone">
+                            <div class="mo-screen">
+                                <div class="cb-idle">
+                                    <div class="sp-home__h">Today</div>
+                                    <div class="sp-home__d">Monday, Sept 28</div>
+                                    <div class="app-card" style="margin-top:14px">
+                                        <div class="app-lbl">Protein · 112 of 120 g</div>
+                                        <div class="app-track"><i style="width:93%;background:#4ADE80"></i></div>
+                                        <div class="app-lbl" style="margin-top:14px">Sugar · 48 of 50 g cap</div>
+                                        <div class="app-track"><i style="width:96%;background:#D4A574"></i></div>
+                                    </div>
+                                    <div class="app-sec">Quick log</div>
+                                    <button class="cb-log" type="button" data-act="goal"><span class="cb-log__plus">+</span><span><b>Protein shake</b><small>24 g protein</small></span></button>
+                                    <button class="cb-log" type="button" data-act="cap"><span class="cb-log__plus">+</span><span><b>Biscuit</b><small>4 g sugar</small></span></button>
+                                </div>
+                                <div class="cb-toast"><i>i</i><div><b>You're past today's sugar cap</b><span>52 of 50 g. Good to know, nothing to fix.</span></div></div>
+                                <div class="cb-sheet">
+                                    <div class="cb-glow"></div>
+                                    <div class="cb-disc"><svg viewBox="0 0 50 50"><path class="cb-check" pathLength="1" d="M12 26 L22 35 L39 15"/></svg></div>
+                                    <div class="cb-h cb-fade">Protein goal hit</div>
+                                    <div class="cb-p cb-fade">120 of 120 g today.</div>
+                                    <button class="cb-cta cb-fade" type="button" data-act="dismiss">Nice</button>
+                                </div>
+                                <canvas class="cb-confetti"></canvas>
+                            </div>
+                            <div class="mo-haptic" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    <div class="mo-demo__bar">
+                        <button class="mo-btn" type="button" data-act="goal">+ Protein shake</button>
+                        <button class="mo-btn mo-btn--ghost" type="button" data-act="cap">+ Biscuit</button>
+                        <p class="mo-demo__note">Tap a quick-log row on the phone, or use the buttons. Sample copy.</p>
+                    </div>
+                    <figcaption class="mo-demo__spec">
+                        <div><b>Goal</b>Disc and glow on spring(0.4, 0.85), success haptic</div>
+                        <div><b>Check</b>Traces at 0.27s, easeOut 0.38s</div>
+                        <div><b>Confetti</b>90 pieces, gravity 0.7t², spin ±4.7 rad/s</div>
+                        <div><b>Cap</b>Info toast, easeOut 0.4s, light tap only</div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- 07. Working with Opus -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(07) &nbsp; Working with Opus 5.5</span>
+                    <h2 class="h2 cs-section__title">I write the intent in words. The model writes the curve.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Motion is hard to hand off because it lives between a design file and code. My approach is to put the intent into the token file as a sentence. The splash accent's comment reads <em>"an overshoot would read playful, which is the wrong register for a high-contrast serif wordmark."</em> Opus 5.5 can act on a sentence like that. It proposes the curve and writes the SwiftUI. It ports the result to Compose with the conversion written at the top of the Android token file, and records every place the platforms have to differ.</p>
+                </div>
+
+                <div class="mo-loop">
+                    <div class="is-you"><span>01 · Me</span><b>Describe it physically</b><p>"Like a garnish set on a plate." What it should feel like and what it must not do.</p></div>
+                    <div><span>02 · Opus</span><b>Propose the curve</b><p>Picks spring or tween, writes the values and the reasoning into the token.</p></div>
+                    <div class="is-you"><span>03 · Me</span><b>Judge it on device</b><p>At full speed and at a quarter. With Reduce Motion on. With a thumb, not a cursor.</p></div>
+                    <div><span>04 · Opus</span><b>Port and audit</b><p>Compose from the same numbers. The web version on this page. What drifted.</p></div>
+                </div>
+
+                <div class="cs-prose" style="margin-top:var(--s-6)">
+                    <p>The spring lab below shows the whole idea in one place: one token and three platforms. Choose a token from the app and you get the SwiftUI, the Compose conversion, and a CSS <code>linear()</code> curve sampled from the same physics. Every demo on this page was rebuilt from those numbers.</p>
+                </div>
+
+                <figure class="mo-demo" data-demo="lab">
+                    <p class="mo-demo__try"><span class="mo-demo__try-dot" aria-hidden="true"></span><b>Interactive</b>Drag the sliders or pick a token, then press Play</p>
+                    <div class="mo-demo__stage">
+                        <div class="lab">
+                            <div>
+                                <canvas class="lab-plot" aria-label="Spring response curve"></canvas>
+                                <div class="lab-lane"><div class="lab-dot"></div></div>
+                            </div>
+                            <div class="lab-ctrl">
+                                <label>Response <output data-out="response">0.40</output></label>
+                                <input type="range" name="response" min="0.15" max="1" step="0.01" value="0.4">
+                                <label>Damping fraction <output data-out="damping">0.85</output></label>
+                                <input type="range" name="damping" min="0.3" max="1" step="0.01" value="0.85">
+                                <label>Settles in <output data-out="settle">–</output></label>
+                                <div class="lab-presets">
+                                    <button type="button" data-preset="0.4,0.85" aria-pressed="true">cardEntry</button>
+                                    <button type="button" data-preset="0.42,0.82" aria-pressed="false">cardArrival</button>
+                                    <button type="button" data-preset="0.5,1" aria-pressed="false">flight</button>
+                                    <button type="button" data-preset="0.2,0.6" aria-pressed="false">shutter</button>
+                                    <button type="button" data-preset="0.45,0.55" aria-pressed="false">water slosh</button>
+                                    <button type="button" data-preset="0.25,0.5" aria-pressed="false">meal bounce</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lab-code">
+                        <div><span>SwiftUI</span><code data-code="swift"></code></div>
+                        <div><span>Compose</span><code data-code="compose"></code></div>
+                        <div><span>CSS</span><code data-code="css"></code></div>
+                    </div>
+                    <div class="mo-demo__bar">
+                        <button class="mo-btn" type="button" data-act="lab-play">Play</button>
+                        <p class="mo-demo__note">stiffness = (2π / response)² · dampingRatio = dampingFraction</p>
+                    </div>
+                </figure>
+
+                <div class="cs-prose" style="margin-top:var(--s-8)">
+                    <p>The part I trust it with most is the audit. For this page, parallel Opus agents read both codebases end to end and gave me back every animation, haptic and Reduce Motion check, with line numbers. They also found what I had missed.</p>
+                </div>
                 <div class="cs-fixes">
                     <div class="cs-fix">
-                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Quitting at the paywall lost every onboarding answer and restarted at step one.</div></div>
-                        <div><span class="cs-fix__k">Fixed, same day</span><div class="cs-fix__after">Answers persist before the paywall. Relaunch resumes at the plan.</div></div>
+                        <div><span class="cs-fix__k">Found</span><div class="cs-fix__before">The onboarding slide, the Home stagger and the ruler ignore Reduce Motion on iOS.</div></div>
+                        <div><span class="cs-fix__k">Next</span><div class="cs-fix__after">Fades in place of travel, matching the capture flight's reduced path.</div></div>
                     </div>
                     <div class="cs-fix">
-                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Projection was empty for maintain, build muscle, eat healthier, and medical tracking.</div></div>
-                        <div><span class="cs-fix__k">Fixed, day 2</span><div class="cs-fix__after">Goal-appropriate projections for every goal, and the weight-loss chart never shows for someone who did not ask to lose weight.</div></div>
+                        <div><span class="cs-fix__k">Found</span><div class="cs-fix__before">On Android the streak count-up jumps straight to its number, and seven motion tokens are never used.</div></div>
+                        <div><span class="cs-fix__k">Next</span><div class="cs-fix__after">Wire the 0.7s count-up and delete the tokens nobody calls.</div></div>
                     </div>
                     <div class="cs-fix">
-                        <div><span class="cs-fix__k">Audit, Aug 10</span><div class="cs-fix__before">Lapsed subscribers hit the paywall on launch and could not reach their data.</div></div>
-                        <div><span class="cs-fix__k">Fixed, Aug 13</span><div class="cs-fix__after">Grace access to Settings, export, and deletion, and a save offer instead of a lockout.</div></div>
+                        <div><span class="cs-fix__k">Found</span><div class="cs-fix__before">The projection graph, the most persuasive screen in onboarding, does not animate at all.</div></div>
+                        <div><span class="cs-fix__k">Next</span><div class="cs-fix__after">A single draw-on, after the numbers it is drawn from have settled.</div></div>
                     </div>
                 </div>
             </section>
 
-            <!-- 06. Reflection -->
+            <!-- 08. Reflection -->
             <section class="cs-section reveal">
                 <header class="cs-section__head">
-                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; What I'm keeping</span>
-                    <h2 class="h2 cs-section__title">Honesty was never the problem. Honesty without structure was.</h2>
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(08) &nbsp; What I'm keeping</span>
+                    <h2 class="h2 cs-section__title">Motion is a sentence the app says. It should be true.</h2>
                 </header>
                 <div class="cs-prose">
-                    <p><strong>Length is not friction if every screen gives something back.</strong> I had been proud of eight questions. The research and the teardown both said the same thing: people will answer twenty if the output is visibly theirs, and the projection they see at step fifteen is what makes them believe the plan at step twenty-one.</p>
-                    <p><strong>Build the paywall's exit before its entrance.</strong> I designed the moment to ask for money and forgot to design the moment someone says no. The audit caught it. Next time it is in the first sketch.</p>
+                    <p><strong>Write the reason next to the number.</strong> A spring value without a sentence gets "improved" by the next person, or the next model. A spring value with a sentence gets ported correctly to a platform I did not write it for.</p>
+                    <p><strong>The model is fast. My thumb is the judge.</strong> Opus can write, port and audit a spring in seconds. It cannot tell me that a flying photo feels a few points off. I still decide that on a phone, at a quarter speed, with the sound off.</p>
                 </div>
 
                 <h3 class="h3 cs-h3">References</h3>
                 <ol class="cs-refs">
-                    <li><span>RevenueCat, <a href="https://www.revenuecat.com/state-of-subscription-apps" target="_blank" rel="noopener">State of Subscription Apps 2026</a>. About 50% of paid conversions on day 0; hard paywall trial-to-paid 10.7% vs 2.1% freemium.</span></li>
-                    <li><span>RevenueCat, <a href="https://www.revenuecat.com/blog/growth/why-your-onboarding-experience-might-be-too-short" target="_blank" rel="noopener">Why your onboarding experience might be too short</a>, and <a href="https://www.revenuecat.com/blog/growth/web-to-app-onboarding-funnel" target="_blank" rel="noopener">Inside Noom's onboarding funnel</a>.</span></li>
-                    <li><span>Primary teardown of Cal AI, MacroFactor, and MyFitnessPal iOS onboarding, July 2026. Cal AI structure also documented at <a href="https://tasu.ai/library/cal-ai" target="_blank" rel="noopener">tasu.ai, Cal AI Teardown</a>.</span></li>
+                    <li><span>Buell, R. W. and Norton, M. I. (2011). <a href="https://doi.org/10.1287/mnsc.1110.1376" target="_blank" rel="noopener">The Labor Illusion: How Operational Transparency Increases Perceived Value</a>. <em>Management Science</em> 57(9).</span></li>
+                    <li><span>Apple, WWDC23. <a href="https://developer.apple.com/videos/play/wwdc2023/10158/" target="_blank" rel="noopener">Animate with springs</a>. Also the <a href="https://developer.apple.com/design/human-interface-guidelines/motion" target="_blank" rel="noopener">Human Interface Guidelines on motion</a>.</span></li>
+                    <li><span>Emil Kowalski, <a href="https://emilkowal.ski/ui/you-dont-need-animations" target="_blank" rel="noopener">You don't need animations</a>. The frequency rule behind section 06.</span></li>
+                    <li><span>Anthropic, <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5</a>.</span></li>
                 </ol>
             </section>
 
         </div>
 
     </main>
+
+    <!-- Motion controls -->
+    <div class="mo-dock" role="group" aria-label="Motion controls">
+        <span class="mo-dock__label">Speed</span>
+        <div class="mo-seg" data-control="speed">
+            <button type="button" data-value="1" aria-pressed="true">1×</button>
+            <button type="button" data-value="0.25" aria-pressed="false">¼×</button>
+        </div>
+        <span class="mo-dock__label"><span class="mo-dock__label--hide">Reduce </span>motion</span>
+        <div class="mo-seg" data-control="reduced">
+            <button type="button" data-value="off" aria-pressed="true">Off</button>
+            <button type="button" data-value="on" aria-pressed="false">On</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -327,6 +477,7 @@
         </div>
     </footer>
 
-    <script src="site.js?v=cafecal4" defer></script>
+    <script src="site.js?v=cafecal5" defer></script>
+    <script src="cafecal-motion.js?v=5" defer></script>
 </body>
 </html>
