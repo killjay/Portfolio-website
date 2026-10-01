@@ -85,9 +85,12 @@
     svg.setAttribute('focusable', 'false');
     svg.innerHTML = `${legs}<g class="blob__body">${leftArm}${rightArm}${shape.body(color)}${face}</g>`;
 
+    el.classList.remove('blob--stand', 'blob--wave', 'blob--walk', 'blob--peek');
     el.classList.add(`blob--${pose}`);
     el.replaceChildren(svg);
   };
 
+  // Exposed so pages can swap a character after load (home rail).
+  window.renderBlob = render;
   document.querySelectorAll('.blob[data-blob]').forEach(render);
 })();
