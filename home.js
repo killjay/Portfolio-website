@@ -100,6 +100,8 @@
   const n = planes.length;
   const ui = {
     count: document.querySelector('[data-count]'),
+    title: document.querySelector('span[data-title]'),
+    titleWrap: document.querySelector('[data-title-wrap]'),
     client: document.querySelector('[data-client]'),
     role: document.querySelector('[data-role]'),
     detail: document.querySelector('[data-detail]'),
@@ -122,6 +124,8 @@
     stage.appendChild(probe);
     G = probe.getBoundingClientRect().width || G;
     probe.remove();
+    // Title starts where the first small plane starts
+    if (ui.titleWrap) ui.titleWrap.style.setProperty('--title-x', `${(stage.offsetLeft + H + G).toFixed(1)}px`);
   };
 
   const lerp = (a, b, t) => a + (b - a) * t;
@@ -186,9 +190,11 @@
     const el = planes[i];
     const num = (k) => String(k).padStart(2, '0');
     if (ui.count) ui.count.textContent = `${num(i + 1)}/${num(n)}`;
+    planes.forEach((pl, k) => pl.classList.toggle('is-active', k === i));
     if (first) return;
     swapText(ui.client, el.dataset.client);
     swapText(ui.role, el.dataset.role);
+    swapText(ui.title, el.dataset.title);
     if (ui.detail) ui.detail.href = el.getAttribute('href');
     if (ui.mName) ui.mName.textContent = el.dataset.client;
     if (ui.mLink) ui.mLink.href = el.getAttribute('href');
