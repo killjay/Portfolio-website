@@ -10,258 +10,260 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="site.css">
-    <meta name="theme-color" content="#F0E6DA">
+    <meta name="theme-color" content="#F3ECDF">
 </head>
-<body>
+<body id="top">
+    <div class="grain" aria-hidden="true"></div>
 
     <header class="nav">
         <div class="nav__inner">
-            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
             <nav class="nav__links" aria-label="Primary">
-                <a href="index.html" aria-current="page">Home</a>
-                <a href="resume.html">Resume</a>
+                <a href="work.html">Work</a>
                 <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
             </nav>
+            <a class="nav__cta" href="mailto:inandha97@gmail.com"><span class="nav__dot" aria-hidden="true"></span><span class="nav__cta-label">Say hi</span><span aria-hidden="true">→</span></a>
         </div>
     </header>
 
     <main>
 
-        <!-- Hero -->
-        <section class="home-hero">
-            <div class="container">
-                <div class="home-hero__inner">
-                    <h1 class="home-hero__title reveal">
-                        Nandha Kumar
-                        <span class="role"><span class="highlight"><em>Product</em></span> Designer</span>
-                    </h1>
-
-                    <p class="home-hero__location reveal">Based in San Francisco</p>
-
-                    <div class="home-hero__actions reveal">
-                        <a class="btn btn--accent" href="#work">
-                            See recent work
-                            <span class="btn__chip" aria-hidden="true">→</span>
-                        </a>
-                        <a class="btn btn--ghost" href="about.html">
-                            About me
-                            <span class="btn__chip" aria-hidden="true">→</span>
-                        </a>
-                    </div>
-
-                    <dl class="home-hero__meta reveal">
-                        <div>
-                            <dt>Currently</dt>
-                            <dd>Open to product design roles</dd>
-                        </div>
-                        <div>
-                            <dt>Based in</dt>
-                            <dd>San Francisco Bay Area</dd>
-                        </div>
-                        <div>
-                            <dt>Designing since</dt>
-                            <dd>2019</dd>
-                        </div>
+        <!-- Split hero: statement on top, gallery below -->
+        <section class="hs" aria-label="Introduction">
+            <div class="hs__half hs__half--top">
+                <div class="hs__rail">
+                    <dl>
+                        <div><dt>Role</dt><dd>Product Designer</dd></div>
+                        <div><dt>Focus</dt><dd>AI tools &amp; immersive interfaces</dd></div>
+                        <div><dt>Designing since</dt><dd>2019</dd></div>
+                    </dl>
+                    <dl>
+                        <div><dt>San Francisco</dt><dd data-clock>—</dd></div>
                     </dl>
                 </div>
+                <div class="hs__main">
+                    <svg class="hs__arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 8.66667H1V0M7.83784 4.64286L12 8.66667L7.83784 13" stroke="currentColor" stroke-width="2"/></svg>
+                    <h1 class="hs__statement reveal">
+                        Nandha Kumar is a product designer in San Francisco who makes hard things feel <em>easy</em>: AI tools, 3D worlds, even a tractor cab.
+                    </h1>
+                    <div class="hs__foot">
+                        <div>
+                            <span class="ui muted">Available for work</span>
+                            <span class="ui">Open to product design roles</span>
+                        </div>
+                        <span class="ui muted hs__scroll">Scroll ↓</span>
+                    </div>
+                    <div class="hs__cast" aria-hidden="true">
+                        <span class="blob" data-blob="cloud" data-color="#F5A8C8"></span>
+                        <span class="blob" data-blob="ball" data-color="#22A595"></span>
+                        <span class="blob" data-blob="star" data-color="#FFC61A" data-pose="wave"></span>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <!-- Work intro -->
-        <section class="work-intro" id="work">
-            <div class="container">
-                <span class="eyebrow reveal">(01) &nbsp; Recent works · 07</span>
-                <h2 class="display work-intro__title reveal" style="margin-top: var(--s-4);">
-                    Seven projects.
-                </h2>
-                <p class="lede reveal">
-                    Each one walks through a real decision. You'll see what was on the table, what got cut, and where the numbers landed after.
-                </p>
-            </div>
-        </section>
-
-        <!-- Work list -->
-        <section class="section--tight">
-            <div class="container">
-                <div class="work-list">
-
-                    <a class="work-row reveal" href="Runara.html">
-                        <div class="work-row__media">
-                            <img src="Images/runara.svg" alt="Runara project preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>High time you changed your <em>design workflow</em></h3>
-                            <p>The design workflow I built at Runara: a design system that lives in a repo, a Figma file Claude Code can read and write, and a review agent that lets the whole team contribute to the system without waiting on me. What changed since the redline years, what the AI gets wrong, and where I still make every call.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Workflow</span>
-                                <span class="work-row__tag">AI</span>
-                                <span class="work-row__tag">Design Systems</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">Runara</span>
-                    </a>
-
-                    <a class="work-row reveal" href="JohnDeere.html">
-                        <div class="work-row__media">
-                            <img src="Images/Tractor inCab.png" alt="John Deere in-cab display preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Designing <em>intuitive</em> in-cab displays</h3>
-                            <p>Redesigning John Deere's tractor interface to reduce cognitive load for farmers. NASA TLX validated 41% reduction in mental demand. Partnership with John Deere UX team, 6 weeks, team of 5.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Partnership</span>
-                                <span class="work-row__tag">Industrial UX</span>
-                                <span class="work-row__tag">UI/UX</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">John Deere (ISU)</span>
-                    </a>
-
-                    <a class="work-row reveal" href="Workiva.html">
-                        <div class="work-row__media">
-                            <img src="Images/Anomaly.png" alt="Workiva anomaly detection preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Making <em>anomaly</em> detection less painful</h3>
-                            <p>An AI assist for data teams catching inconsistencies in collaborative spreadsheets. Built with Ranga over 3 months.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Partnership</span>
-                                <span class="work-row__tag">AI</span>
-                                <span class="work-row__tag">UI/UX</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">Workiva (ISU)</span>
-                    </a>
-
-                    <a class="work-row reveal" href="CafeCal.html">
-                        <div class="work-row__media">
-                            <img src="Images/CafeCal/iPhone Air - 1 (1).png" alt="Café Cal project preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Motion for an app that <em>has to wait</em></h3>
-                            <p>An AI calorie tracker spends a lot of its life waiting, and every wait in Café Cal looked like a crash. The motion system I built to fix that, shipped on iOS and Android from one token file, and designed with Claude Opus 5.5. Every demo on the page is live. Today around 10,000 people use the app across iOS and Android.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Founder</span>
-                                <span class="work-row__tag">Motion</span>
-                                <span class="work-row__tag">AI</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">Café Cal</span>
-                    </a>
-
-                    <a class="work-row reveal" href="Velotic.html">
-                        <div class="work-row__media">
-                            <img src="Images/velotic.jpg" alt="Velotic project preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Building the <em>operating system</em> for fitness coaches</h3>
-                            <p>Solo-built B2B SaaS: a coach portal, native iOS and Android client apps, and an AI coaching layer. Three platforms, ~150k lines, three months. Pre-seed-ready in May 2026.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Solo Venture</span>
-                                <span class="work-row__tag">AI</span>
-                                <span class="work-row__tag">Multi-platform</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">Velotic</span>
-                    </a>
-
-                    <!-- ARCHIVED: Myntra case study hidden from portfolio. Uncomment to restore.
-                    <a class="work-row reveal" href="Myntra.html">
-                        <div class="work-row__media">
-                            <img src="Images/Shirts.png" alt="Myntra wishlist preview">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Rebuilding the <em>wishlist</em> from scratch</h3>
-                            <p>Reworking the wishlist on India's biggest fashion platform, used by 75M+ shoppers. Bounce rate dropped 34% and more saves started turning into purchases.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">Product Strategy</span>
-                                <span class="work-row__tag">UI/UX</span>
-                                <span class="work-row__tag">Mobile</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">Myntra</span>
-                    </a>
-                    -->
-
-                    <a class="work-row reveal" href="XRLabs.html">
-                        <div class="work-row__media">
-                            <img src="Images/xrlabs-intel.jpg" alt="Intel logo">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Designing Intel's <em>virtual demo</em></h3>
-                            <p>The Intel Virtual Demo Zone: a browser-based 3D city where 40+ startups show their robots, sensors and inspection rigs inside the buildings they were made for. Built at XR Labs with a team of 12, launched at Intel Innovate 2022.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">XR</span>
-                                <span class="work-row__tag">Spatial UI</span>
-                                <span class="work-row__tag">WebGL</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">XR Labs</span>
-                    </a>
-
-                    <a class="work-row reveal" href="PixelMortar.html">
-                        <div class="work-row__media">
-                            <img src="Images/pm.jpg?v=2" alt="Pixel &amp; Mortar 3D Studio preview. A furnished room plan with a sofa selected and its product details beside it">
-                        </div>
-                        <div class="work-row__body">
-                            <h3>Designing Pixel &amp; Mortar's 3D Studio in <em>web and AR</em></h3>
-                            <p>3D Studio: a room editor inside Pixel &amp; Mortar's interior design platform, where designers lay out a space in 2D, check it in 3D and AR, and share it with their client. Built at XR Labs over 6 months.</p>
-                            <div class="work-row__tags">
-                                <span class="work-row__tag">3D Editor</span>
-                                <span class="work-row__tag">Web</span>
-                                <span class="work-row__tag">UI/UX</span>
-                            </div>
-                        </div>
-                        <span class="work-row__year">XR Labs</span>
-                    </a>
-
+            <div class="hs__half hs__half--bottom">
+                <div class="hs__rail">
+                    <div>
+                        <span class="eyebrow">Selected work</span>
+                        <div class="gal-count" aria-live="polite"><span data-gal-index>01</span><small> / 07</small></div>
+                        <p class="ui gal-title" data-gal-title>Runara</p>
+                    </div>
+                    <div class="gal-ctrl">
+                        <button type="button" data-gal-prev aria-label="Previous project">←</button>
+                        <button type="button" data-gal-next aria-label="Next project">→</button>
+                    </div>
+                </div>
+                <div class="gal">
+                    <div class="gal__track" data-gal>
+                        <a class="gal__card gal__card--dark" href="Runara.html" style="--c: var(--cobalt)" data-title="Runara · Design workflow">
+                            <span class="blob" data-blob="star" data-color="#FFC61A"></span>
+                            <div class="gal__media"><img src="Images/runara.svg" alt="Runara project preview" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Runara</span><span class="gal__tag">Workflow · AI</span></div>
+                        </a>
+                        <a class="gal__card gal__card--dark" href="JohnDeere.html" style="--c: var(--kelly)" data-title="John Deere · In-cab displays">
+                            <span class="blob" data-blob="bean" data-color="#F5A8C8"></span>
+                            <div class="gal__media"><img src="Images/Tractor inCab.png" alt="John Deere in-cab display preview" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">John Deere</span><span class="gal__tag">Industrial UX</span></div>
+                        </a>
+                        <a class="gal__card gal__card--dark" href="Workiva.html" style="--c: var(--teal)" data-title="Workiva · Anomaly detection">
+                            <span class="blob" data-blob="ball" data-color="#F0552B"></span>
+                            <div class="gal__media"><img src="Images/Anomaly.png" alt="Workiva anomaly detection preview" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Workiva</span><span class="gal__tag">AI · UI/UX</span></div>
+                        </a>
+                        <a class="gal__card gal__card--dark" href="CafeCal.html" style="--c: var(--tomato)" data-title="Café Cal · Motion">
+                            <span class="blob" data-blob="cloud" data-color="#EEEA3C"></span>
+                            <div class="gal__media"><img src="Images/CafeCal/iPhone Air - 1 (1).png" alt="Café Cal project preview" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Café Cal</span><span class="gal__tag">Motion · Founder</span></div>
+                        </a>
+                        <a class="gal__card" href="Velotic.html" style="--c: var(--sun)" data-title="Velotic · Coaching OS">
+                            <span class="blob" data-blob="square" data-color="#2A5BD7"></span>
+                            <div class="gal__media"><img src="Images/velotic.jpg" alt="Velotic project preview" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Velotic</span><span class="gal__tag">Solo venture</span></div>
+                        </a>
+                        <a class="gal__card" href="XRLabs.html" style="--c: var(--pink)" data-title="XR Labs · Intel Virtual Demo">
+                            <span class="blob" data-blob="bean" data-color="#11893F"></span>
+                            <div class="gal__media"><img src="Images/xrlabs-intel.jpg" alt="Intel logo" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Intel × XR Labs</span><span class="gal__tag">XR · WebGL</span></div>
+                        </a>
+                        <a class="gal__card" href="PixelMortar.html" style="--c: var(--lemon)" data-title="Pixel &amp; Mortar · 3D Studio">
+                            <span class="blob" data-blob="square" data-color="#F0552B"></span>
+                            <div class="gal__media"><img src="Images/pm.jpg?v=2" alt="Pixel &amp; Mortar 3D Studio preview. A furnished room plan with a sofa selected and its product details beside it" draggable="false"></div>
+                            <div class="gal__meta"><span class="gal__name">Pixel &amp; Mortar</span><span class="gal__tag">3D · AR</span></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Refrain -->
-        <section class="refrain refrain--bare">
-            <div class="container">
-                <span class="eyebrow reveal">(02) &nbsp; Let's talk</span>
-                <h2 class="refrain__title reveal" style="margin-top: var(--s-4);">
-                    Have a hard problem<br />worth designing <em>carefully</em>?
-                </h2>
-                <a class="btn btn--accent reveal" href="mailto:inandha97@gmail.com">
-                    Get in touch
-                    <span class="btn__chip" aria-hidden="true">→</span>
+        <!-- Index -->
+        <section class="sec" id="work">
+            <div class="v-wrap v-grid sec__head">
+                <span class="eyebrow sec__label reveal">(01) Index · 07</span>
+                <h2 class="sec__title reveal">Seven projects, each a <em>real</em> decision.</h2>
+            </div>
+
+            <div class="idx" data-idx>
+                <a class="idx__row idx__row--dark" href="Runara.html" style="--c: var(--cobalt)" data-img="Images/runara.svg">
+                    <span class="idx__num">01</span>
+                    <span class="idx__client">Runara</span>
+                    <h3 class="idx__title">High time you changed your <em>design workflow</em></h3>
+                    <span class="idx__tags">Workflow · AI<br>Design Systems</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/runara.svg" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row idx__row--dark" href="JohnDeere.html" style="--c: var(--kelly)" data-img="Images/Tractor inCab.png">
+                    <span class="idx__num">02</span>
+                    <span class="idx__client">John Deere (ISU)</span>
+                    <h3 class="idx__title">Designing <em>intuitive</em> in-cab displays</h3>
+                    <span class="idx__tags">Partnership<br>Industrial UX</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/Tractor inCab.png" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row idx__row--dark" href="Workiva.html" style="--c: var(--teal)" data-img="Images/Anomaly.png">
+                    <span class="idx__num">03</span>
+                    <span class="idx__client">Workiva (ISU)</span>
+                    <h3 class="idx__title">Making <em>anomaly</em> detection less painful</h3>
+                    <span class="idx__tags">Partnership · AI<br>UI/UX</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/Anomaly.png" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row idx__row--dark" href="CafeCal.html" style="--c: var(--tomato)" data-img="Images/CafeCal/iPhone Air - 1 (1).png">
+                    <span class="idx__num">04</span>
+                    <span class="idx__client">Café Cal</span>
+                    <h3 class="idx__title">Motion for an app that <em>has to wait</em></h3>
+                    <span class="idx__tags">Founder · Motion<br>AI</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/CafeCal/iPhone Air - 1 (1).png" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row" href="Velotic.html" style="--c: var(--sun)" data-img="Images/velotic.jpg">
+                    <span class="idx__num">05</span>
+                    <span class="idx__client">Velotic</span>
+                    <h3 class="idx__title">Building the <em>operating system</em> for fitness coaches</h3>
+                    <span class="idx__tags">Solo Venture · AI<br>Multi-platform</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/velotic.jpg" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row" href="XRLabs.html" style="--c: var(--pink)" data-img="Images/xrlabs-intel.jpg">
+                    <span class="idx__num">06</span>
+                    <span class="idx__client">XR Labs</span>
+                    <h3 class="idx__title">Designing Intel's <em>virtual demo</em></h3>
+                    <span class="idx__tags">XR · Spatial UI<br>WebGL</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/xrlabs-intel.jpg" alt="" loading="lazy"></span>
+                </a>
+                <a class="idx__row" href="PixelMortar.html" style="--c: var(--lemon)" data-img="Images/pm.jpg?v=2">
+                    <span class="idx__num">07</span>
+                    <span class="idx__client">XR Labs</span>
+                    <h3 class="idx__title">Pixel &amp; Mortar's 3D Studio in <em>web and AR</em></h3>
+                    <span class="idx__tags">3D Editor · Web<br>UI/UX</span>
+                    <span class="idx__go" aria-hidden="true">→</span>
+                    <span class="idx__thumb"><img src="Images/pm.jpg?v=2" alt="" loading="lazy"></span>
                 </a>
             </div>
+        </section>
+
+        <!-- The cast -->
+        <section class="sec cast">
+            <div class="v-wrap v-grid sec__head">
+                <span class="eyebrow sec__label reveal">(02) How I work</span>
+                <h2 class="sec__title reveal">Three designers, <em>one</em> person.</h2>
+            </div>
+            <div class="v-wrap v-grid">
+                <div class="cast__grid">
+                    <article class="cast__card reveal">
+                        <h3 class="cast__name">The Curious One</h3>
+                        <div class="cast__stage"><span class="blob" data-blob="bean" data-color="#2A5BD7" data-pose="wave"></span></div>
+                        <p>Starts with people. <strong>Interviewed 22 farmers</strong> before touching John Deere's in-cab display.</p>
+                    </article>
+                    <article class="cast__card reveal">
+                        <h3 class="cast__name">The Tidy One</h3>
+                        <div class="cast__stage"><span class="blob" data-blob="ball" data-color="#F0552B"></span></div>
+                        <p>Builds systems that hold. Café Cal's motion ships on <strong>iOS and Android from one token file</strong>.</p>
+                    </article>
+                    <article class="cast__card reveal">
+                        <h3 class="cast__name">The Builder</h3>
+                        <div class="cast__stage"><span class="blob" data-blob="star" data-color="#FFC61A" data-pose="walk"></span></div>
+                        <p>Ships the thing. Velotic: <strong>three platforms, ~150k lines, three months</strong>, solo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shout -->
+        <section class="shout">
+            <div class="v-wrap v-grid">
+                <span class="eyebrow shout__label">(03) Let's talk</span>
+                <div class="shout__body">
+                    <p class="shout__big extrude" aria-hidden="true">SAY HI!</p>
+                    <h2 class="shout__line">Have a hard problem worth designing <em>carefully</em>?</h2>
+                    <a class="btn btn--accent" href="mailto:inandha97@gmail.com">
+                        Get in touch
+                        <span class="btn__chip" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+            <span class="blob blob--b" data-blob="ball" data-color="#FFC61A" aria-hidden="true"></span>
+            <span class="blob blob--a" data-blob="cloud" data-color="#F5A8C8" data-pose="wave" aria-hidden="true"></span>
         </section>
 
     </main>
 
     <footer class="footer">
-        <div class="container">
-
-            <div class="footer__cols">
-                <div class="footer__col">
-                    <h4>Navigate</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="resume.html">Resume</a>
-                </div>
-                <div class="footer__col">
-                    <h4>Connect</h4>
-                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
-                </div>
+        <div class="stroll" aria-hidden="true"><span class="blob" data-blob="square" data-color="#F0552B" data-pose="walk"></span></div>
+        <div class="v-wrap v-grid footer__grid">
+            <div class="footer__brand">
+                <div class="footer__mark">n.k</div>
+                <p>Product designer in San Francisco.</p>
             </div>
-            <div class="footer__legal">
-                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
-                <a href="#top">Back to top ↑</a>
+            <div class="footer__col">
+                <h4>Navigate</h4>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
             </div>
+            <div class="footer__col">
+                <h4>Connect</h4>
+                <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="footer__col">
+                <h4>Local time</h4>
+                <p data-clock>—</p>
+                <p class="muted">San Francisco, CA</p>
+            </div>
+        </div>
+        <div class="v-wrap footer__legal">
+            <span>© <span data-year>2026</span> Nandha Kumar</span>
+            <a href="#top">Back to top ↑</a>
         </div>
     </footer>
 
+    <script src="blobs.js" defer></script>
     <script src="site.js" defer></script>
 </body>
 </html>

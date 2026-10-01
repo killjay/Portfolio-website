@@ -10,21 +10,23 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Manufacturing+Consent&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="site.css?v=toc3">
-    <meta name="theme-color" content="#D3DDC6">
+    <meta name="theme-color" content="#F3ECDF">
 </head>
-<body class="cs-tint-workiva">
+<body id="top" class="cs-tint-workiva">
+    <div class="grain" aria-hidden="true"></div>
 
     <header class="nav">
         <div class="nav__inner">
-            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home">N</a>
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
             <nav class="nav__links" aria-label="Primary">
-                <a href="index.html">Home</a>
-                <a href="resume.html">Resume</a>
+                <a href="work.html" aria-current="page">Work</a>
                 <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
             </nav>
+            <a class="nav__cta" href="mailto:inandha97@gmail.com"><span class="nav__dot" aria-hidden="true"></span><span class="nav__cta-label">Say hi</span><span aria-hidden="true">→</span></a>
         </div>
     </header>
 
@@ -32,6 +34,7 @@
 
         <!-- Hero -->
         <section class="cs-hero">
+            <span class="blob cs-hero__blob" data-blob="ball" data-color="#22A595" data-pose="wave" aria-hidden="true"></span>
             <div class="container">
                 <a class="cs-back" href="work.html">← All work</a>
 
@@ -300,28 +303,36 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-
-            <div class="footer__cols">
-                <div class="footer__col">
-                    <h4>Navigate</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="resume.html">Resume</a>
-                </div>
-                <div class="footer__col">
-                    <h4>Connect</h4>
-                    <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
-                </div>
+        <div class="stroll" aria-hidden="true"><span class="blob" data-blob="square" data-color="#F0552B" data-pose="walk"></span></div>
+        <div class="v-wrap v-grid footer__grid">
+            <div class="footer__brand">
+                <div class="footer__mark">n.k</div>
+                <p>Product designer in San Francisco.</p>
             </div>
-            <div class="footer__legal">
-                <span>© <span data-year>2026</span> Nandha Kumar · San Francisco</span>
-                <a href="#top">Back to top ↑</a>
+            <div class="footer__col">
+                <h4>Navigate</h4>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+            </div>
+            <div class="footer__col">
+                <h4>Connect</h4>
+                <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="footer__col">
+                <h4>Local time</h4>
+                <p data-clock>—</p>
+                <p class="muted">San Francisco, CA</p>
             </div>
         </div>
+        <div class="v-wrap footer__legal">
+            <span>© <span data-year>2026</span> Nandha Kumar</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
     </footer>
+    <script src="blobs.js" defer></script>
 
     <script src="site.js?v=toc3" defer></script>
 </body>
