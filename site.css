@@ -3349,6 +3349,24 @@ body.is-home { overflow: hidden; height: 100svh; }
 .t-ui.is-muted { color: var(--muted); }
 a.t-ui:hover { color: var(--accent); }
 
+/* External-link arrow — marks rail links as clickable */
+.ext-icon {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  margin-left: 0.3em;
+  vertical-align: 0.08em;
+  transition: transform 0.3s var(--bounce);
+}
+a:hover .ext-icon { transform: translate(2px, -2px); }
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* Portrait — cycles with an RGB channel split on each swap */
 .jh__portrait {
   position: relative;
