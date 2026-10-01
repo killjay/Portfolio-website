@@ -44,6 +44,18 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
 const yearEl = document.querySelector('[data-year]');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Portrait slideshow — swap photos on a timer
+document.querySelectorAll('[data-cycle]').forEach((fig) => {
+  const imgs = fig.querySelectorAll('img');
+  if (imgs.length < 2 || prefersReduced) return;
+  let i = 0;
+  setInterval(() => {
+    imgs[i].classList.remove('is-active');
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add('is-active');
+  }, Number(fig.dataset.cycle) || 1000);
+});
+
 // Image lightbox — click any in-content image to expand with prev/next/close
 (() => {
   const images = Array.from(document.querySelectorAll('main img'))
@@ -224,15 +236,15 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   updateBounds();
 })();
 
-// Live San Francisco clock — fills every [data-clock]
+// Live Bengaluru clock — fills every [data-clock]
 (() => {
   const els = document.querySelectorAll('[data-clock]');
   if (!els.length) return;
   const fmt = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit',
+    timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit',
   });
   const tick = () => {
-    const t = fmt.format(new Date()) + ' PT';
+    const t = fmt.format(new Date()) + ' IST';
     els.forEach((el) => { el.textContent = t; });
   };
   tick();

@@ -22,7 +22,7 @@
         <div class="nav__inner">
             <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
             <nav class="nav__links" aria-label="Primary">
-                <a href="work.html" aria-current="page">Work</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="resume.html">Resume</a>
             </nav>
@@ -36,7 +36,7 @@
         <section class="cs-hero">
             <span class="blob cs-hero__blob" data-blob="ball" data-color="#22A595" data-pose="wave" aria-hidden="true"></span>
             <div class="container">
-                <a class="cs-back" href="work.html">← All work</a>
+                <a class="cs-back" href="index.html">← All work</a>
 
                 <p class="cs-hero__tags reveal">Partnership · Product Design · AI · UI/UX</p>
                 <h1 class="cs-hero__title reveal">
@@ -131,28 +131,33 @@
                     <p>I interviewed 6 Business Analysts and MIS students using an 18-question guide, then ran a thematic analysis. Everyone relied on domain knowledge plus manual scanning. Three problems came up again and again.</p>
                 </div>
 
-                <div class="issue">
-                    <div class="issue__label">Problem 01</div>
-                    <h3 class="issue__title">A flag without a reason is just more work</h3>
-                    <p class="issue__desc">"Ideally it would tell me what the problem could be as well. Maybe we can tell me that it's possibly because this variable seems to have too many missing values."<br><em>Business Analyst</em></p>
-                </div>
-                <div class="issue">
-                    <div class="issue__label">Problem 02</div>
-                    <h3 class="issue__title">"Something's wrong" isn't an answer</h3>
-                    <p class="issue__desc">"It should actually tell you where exactly is the error instead of just telling that there is something wrong."<br><em>MIS graduate student</em></p>
-                </div>
-                <div class="issue">
-                    <div class="issue__label">Problem 03</div>
-                    <h3 class="issue__title">Two users with opposite needs</h3>
-                    <p class="issue__desc">Newer analysts couldn't tell an anomaly from a normal spike and wanted guidance. Senior analysts wanted speed and control: "Show me the anomalies, let me decide what to do with them."</p>
-                </div>
-
-                <figure class="cs-figure">
-                    <div class="cs-figure__img">
-                        <img src="Images/Workiva/workiva novice.png" alt="Journey map of a novice analyst moving from overwhelmed to confident across five review stages, with pain points and AI opportunities at each stage">
+                <div class="cs-alt cs-alt--tight">
+                    <div class="cs-alt__text">
+                        <div class="issue">
+                            <div class="issue__label">Problem 01</div>
+                            <h3 class="issue__title">A flag without a reason is just more work</h3>
+                            <p class="issue__desc">"Ideally it would tell me what the problem could be as well. Maybe we can tell me that it's possibly because this variable seems to have too many missing values."<br><em>Business Analyst</em></p>
+                        </div>
+                        <div class="issue">
+                            <div class="issue__label">Problem 02</div>
+                            <h3 class="issue__title">"Something's wrong" isn't an answer</h3>
+                            <p class="issue__desc">"It should actually tell you where exactly is the error instead of just telling that there is something wrong."<br><em>MIS graduate student</em></p>
+                        </div>
+                        <div class="issue">
+                            <div class="issue__label">Problem 03</div>
+                            <h3 class="issue__title">Two users with opposite needs</h3>
+                            <p class="issue__desc">Newer analysts couldn't tell an anomaly from a normal spike and wanted guidance. Senior analysts wanted speed and control: "Show me the anomalies, let me decide what to do with them."</p>
+                        </div>
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 1. Novice analyst journey. The lowest point is cleaning and analysis, where "Is this pattern normal or an anomaly?" goes unanswered.</figcaption>
-                </figure>
+                    <div class="cs-alt__media">
+                        <figure class="cs-figure">
+                            <div class="cs-figure__img">
+                                <img src="Images/Workiva/workiva novice.png" alt="Journey map of a novice analyst moving from overwhelmed to confident across five review stages, with pain points and AI opportunities at each stage">
+                            </div>
+                            <figcaption class="cs-figure__caption">Fig 1. Novice analyst journey. The lowest point is cleaning and analysis, where "Is this pattern normal or an anomaly?" goes unanswered.</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
 
             <!-- Idea we dropped -->
@@ -201,38 +206,56 @@
                     <h2 class="h2 cs-section__title">Find it, understand it, tune it</h2>
                 </header>
 
-                <h3 class="h3 cs-h3">Pinpointed, not just flagged</h3>
-                <div class="cs-prose">
-                    <p>The AI marks the exact point on the chart and states it plainly: the date, the value, and the expected range it fell outside. <em>Answers problem 02.</em></p>
-                </div>
-                <figure class="cs-figure">
-                    <div class="cs-figure__img">
-                        <img src="Images/Workiva/final-explain.png" alt="Workiva spreadsheet with the AI panel docked on the right, showing a marked revenue spike, a plain-language summary and ranked possible explanations">
+                <div class="cs-alt">
+                    <div class="cs-alt__text">
+                        <h3 class="h3 cs-h3">Pinpointed, not just flagged</h3>
+                        <div class="cs-prose">
+                            <p>The AI marks the exact point on the chart and states it plainly: the date, the value, and the expected range it fell outside. <em>Answers problem 02.</em></p>
+                        </div>
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 4. Summary: "Revenue was unexpectedly high on Friday, August 30, 2019," with the expected range underneath.</figcaption>
-                </figure>
+                    <div class="cs-alt__media">
+                        <figure class="cs-figure">
+                            <div class="cs-figure__img">
+                                <img src="Images/Workiva/final-explain.png" alt="Workiva spreadsheet with the AI panel docked on the right, showing a marked revenue spike, a plain-language summary and ranked possible explanations">
+                            </div>
+                            <figcaption class="cs-figure__caption">Fig 4. Summary: "Revenue was unexpectedly high on Friday, August 30, 2019," with the expected range underneath.</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
-                <h3 class="h3 cs-h3">Reasons, ranked by strength</h3>
-                <div class="cs-prose">
-                    <p>Each flag comes with possible explanations scored by strength. Opening one shows the evidence chart, which the analyst can add to their workspace next to the original. <em>Answers problem 01.</em></p>
-                </div>
-                <figure class="cs-figure">
-                    <div class="cs-figure__img">
-                        <img src="Images/Workiva/final-compare.png" alt="An expanded explanation, 'Seller is Northwind Traders' at 71%, with its evidence chart added to the workspace beside the original revenue chart">
+                <div class="cs-alt cs-alt--flip">
+                    <div class="cs-alt__text">
+                        <h3 class="h3 cs-h3">Reasons, ranked by strength</h3>
+                        <div class="cs-prose">
+                            <p>Each flag comes with possible explanations scored by strength. Opening one shows the evidence chart, which the analyst can add to their workspace next to the original. <em>Answers problem 01.</em></p>
+                        </div>
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 5. Drilling into "Seller is Northwind Traders" (71%) and comparing it with the original chart.</figcaption>
-                </figure>
+                    <div class="cs-alt__media">
+                        <figure class="cs-figure">
+                            <div class="cs-figure__img">
+                                <img src="Images/Workiva/final-compare.png" alt="An expanded explanation, 'Seller is Northwind Traders' at 71%, with its evidence chart added to the workspace beside the original revenue chart">
+                            </div>
+                            <figcaption class="cs-figure__caption">Fig 5. Drilling into "Seller is Northwind Traders" (71%) and comparing it with the original chart.</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
-                <h3 class="h3 cs-h3">Control for experts, defaults for everyone else</h3>
-                <div class="cs-prose">
-                    <p>Newer analysts never need to leave the defaults. Senior analysts can open settings to change sensitivity, pick the parameters to explain by, and restyle how anomalies are marked. <em>Answers problem 03.</em></p>
-                </div>
-                <figure class="cs-figure">
-                    <div class="cs-figure__img">
-                        <img src="Images/Workiva/final-settings.png" alt="Anomaly detection settings in the AI panel: sensitivity slider at 83%, explain-by parameters, anomaly shape, size and color">
+                <div class="cs-alt">
+                    <div class="cs-alt__text">
+                        <h3 class="h3 cs-h3">Control for experts, defaults for everyone else</h3>
+                        <div class="cs-prose">
+                            <p>Newer analysts never need to leave the defaults. Senior analysts can open settings to change sensitivity, pick the parameters to explain by, and restyle how anomalies are marked. <em>Answers problem 03.</em></p>
+                        </div>
                     </div>
-                    <figcaption class="cs-figure__caption">Fig 6. Detection settings: sensitivity, explain-by parameters, and marker style.</figcaption>
-                </figure>
+                    <div class="cs-alt__media">
+                        <figure class="cs-figure">
+                            <div class="cs-figure__img">
+                                <img src="Images/Workiva/final-settings.png" alt="Anomaly detection settings in the AI panel: sensitivity slider at 83%, explain-by parameters, anomaly shape, size and color">
+                            </div>
+                            <figcaption class="cs-figure__caption">Fig 6. Detection settings: sensitivity, explain-by parameters, and marker style.</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
 
             <!-- Impact & learnings -->
@@ -307,11 +330,11 @@
         <div class="v-wrap v-grid footer__grid">
             <div class="footer__brand">
                 <div class="footer__mark">n.k</div>
-                <p>Product designer in San Francisco.</p>
+                <p>Product designer in Bengaluru.</p>
             </div>
             <div class="footer__col">
                 <h4>Navigate</h4>
-                <a href="work.html">Work</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="resume.html">Resume</a>
             </div>
@@ -324,7 +347,7 @@
             <div class="footer__col">
                 <h4>Local time</h4>
                 <p data-clock>—</p>
-                <p class="muted">San Francisco, CA</p>
+                <p class="muted">Bengaluru, India</p>
             </div>
         </div>
         <div class="v-wrap footer__legal">
