@@ -250,3 +250,18 @@ document.querySelectorAll('[data-cycle]').forEach((fig) => {
   tick();
   setInterval(tick, 15000);
 })();
+
+// Phone nav: hamburger toggles the links/Contact panel; closes on choose, Escape, or widening past 900px
+(() => {
+  const bar = document.querySelector('.nav');
+  const burger = document.querySelector('.nav__burger');
+  if (!bar || !burger) return;
+  const setOpen = (open) => {
+    bar.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  };
+  burger.addEventListener('click', () => setOpen(!bar.classList.contains('is-open')));
+  bar.querySelectorAll('.nav__links a, .nav__cta').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
+})();

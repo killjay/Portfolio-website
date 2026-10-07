@@ -229,6 +229,7 @@
   // Wheel: one step per gesture (trackpads fire dozens of events).
   let acc = 0, locked = false, accT;
   stage.closest('.jh').addEventListener('wheel', (e) => {
+    if (mobileMq.matches) return; // phones scroll the page normally
     e.preventDefault();
     if (locked) return;
     acc += Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
@@ -283,6 +284,7 @@
   });
 
   window.addEventListener('keydown', (e) => {
+    if (mobileMq.matches) return;
     if (['ArrowRight', 'ArrowDown'].includes(e.key)) { e.preventDefault(); go(Math.round(target) + 1); }
     if (['ArrowLeft', 'ArrowUp'].includes(e.key)) { e.preventDefault(); go(Math.round(target) - 1); }
   });
@@ -314,4 +316,7 @@
   setActive(0);
   window.addEventListener('resize', () => { measure(); render(); });
   mobileMq.addEventListener('change', () => { measure(); render(); });
+  // iOS Safari can size the stage after first paint (toolbar settles, fonts land);
+  // re-measure whenever the stage box changes so planes never stay thumbnail-sized.
+  if (window.ResizeObserver) new ResizeObserver(() => { measure(); render(); }).observe(stage);
 })();

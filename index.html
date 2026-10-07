@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="site.css?v=20261002b">
+    <link rel="stylesheet" href="site.css?v=20261008">
     <meta name="theme-color" content="#F3ECDF">
 </head>
 <body class="is-home">
@@ -36,12 +36,13 @@
         <header class="nav">
             <div class="nav__inner">
                 <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
-                <nav class="nav__links" aria-label="Primary">
+                <nav class="nav__links" id="primary-nav" aria-label="Primary">
                     <a href="index.html" aria-current="page">Home</a>
                     <a href="about.html">About</a>
                     <a href="resume.html">Resume</a>
                 </nav>
                 <a class="nav__cta" href="mailto:inandha97@gmail.com">Contact</a>
+                <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
             </div>
         </header>
 
@@ -145,22 +146,81 @@
                         <span class="jh-pill__track t-ui"><span>View Project</span><span>View Project</span><span>View Project</span><span>View Project</span><span>View Project</span><span>View Project</span></span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Mobile overlays -->
-                <div class="jh-m jh-m--mid">
-                    <span class="jh-m__name" data-m-name>Runara</span>
-                    <a class="jh-m__link" href="Runara.html" data-m-link>View project</a>
+        <!-- Phone home: plain scrolling page. The carousel above is desktop-only. -->
+        <section class="jh-mobile" aria-label="Intro and selected work">
+            <img class="jh-mobile__portrait" src="Images/about-photo.png" alt="Portrait of Nandha Kumar">
+            <p class="jh-mobile__statement">Nandha Kumar is a product designer in Bengaluru who makes hard things feel <em class="serif">easy</em>: AI tools, 3D worlds, even a tractor cab.</p>
+            <div class="jh-mobile__meta">
+                <div>
+                    <span class="t-ui is-muted">Available for work</span>
+                    <span class="t-ui">Open to product design roles</span>
                 </div>
-                <div class="jh-m jh-m--bottom">
-                    <p>Nandha Kumar is a product designer in Bengaluru who makes hard things feel easy: AI tools, 3D worlds, even a tractor cab.</p>
+                <div class="jh-mobile__links">
+                    <a class="t-ui" href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn<svg class="ext-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+                    <a class="t-ui" href="https://github.com/killjay" target="_blank" rel="noopener">GitHub<svg class="ext-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
                 </div>
             </div>
+            <h2 class="jh-mobile__head"><span class="t-ui is-muted">Selected work</span><span class="t-ui">07</span></h2>
+            <ul class="jh-mobile__list">
+                <li>
+                    <a class="jh-mobile__card" href="Runara.html" style="--c: var(--cobalt)" data-fit="contain">
+                        <span class="jh-mobile__img"><img src="Images/runara.svg" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Runara</span><span class="t-ui is-muted">01</span></span>
+                        <span class="jh-mobile__title">High time you changed your design workflow</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="JohnDeere.html" style="--c: var(--kelly)">
+                        <span class="jh-mobile__img"><img src="Images/Tractor inCab.png" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">John Deere</span><span class="t-ui is-muted">02</span></span>
+                        <span class="jh-mobile__title">Simplifying tractor in-cab displays</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="Workiva.html" style="--c: var(--teal)">
+                        <span class="jh-mobile__img"><img src="Images/Anomaly.png" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Workiva</span><span class="t-ui is-muted">03</span></span>
+                        <span class="jh-mobile__title">AI-powered anomaly detection</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="CafeCal.html" style="--c: #2F6B3B">
+                        <span class="jh-mobile__img"><img src="Images/CafeCal/iPhone Air - 1 (1).png" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Café Cal</span><span class="t-ui is-muted">04</span></span>
+                        <span class="jh-mobile__title">Motion for an app that has to wait</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="Velotic.html" style="--c: var(--sun)">
+                        <span class="jh-mobile__img"><img src="Images/velotic.jpg" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Velotic</span><span class="t-ui is-muted">05</span></span>
+                        <span class="jh-mobile__title">Getting fitness coaches out of spreadsheets</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="XRLabs.html" style="--c: var(--cobalt)">
+                        <span class="jh-mobile__img"><img src="Images/xrlabs-intel.jpg" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Intel</span><span class="t-ui is-muted">06</span></span>
+                        <span class="jh-mobile__title">Designing Intel&#39;s virtual demo</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="jh-mobile__card" href="PixelMortar.html" style="--c: var(--lemon)">
+                        <span class="jh-mobile__img"><img src="Images/pm.jpg?v=2" alt="" loading="lazy"></span>
+                        <span class="jh-mobile__client"><span class="t-ui">Pixel &amp; Mortar</span><span class="t-ui is-muted">07</span></span>
+                        <span class="jh-mobile__title">A 3D studio in web and AR</span>
+                    </a>
+                </li>
+            </ul>
         </section>
 
     </main>
 
     <script src="blobs.js?v=20261002" defer></script>
-    <script src="site.js?v=20261002" defer></script>
-    <script src="home.js?v=20261002" defer></script>
+    <script src="site.js?v=20261008" defer></script>
+    <script src="home.js?v=20261008" defer></script>
 </body>
 </html>
