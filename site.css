@@ -3228,6 +3228,7 @@ h1 em, h2 em, h3 em, h4 em,
 .rz-craft { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); }
 .rz-craft p { margin-top: 10px; font-size: 16px; line-height: 1.6; color: var(--ink-2); }
 .rz-edu .eyebrow { margin-top: 4px; }
+.rz-edu .eyebrow + .rz-job__title { margin-top: 24px; }
 .rz-tools { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 .rz-tools li { border: 2px solid var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 500; background: var(--bg-card); }
 .rz-last { padding-bottom: clamp(24px, 4vw, 56px); }
