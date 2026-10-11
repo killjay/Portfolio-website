@@ -3231,6 +3231,10 @@ h1 em, h2 em, h3 em, h4 em,
 .rz-edu .eyebrow + .rz-job__title { margin-top: 24px; }
 .rz-tools { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 .rz-tools li { border: 2px solid var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 500; background: var(--bg-card); }
+.rz-skills { display: grid; gap: 24px; }
+.rz-skills .eyebrow { display: block; margin-bottom: 10px; }
+.rz-list a { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: var(--accent); }
+.rz-list a:hover { color: var(--accent); }
 .rz-last { padding-bottom: clamp(24px, 4vw, 56px); }
 
 @media (max-width: 900px) {
