@@ -3804,3 +3804,17 @@ a:hover .ext-icon { transform: translate(2px, -2px); }
   .cs-split-head .cs-section__head,
   .cs-split-head .cs-prose { grid-column: 1; grid-row: auto; }
 }
+
+/* =========================================================
+   [TODO] placeholders: loud on purpose, so none ship unnoticed
+   ========================================================= */
+mark.todo {
+  background: var(--sun);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0 0.3em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
