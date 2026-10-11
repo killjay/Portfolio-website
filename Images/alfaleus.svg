@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 459" width="612" height="459" role="img" aria-label="Alfaleus VR visual-field test: when gaze leaves the centre the screen blanks and a pause prompt appears; two seconds of looking at the centre resumes the test">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 10px; letter-spacing: 1.3px; fill: #1A1B1D; }
+      .muted { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 10px; letter-spacing: 1.3px; fill: rgba(26,27,29,0.62); }
+      .serif { font-family: 'Libre Baskerville', Georgia, serif; font-size: 13px; fill: #1A1B1D; }
+      .serif-i { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 13px; fill: #A84E1F; }
+      .node { fill: #F9F2E6; stroke: rgba(26,27,29,0.14); }
+      .acc { fill: #F9F2E6; stroke: #C8632E; stroke-width: 1.5; }
+      .line { stroke: rgba(26,27,29,0.4); stroke-width: 1.2; fill: none; }
+      .lacc { stroke: #C8632E; stroke-width: 1.2; fill: none; }
+      .dash { stroke: rgba(26,27,29,0.4); stroke-width: 1.2; fill: none; stroke-dasharray: 4 5; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="rgba(26,27,29,0.5)"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C8632E"/></marker>
+  </defs>
+  <rect width="612" height="459" fill="#F4DDE6"/>
+
+  <text x="48" y="56" class="muted">ALFALEUS · VR VISUAL-FIELD TEST · EYE TRACKING</text>
+
+  <rect x="48" y="92" width="140" height="76" rx="8" class="node"/>
+  <text x="62" y="118" class="mono">TEST RUNS</text>
+  <text x="62" y="142" class="serif">Gaze on centre</text>
+
+  <path d="M188 130 H226" class="line" marker-end="url(#a)"/>
+
+  <rect x="228" y="92" width="140" height="76" rx="8" class="acc"/>
+  <text x="242" y="118" class="mono">GAZE LEAVES</text>
+  <text x="242" y="142" class="serif">Screen blanks</text>
+
+  <path d="M368 130 H406" class="lacc" marker-end="url(#b)"/>
+
+  <rect x="408" y="92" width="156" height="76" rx="8" class="node"/>
+  <text x="422" y="118" class="mono">PAUSE PROMPT</text>
+  <text x="422" y="142" class="serif">Look at the centre</text>
+
+  <path d="M486 168 V196 H118 V172" class="dash" marker-end="url(#a)"/>
+  <text x="196" y="190" class="muted">2 S AT CENTRE · TEST RESUMES</text>
+
+  <line x1="48" y1="230" x2="564" y2="230" stroke="rgba(26,27,29,0.14)"/>
+
+  <rect x="48" y="252" width="516" height="132" rx="8" class="node"/>
+  <text x="68" y="280" class="muted">BEFORE</text>
+  <text x="68" y="304" class="serif">Gaze drifted unnoticed: 2–3 attempts, about 40 min.</text>
+  <text x="68" y="336" class="muted">AFTER</text>
+  <text x="68" y="360" class="serif-i">One attempt, about 20 minutes per patient.</text>
+
+  <text x="48" y="428" class="serif">Alfaleus</text>
+  <text x="118" y="428" class="serif-i">fewer retests for a VR glaucoma exam</text>
+</svg>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Turning GPU metrics into fixes non-experts can approve · Runara · Nandha Kumar</title>
+    <meta name="description" content="How I designed an AI agent at Runara that turns GPU and model metrics into ranked, explainable fixes for non-technical users, and then lets them approve a fix before it deploys.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=20261012">
+    <meta name="theme-color" content="#F3ECDF">
+</head>
+<body id="top" class="cs-tint-runara">
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
+            <nav class="nav__links" id="primary-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+            <a class="nav__cta" href="mailto:inandha97@gmail.com">Contact</a>
+            <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <span class="blob cs-hero__blob" data-blob="star" data-color="#FFC61A" data-pose="wave" aria-hidden="true"></span>
+            <div class="container">
+                <a class="cs-back" href="index.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">Runara · Senior Product Designer · AI agent · Developer tools</p>
+                <h1 class="cs-hero__title reveal">
+                    Turning GPU metrics into <span class="highlight">fixes non-experts can approve</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Runara is an AI deployment platform used by teams at companies including Meta and AMD. Many of our beta users weren't ML engineers, and they couldn't read the GPU and model-behaviour metrics the platform showed them. I designed an AI agent that reads the metrics for them. The first version explained what to fix and why. Three months later, it could make the fix, once the user approved it.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Senior Product Designer. Sole designer, also acting as PM</dd>
+                    </div>
+                    <div>
+                        <dt>Users</dt>
+                        <dd>About 150 beta users, from teams at companies including Meta and AMD</dd>
+                    </div>
+                    <div>
+                        <dt>Versions</dt>
+                        <dd>Explain, then Fix three months later. <mark class="todo">[TODO: ship dates]</mark></dd>
+                    </div>
+                    <div>
+                        <dt>Built with</dt>
+                        <dd>Figma, Claude Code</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Stats teaser strip -->
+        <section class="container reveal">
+            <div class="cs-statstrip">
+                <div class="cs-stat">
+                    <div class="cs-stat__num">~150</div>
+                    <div class="cs-stat__label">Beta users</div>
+                    <div class="cs-stat__cap">From teams at companies including Meta and AMD</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">64%</div>
+                    <div class="cs-stat__label">Explanation engagement</div>
+                    <div class="cs-stat__cap">Explain version. Users clicking to expand the agent's reasoning</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">83%</div>
+                    <div class="cs-stat__label">Engagement to action</div>
+                    <div class="cs-stat__cap">Fix version. From issue, to explanation, to clicking Fix</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <section class="container">
+            <div class="cs-cover reveal">
+                <img src="Images/runara-agent.svg" alt="Diagram. GPU and model metrics go to an AI agent, which ranks issues critical, high, medium and low. Version one explains what to fix and why. Version two, three months later, applies the fix and explains the change, and the user approves it before it deploys.">
+            </div>
+        </section>
+
+        <div class="container--prose">
+
+            <!-- 01. Problem -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; The problem</span>
+                    <h2 class="h2 cs-section__title">Metrics most of our users couldn't read.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Runara shows GPU and model-behaviour metrics for every deployment, including hallucination rate. That works for an ML engineer. Many of our beta users weren't ML engineers. They could see the numbers, but the numbers didn't tell them what to do.</p>
+                    <p>I also worked with the CTO to cut the default metrics view down to the few metrics users relied on, and moved the rest behind search. The agent goes further: it reads the metrics for the user, and says what to change.</p>
+                </div>
+                <div class="cs-problem">
+                    <div class="cs-problem__label">Problem statement</div>
+                    <p class="cs-problem__text">Non-technical beta users couldn't read GPU and model-behaviour metrics, so they couldn't tell what was wrong with a deployment or what to fix first.</p>
+                </div>
+            </section>
+
+            <!-- 02. Explain -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; Version 1: Explain</span>
+                    <h2 class="h2 cs-section__title">An agent that says what to fix, and why.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>The agent analyses the metrics and turns them into a list of issues, ranked critical, high, medium and low. Each issue says what to fix and why. The reasoning is there for anyone who wants to check it: one click expands it.</p>
+                </div>
+                <figure class="cs-figure">
+                    <div class="cs-placeholder"><mark class="todo">[TODO: image — the Explain version: the ranked issue list, with one issue's reasoning expanded]</mark></div>
+                    <figcaption class="cs-figure__caption">Fig 1. Version 1. Issues ranked by severity, each with what to fix and why.</figcaption>
+                </figure>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Measured</span>
+                    <div class="cs-decision__body"><strong>64% explanation engagement.</strong> Users clicking to expand the agent's reasoning.</div>
+                </div>
+            </section>
+
+            <!-- 03. Fix -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Version 2: Fix</span>
+                    <h2 class="h2 cs-section__title">Three months later, a Fix button. The user still decides.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Three months after the first version, I added a Fix button. The flow:</p>
+                    <ol>
+                        <li>The agent flags an issue and explains it, as before.</li>
+                        <li>The user clicks Fix.</li>
+                        <li>The agent applies the fix and explains what it changed.</li>
+                        <li>The user approves it. Only then does it deploy.</li>
+                    </ol>
+                </div>
+                <figure class="cs-figure">
+                    <div class="cs-placeholder"><mark class="todo">[TODO: image — the Fix version: the Fix button, the agent's explanation of the change, and the approval step]</mark></div>
+                    <figcaption class="cs-figure__caption">Fig 2. Version 2. The agent makes the change, says what it changed, and waits for approval.</figcaption>
+                </figure>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Measured</span>
+                    <div class="cs-decision__body"><strong>83% engagement-to-action rate.</strong> From issue, to explanation, to clicking Fix.</div>
+                </div>
+            </section>
+
+            <!-- 04. Human approval -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; Responsible AI</span>
+                    <h2 class="h2 cs-section__title">Why a human approves every fix.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><mark class="todo">[TODO: Nandha to explain]</mark></p>
+                    <ul>
+                        <li><mark class="todo">[TODO]</mark> What is the AI never allowed to do alone?</li>
+                        <li><mark class="todo">[TODO]</mark> How are severity and confidence shown?</li>
+                        <li><mark class="todo">[TODO]</mark> What happens if the user rejects a fix?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 05. How I worked -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; How I worked</span>
+                    <h2 class="h2 cs-section__title">Working code, not mockups.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Both versions went through the same loop:</p>
+                    <ol>
+                        <li>Designed it in Figma.</li>
+                        <li>Built it in a feature branch with Claude Code.</li>
+                        <li>Smoke-tested it and fixed bugs with an engineer.</li>
+                        <li>Released it to beta users.</li>
+                        <li>Validated it with analytics and interviews.</li>
+                        <li>Presented it to the CEO and CTO at the weekly review, then handed it to engineering.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 06. Measurement -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Measurement</span>
+                    <h2 class="h2 cs-section__title">How the numbers were measured.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><strong>Explanation engagement (64%):</strong> users clicking to expand the agent's reasoning, in the Explain version.</p>
+                    <p><strong>Engagement-to-action rate (83%):</strong> from issue, to explanation, to clicking Fix, in the Fix version.</p>
+                    <p><mark class="todo">[TODO: per user or per issue, time period, sample size]</mark></p>
+                </div>
+            </section>
+
+            <!-- 07. What didn't work -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(07) &nbsp; What didn't work</span>
+                    <h2 class="h2 cs-section__title">What didn't work.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p><mark class="todo">[TODO]</mark></p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="stroll" aria-hidden="true"><span class="blob" data-blob="square" data-color="#F0552B" data-pose="walk"></span></div>
+        <div class="v-wrap v-grid footer__grid">
+            <div class="footer__brand">
+                <div class="footer__mark">n.k</div>
+                <p>Product designer in Bengaluru.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Navigate</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+            </div>
+            <div class="footer__col">
+                <h4>Connect</h4>
+                <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="footer__col">
+                <h4>Local time</h4>
+                <p data-clock>—</p>
+                <p class="muted">Bengaluru, India</p>
+            </div>
+        </div>
+        <div class="v-wrap footer__legal">
+            <span>© <span data-year>2026</span> Nandha Kumar</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
+    <script src="blobs.js?v=20261001" defer></script>
+
+    <script src="site.js?v=20261008" defer></script>
+</body>
+</html>
