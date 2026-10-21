@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AI Deployment Platform · Runara · Nandha Kumar</title>
+    <meta name="description" content="How I took Runara's AI deployment platform from showing raw GPU and model metrics, to explaining them, to fixing them, with the user approving every fix. Three versions, one dashboard idea that didn't work, and about 150 beta users.">
+    <link rel="icon" href="Images/Dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Images/Light.png" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css?v=20261012">
+    <meta name="theme-color" content="#F3ECDF">
+</head>
+<body id="top" class="cs-tint-runara">
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="cs-progress" aria-hidden="true"><span class="cs-progress__bar"></span></div>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Nandha Kumar, home"><span class="blob" data-blob="star" data-color="#FFC61A"></span>n.k</a>
+            <nav class="nav__links" id="primary-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+            <a class="nav__cta" href="mailto:inandha97@gmail.com">Contact</a>
+            <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="cs-hero">
+            <span class="blob cs-hero__blob" data-blob="star" data-color="#FFC61A" data-pose="wave" aria-hidden="true"></span>
+            <div class="container">
+                <a class="cs-back" href="index.html">← All work</a>
+
+                <p class="cs-hero__tags reveal">Runara · AI Deployment Platform · Senior Product Designer · Developer tools</p>
+                <h1 class="cs-hero__title reveal">
+                    From raw metrics to <span class="highlight">fixes you approve</span>
+                </h1>
+                <p class="lede cs-hero__lede reveal">
+                    Runara is an AI deployment platform used by teams at companies including Meta and AMD. Our users could see every GPU and model metric for a deployment, but many of them weren't ML engineers, and the numbers didn't tell them what to do. Across three versions I took the product from showing metrics, to explaining them, to fixing them, with the user approving every fix.
+                </p>
+
+                <dl class="cs-meta reveal">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Senior Product Designer. Sole designer, also acting as PM</dd>
+                    </div>
+                    <div>
+                        <dt>Users</dt>
+                        <dd>About 150 beta users, from teams at companies including Meta and AMD</dd>
+                    </div>
+                    <div>
+                        <dt>Timeline</dt>
+                        <dd>Jun 2025 – Jul 2026</dd>
+                    </div>
+                    <div>
+                        <dt>Built with</dt>
+                        <dd>Figma, Claude Code, React (Material UI)</dd>
+                    </div>
+                </dl>
+
+                <div class="cs-tldr reveal">
+                    <div class="cs-tldr__label">Role and team</div>
+                    <ul class="cs-tldr__list">
+                        <li>
+                            <span class="cs-tldr__key">My role</span>
+                            <span class="cs-tldr__val">Sole designer, also acting as PM. I designed and built every version, and tested each one with beta users.</span>
+                        </li>
+                        <li>
+                            <span class="cs-tldr__key">Team</span>
+                            <span class="cs-tldr__val">Me, an engineer I smoke-tested each build with, and the CEO, CTO and engineers at the weekly review.</span>
+                        </li>
+                        <li>
+                            <span class="cs-tldr__key">Versions</span>
+                            <span class="cs-tldr__val">Version 0, Metrics. A customisable dashboard that didn't work. Version 1, Explain. Version 2, Fix, three months later.</span>
+                        </li>
+                        <li>
+                            <span class="cs-tldr__key">Outcome</span>
+                            <span class="cs-tldr__val">Explain and Fix both shipped to beta users. 64% engaged with the explanations, and in the Fix version 83% went on from explanation to Fix.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats teaser strip -->
+        <section class="container reveal">
+            <div class="cs-statstrip">
+                <div class="cs-stat">
+                    <div class="cs-stat__num">~150</div>
+                    <div class="cs-stat__label">Beta users</div>
+                    <div class="cs-stat__cap">From teams at companies including Meta and AMD</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">64%</div>
+                    <div class="cs-stat__label">Explanation engagement</div>
+                    <div class="cs-stat__cap">Explain version. Users clicking to expand the agent's reasoning</div>
+                </div>
+                <div class="cs-stat">
+                    <div class="cs-stat__num">83%</div>
+                    <div class="cs-stat__label">Engagement to action</div>
+                    <div class="cs-stat__cap">Fix version. From issue, to explanation, to clicking Fix</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01. Version 0 -->
+        <div class="container">
+            <section class="cs-section reveal">
+                <div class="cs-alt" style="margin: 0;">
+                    <div class="cs-alt__text">
+                        <header class="cs-section__head">
+                            <span class="eyebrow eyebrow--accent cs-section__eyebrow">(01) &nbsp; Version 0 · Metrics</span>
+                            <h2 class="h2 cs-section__title">Every metric, and no answer.</h2>
+                        </header>
+                        <div class="cs-prose">
+                            <p>I built the first version to show everything. Every infrastructure, serving and model-behaviour metric for a deployment sat on one screen, grouped and searchable, hallucination rate included.</p>
+                            <p>That works for an ML engineer. Many of our beta users weren't ML engineers. They could see the numbers, but the numbers didn't tell them what was wrong or what to do about it.</p>
+                        </div>
+                    </div>
+                    <div class="cs-alt__media">
+                        <div class="cs-figure">
+                            <div class="cs-figure__img"><img src="Images/RunaraPlatform/v0-metrics.jpg" alt="Version 0 Analytics screen for one deployment. A breaching-metrics banner, requests, serving performance, GPU memory, a GPU utilisation and KV cache chart, and model-behaviour metrics such as hallucination rate and groundedness." loading="lazy"></div>
+                            <p class="cs-figure__caption">Fig 1. Version 0. Every metric for one deployment, grouped and searchable. Sample data.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 02. What didn't work -->
+        <div class="container">
+            <section class="cs-section reveal">
+                <div class="cs-alt cs-alt--flip" style="margin: 0;">
+                    <div class="cs-alt__text">
+                        <header class="cs-section__head">
+                            <span class="eyebrow eyebrow--accent cs-section__eyebrow">(02) &nbsp; What didn't work</span>
+                            <h2 class="h2 cs-section__title">A dashboard each team could make its own.</h2>
+                        </header>
+                        <div class="cs-prose">
+                            <p>My first answer was more control. Different teams needed different metrics, so I designed a customisable dashboard, inspired by Datadog's: each team could choose which cards and metrics it saw.</p>
+                            <p>It didn't work. Users weren't comfortable reading the metrics in the first place, and there were so many that they were overwhelmed. A dashboard they could customise gave them more decisions about numbers they couldn't read.</p>
+                            <!-- NEEDS: how you found out it wasn't working (beta analytics? interviews?), and whether the customisable dashboard shipped to beta users. -->
+                        </div>
+                        <div class="cs-decision">
+                            <span class="cs-decision__label">What changed</span>
+                            <div class="cs-decision__body"><strong>Stop asking people to read the metrics. Read them for them.</strong> That became Version 1.</div>
+                        </div>
+                    </div>
+                    <div class="cs-alt__media">
+                        <div class="cs-figure">
+                            <div class="cs-figure__img"><img src="Images/RunaraPlatform/customise-view.jpg" alt="The Customise view drawer over the Version 0 dashboard. Toggles for each card, such as Requests, GPU memory and Model behaviour, checkboxes and drag handles for table columns, and a filter for metrics by status." loading="lazy"></div>
+                            <p class="cs-figure__caption">Fig 2. The customisable view. Cards and columns on or off, and a status filter. Sample data.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 03. Version 1 -->
+        <div class="container--prose">
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(03) &nbsp; Version 1 · Explain</span>
+                    <h2 class="h2 cs-section__title">Answers with reasons, instead of metrics.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>In Version 1 an AI agent reads the deployment's GPU and model-behaviour metrics, including hallucination rate. The screen opens with one sentence on what's wrong. Below it, issues are ranked critical, high, medium and low, and each gives its cause, impact and fix in short labelled lines.</p>
+                    <p>The agent's reasoning stays collapsed. Anyone who wants to check it opens "Show reasoning" and sees, step by step, how the agent got there. Follow-up questions go to Ask Runara.</p>
+                    <p>The metrics didn't disappear. They moved one tab away, to a view the CTO and I cut down to the few metrics users relied on, with the rest behind search.</p>
+                    <!-- NEEDS: confirm the cut-down metrics view (with the CTO) was part of Version 1. The demo shows it there. -->
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <div class="cs-figure reveal">
+                <div class="cs-figure__img">
+                    <video controls muted playsinline preload="metadata" poster="Images/RunaraPlatform/explain-poster.jpg" aria-label="Screen recording of Version 1: the summary and ranked issues, a question to Ask Runara, the Metrics tab, and the reasoning behind the critical issue">
+                        <source src="Images/RunaraPlatform/explain.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="cs-figure__caption">Fig 3. Version 1 in the demo: the summary, Ask Runara, the Metrics tab, and the reasoning behind an issue. 41 s, no sound. Sample data.</p>
+            </div>
+        </div>
+        <div class="container--prose">
+            <div class="cs-decision">
+                <span class="cs-decision__label">Measured</span>
+                <div class="cs-decision__body"><strong>64% explanation engagement.</strong> Users clicking to expand the agent's reasoning.</div>
+            </div>
+        </div>
+
+        <!-- 04. Version 2 -->
+        <div class="container--prose">
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(04) &nbsp; Version 2 · Fix</span>
+                    <h2 class="h2 cs-section__title">Three months later, a fix you approve.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Version 1 told people what to fix. Three months later, Version 2 could make the fix. Issues Runara can change get a Prepare fix button. The rest get step-by-step instructions.</p>
+                </div>
+                <div class="cs-decision">
+                    <span class="cs-decision__label">Decision</span>
+                    <div class="cs-decision__body"><strong>Nothing deploys until you approve it.</strong> The agent does the work: the change, the test, the explanation. The user makes the decision.</div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <div class="cs-figure reveal">
+                <div class="cs-figure__img">
+                    <video controls muted playsinline preload="metadata" poster="Images/RunaraPlatform/fix-poster.jpg" aria-label="Screen recording of Version 2: connecting GitHub, preparing a fix and testing it on a copy, reviewing it, approving and redeploying, checking that it holds, then preparing a second fix">
+                        <source src="Images/RunaraPlatform/fix.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="cs-figure__caption">Fig 4. Version 2 in the demo: prepare, test on a copy, review, approve, and check that it holds. Then a second fix. 60 s, no sound. Sample data.</p>
+            </div>
+        </div>
+
+        <div class="container--prose">
+            <div class="cs-decision">
+                <span class="cs-decision__label">Measured</span>
+                <div class="cs-decision__body"><strong>83% engagement-to-action rate.</strong> From issue, to explanation, to clicking Fix.</div>
+            </div>
+        </div>
+
+        <div class="container--prose">
+
+            <!-- 05. Writing -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(05) &nbsp; Writing for scanning</span>
+                    <h2 class="h2 cs-section__title">Every screen opens with one verdict.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>People who can't read the metrics won't read paragraphs about them either. So I wrote rules for how the Analytics screens are written, and designed every screen to them. Four of the eight:</p>
+                </div>
+                <div class="cs-rules">
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Rule 01</div>
+                        <div class="cs-rule__title">Verdict first</div>
+                        <div class="cs-rule__body">Open with one sentence of 12 words or fewer, then the details.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Rule 02</div>
+                        <div class="cs-rule__title">One issue in detail</div>
+                        <div class="cs-rule__body">Expand only the top issue. Every other issue is one row: severity, title, key number, action.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Rule 05</div>
+                        <div class="cs-rule__title">Trade-offs as tags</div>
+                        <div class="cs-rule__body">Cost, speed and risk are short tags, such as Free, −3% peak or +$0.52/hr, not clauses.</div>
+                    </div>
+                    <div class="cs-rule">
+                        <div class="cs-rule__num">Rule 07</div>
+                        <div class="cs-rule__title">Reasoning on demand</div>
+                        <div class="cs-rule__body">Reasoning, config changes and rollout steps start collapsed. Decisions and approvals stay visible.</div>
+                    </div>
+                </div>
+                <!-- NEEDS: confirm the Reading-load numbers in the design file describe work at Runara: 21,827 → 12,047 words across 40 screens, 546 → 301 words per screen, 229 → 0 visible paragraphs over 20 words. If yes, they belong here as a stat row. -->
+            </section>
+
+            <!-- 06. Outcome and reflection -->
+            <section class="cs-section reveal">
+                <header class="cs-section__head">
+                    <span class="eyebrow eyebrow--accent cs-section__eyebrow">(06) &nbsp; Outcome</span>
+                    <h2 class="h2 cs-section__title">It was a reading problem, not a layout problem.</h2>
+                </header>
+                <div class="cs-prose">
+                    <p>Explain and Fix both shipped to beta users. In Explain, 64% engaged with the explanations by expanding the agent's reasoning. In Fix, 83% went on from explanation to Fix. The two numbers measure different things in different versions, so I don't compare them.</p>
+                    <p>The dashboard that didn't work taught me the most. I treated the problem as a layout problem, and gave people more control over numbers they couldn't read. Fewer numbers, read for them, is what the next two versions were built on.</p>
+                    <!-- NEEDS: the reflection in your own words, and one thing you'd do differently. Three sentences at most. -->
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="stroll" aria-hidden="true"><span class="blob" data-blob="square" data-color="#F0552B" data-pose="walk"></span></div>
+        <div class="v-wrap v-grid footer__grid">
+            <div class="footer__brand">
+                <div class="footer__mark">n.k</div>
+                <p>Product designer in Bengaluru.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Navigate</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+            </div>
+            <div class="footer__col">
+                <h4>Connect</h4>
+                <a href="mailto:inandha97@gmail.com">inandha97@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nandhakumarilangovan/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/killjay" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="footer__col">
+                <h4>Local time</h4>
+                <p data-clock>IST (UTC+5:30)</p>
+                <p class="muted">Bengaluru, India</p>
+            </div>
+        </div>
+        <div class="v-wrap footer__legal">
+            <span>© <span data-year>2026</span> Nandha Kumar</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
+    <script src="blobs.js?v=20261001" defer></script>
+
+    <script src="site.js?v=20261008" defer></script>
+</body>
+</html>

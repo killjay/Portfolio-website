@@ -3821,20 +3821,3 @@ mark.todo {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-
-/* Alfaleus case study tint: the board pink, washed toward cream */
-:root { --tint-alfaleus: #F4DDE6; }
-.cs-tint-alfaleus { --cs-tint: var(--tint-alfaleus); }
-
-/* Image placeholder for screens that are still to come */
-.cs-placeholder {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 10;
-  padding: var(--s-5);
-  border: 2px dashed var(--hairline);
-  border-radius: var(--radius-m);
-  background: var(--bg-card);
-  text-align: center;
-  line-height: 1.5;
-}
